@@ -3,6 +3,12 @@ import { MapPin, Phone } from 'lucide-react';
 import { getBusinessesByCategory, getCategories, getSubcategoriesByCategory } from '@/lib/businesses';
 import { notFound } from 'next/navigation';
 import ShareButtons from '@/components/ShareButtons';
+import dynamic from 'next/dynamic';
+
+const MultiMap = dynamic(() => import('@/components/MultiMap'), {
+  ssr: false,
+  loading: () => <div className="bg-gray-200 h-96 rounded-lg flex items-center justify-center text-gray-600">Loading map...</div>
+});
 
 export async function generateStaticParams() {
   const categories = await getCategories();
@@ -118,26 +124,41 @@ export default async function SubcategoryPage({ params }: { params: { slug: stri
 
       {/* Premium Listings */}
       {premiumBusinesses.length > 0 && (
-        <section className="max-w-6xl mx-auto px-6 py-12">
-          <h3 className="text-2xl font-bold mb-6 text-accent-dark">Featured Businesses</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {premiumBusinesses.map(business => (
-              <Link
-                key={business.slug}
-                href={`/business/${business.slug}`}
-                className="group"
-              >
-                <div className="bg-gradient-to-br from-accent to-blue-300 h-48 rounded-lg flex items-center justify-center text-white font-bold text-xl hover:shadow-lg transition-shadow">
-                  {business.name}
-                </div>
-                <h4 className="text-lg font-semibold mt-3 group-hover:text-accent-dark">
-                  {business.name}
-                </h4>
-                <p className="text-gray-600 text-sm">{business.subcategory}</p>
-              </Link>
-            ))}
-          </div>
-        </section>
+        <>
+          <section className="max-w-6xl mx-auto px-6 py-12">
+            <h3 className="text-2xl font-bold mb-6 text-accent-dark">Featured Businesses</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {premiumBusinesses.map(business => (
+                <Link
+                  key={business.slug}
+                  href={`/business/${business.slug}`}
+                  className="group"
+                >
+                  <div className="bg-gradient-to-br from-accent to-blue-300 h-48 rounded-lg flex items-center justify-center text-white font-bold text-xl hover:shadow-lg transition-shadow">
+                    {business.name}
+                  </div>
+                  <h4 className="text-lg font-semibold mt-3 group-hover:text-accent-dark">
+                    {business.name}
+                  </h4>
+                  <p className="text-gray-600 text-sm">{business.subcategory}</p>
+                </Link>
+              ))}
+            </div>
+          </section>
+
+          {/* Map of Premium Businesses */}
+          <section className="max-w-6xl mx-auto px-6 py-12">
+            <h3 className="text-2xl font-bold mb-6">Find Our Featured Businesses</h3>
+            <div className="h-96 rounded-lg overflow-hidden">
+              <MultiMap 
+                locations={premiumBusinesses.filter(b => b.address).map(b => ({
+                  name: b.name,
+                  address: b.address
+                }))}
+              />
+            </div>
+          </section>
+        </>
       )}
 
       {/* Basic Listings */}

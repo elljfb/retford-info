@@ -1,6 +1,11 @@
 import Link from "next/link";
-import { MapPin } from "lucide-react";
 import ShareButtons from "@/components/ShareButtons";
+import dynamic from "next/dynamic";
+
+const MultiMap = dynamic(() => import('@/components/MultiMap'), {
+  ssr: false,
+  loading: () => <div className="bg-gray-200 h-64 rounded-lg flex items-center justify-center text-gray-600">Loading map...</div>
+});
 
 export default function Home() {
   const categories = [
@@ -87,9 +92,12 @@ export default function Home() {
               is the perfect place to visit or call home.
             </p>
           </div>
-          <div className="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
-            <MapPin size={48} className="text-accent" />
-            <p className="ml-4 text-gray-600">[Map integration here]</p>
+          <div className="h-64 rounded-lg overflow-hidden">
+            <MultiMap 
+              locations={[{ name: 'Retford Town Centre', address: 'Market Square, Retford' }]} 
+              center={[53.3225, -0.9417]}
+              zoom={9}
+            />
           </div>
         </div>
       </section>

@@ -2,6 +2,12 @@ import { MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
 import { getBusinessBySlug, getBusinesses } from '@/lib/businesses';
 import { notFound } from 'next/navigation';
 import ShareButtons from '@/components/ShareButtons';
+import dynamic from 'next/dynamic';
+
+const Map = dynamic(() => import('@/components/Map'), {
+  ssr: false,
+  loading: () => <div className="bg-gray-200 h-48 rounded-lg flex items-center justify-center text-gray-600">Loading map...</div>
+});
 
 export async function generateStaticParams() {
   const businesses = await getBusinesses();
@@ -157,16 +163,18 @@ export default async function BusinessPage({ params }: { params: { slug: string 
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="text-xl font-bold mb-4">Find Us</h3>
                 {business.address && (
-                  <div className="flex gap-2 text-gray-700 mb-4">
-                    <MapPin className="flex-shrink-0 text-accent-dark mt-1" />
-                    <address className="not-italic">
-                      {business.address}
-                    </address>
-                  </div>
+                  <>
+                    <div className="flex gap-2 text-gray-700 mb-4">
+                      <MapPin className="flex-shrink-0 text-accent-dark mt-1" />
+                      <address className="not-italic">
+                        {business.address}
+                      </address>
+                    </div>
+                    <div className="h-48 rounded-lg overflow-hidden">
+                      <Map address={business.address} businessName={business.name} />
+                    </div>
+                  </>
                 )}
-                <div className="bg-gray-300 h-48 rounded-lg flex items-center justify-center text-gray-600">
-                  [Map Integration Here]
-                </div>
               </div>
             </div>
           </div>
