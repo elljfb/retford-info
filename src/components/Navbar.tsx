@@ -11,10 +11,16 @@ interface Article {
   date: string;
 }
 
+interface NewsItem {
+  title: string;
+  link: string;
+  source: string;
+}
+
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [articles, setArticles] = useState<Article[]>([]);
-  const [news, setNews] = useState<Article[]>([]);
+  const [news, setNews] = useState<NewsItem[]>([]);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -165,15 +171,17 @@ export default function Navbar() {
                     >
                       View All News →
                     </Link>
-                    {news.slice(0, 3).map((item) => (
-                      <Link
-                        key={item.slug}
-                        href={`/news/${item.slug}`}
+                    {news.slice(0, 3).map((item, index) => (
+                      <a
+                        key={`${item.source}-${index}`}
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="block text-sm text-gray-600 hover:text-accent hover:underline"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {item.title}
-                      </Link>
+                      </a>
                     ))}
                   </div>
                 </div>

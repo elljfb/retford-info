@@ -1,10 +1,11 @@
 import { NextResponse } from 'next/server';
-import { getArticles, getNews } from '@/lib/articles';
+import { getArticles } from '@/lib/articles';
+import { getLatestAggregatedNews } from '@/lib/rss-feeds';
 
 export async function GET() {
   try {
     const articles = await getArticles();
-    const news = await getNews();
+    const news = await getLatestAggregatedNews(3);
 
     return NextResponse.json({
       articles: articles.slice(0, 3).map(a => ({
@@ -12,10 +13,10 @@ export async function GET() {
         slug: a.slug,
         date: a.date,
       })),
-      news: news.slice(0, 3).map(n => ({
+      news: news.map(n => ({
         title: n.title,
-        slug: n.slug,
-        date: n.date,
+        link: n.link,
+        source: n.source,
       })),
     });
   } catch (error) {
