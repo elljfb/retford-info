@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Terms & Conditions | Retford.info',
+  title: 'Terms & Conditions - Retford, Nottinghamshire',
 };
 
 export default function Terms() {

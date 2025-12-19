@@ -2,8 +2,19 @@ import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata = {
-  title: 'Contact Us | Retford.info',
+  title: 'Contact Us - Retford, Nottinghamshire',
   description: 'Get in touch with Retford.info for business listings, advertising, or general inquiries.',
+  openGraph: {
+    title: 'Contact Us - Retford, Nottinghamshire',
+    description: 'Get in touch with Retford.info for business listings, advertising, or general inquiries.',
+    images: ['/api/og?title=Contact%20Us&subtitle=Retford.info'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Us - Retford, Nottinghamshire',
+    description: 'Get in touch with Retford.info for business listings, advertising, or general inquiries.',
+    images: ['/api/og?title=Contact%20Us&subtitle=Retford.info'],
+  },
 };
 
 export default function Contact() {

@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Privacy Policy | Retford.info',
+  title: 'Privacy Policy - Retford, Nottinghamshire',
 };
 
 export default function PrivacyPolicy() {

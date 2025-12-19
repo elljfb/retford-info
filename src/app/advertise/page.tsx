@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Advertise Your Business | Retford.info',
+  title: 'Advertise Your Business - Retford, Nottinghamshire',
   description: 'Get your business listed on Retford.info. Free and premium listing options available.',
 };
 

@@ -3,8 +3,19 @@ import { getLatestArticles } from '@/lib/articles';
 import { formatDate } from '@/lib/utils';
 
 export const metadata = {
-  title: 'Latest Articles | Retford.info',
+  title: 'Latest Articles - Retford, Nottinghamshire',
   description: 'Read the latest articles and stories from Retford.',
+  openGraph: {
+    title: 'Latest Articles - Retford, Nottinghamshire',
+    description: 'Read the latest articles and stories from Retford.',
+    images: ['/api/og?title=Latest%20Articles&subtitle=Retford.info'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Latest Articles - Retford, Nottinghamshire',
+    description: 'Read the latest articles and stories from Retford.',
+    images: ['/api/og?title=Latest%20Articles&subtitle=Retford.info'],
+  },
 };
 
 export default async function ArticlesPage() {

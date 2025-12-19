@@ -7,6 +7,17 @@ import { Analytics } from "@vercel/analytics/react";
 export const metadata: Metadata = {
   title: "Retford in Nottinghamshire - Information for Residents and Visitors",
   description: "A local community information website for Retford, Nottinghamshire",
+  openGraph: {
+    title: "Retford in Nottinghamshire - Information for Residents and Visitors",
+    description: "A local community information website for Retford, Nottinghamshire",
+    images: ['/api/og?title=Retford.info&subtitle=Your%20Local%20Community%20Guide'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Retford in Nottinghamshire - Information for Residents and Visitors",
+    description: "A local community information website for Retford, Nottinghamshire",
+    images: ['/api/og?title=Retford.info&subtitle=Your%20Local%20Community%20Guide'],
+  },
 };
 
 export default function RootLayout({

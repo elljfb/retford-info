@@ -96,5 +96,5 @@ export default function MultiMap({
     };
   }, [locations, center, zoom]);
 
-  return <div ref={mapRef} className={className} style={{ height: '100%', minHeight: '400px' }} />;
+  return <div ref={mapRef} className={className} style={{ height: '100%', minHeight: '400px', position: 'relative', zIndex: 1 }} />;
 }

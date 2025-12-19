@@ -32,10 +32,24 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: { slug: string; subcategory: string } }) {
   const subcategoryName = params.subcategory.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-  const categoryName = params.slug.replace(/-/g, ' ').toUpperCase();
+  const categoryName = params.slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()).replace(/ And /g, ' and ');
+  
+  const ogImage = `/api/og?title=${encodeURIComponent(subcategoryName)}&subtitle=${encodeURIComponent(categoryName)}`;
+  
   return {
     title: `${subcategoryName} in Retford, Nottinghamshire`,
     description: `Browse ${subcategoryName} in the ${categoryName} category. Local listings and reviews.`,
+    openGraph: {
+      title: `${subcategoryName} in Retford, Nottinghamshire`,
+      description: `Browse ${subcategoryName} in the ${categoryName} category. Local listings and reviews.`,
+      images: [ogImage],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${subcategoryName} in Retford, Nottinghamshire`,
+      description: `Browse ${subcategoryName} in the ${categoryName} category. Local listings and reviews.`,
+      images: [ogImage],
+    },
   };
 }
 

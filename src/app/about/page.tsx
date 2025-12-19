@@ -3,6 +3,17 @@ import Link from 'next/link';
 export const metadata = {
   title: 'About Retford.info',
   description: 'Learn about Retford.info and our mission to support the local community.',
+  openGraph: {
+    title: 'About Retford.info',
+    description: 'Learn about Retford.info and our mission to support the local community.',
+    images: ['/api/og?title=About%20Us&subtitle=Retford.info'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Retford.info',
+    description: 'Learn about Retford.info and our mission to support the local community.',
+    images: ['/api/og?title=About%20Us&subtitle=Retford.info'],
+  },
 };
 
 export default function About() {

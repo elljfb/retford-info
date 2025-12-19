@@ -19,9 +19,23 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const business = await getBusinessBySlug(params.slug);
   if (!business) return {};
+  
+  const ogImage = `/api/og?title=${encodeURIComponent(business.name)}&subtitle=${encodeURIComponent(business.category)}${business.subcategory ? `%20•%20${encodeURIComponent(business.subcategory)}` : ''}`;
+  
   return {
-    title: `${business.name} | Retford.info`,
+    title: `${business.name} - Retford, Nottinghamshire`,
     description: business.description || `Contact and find ${business.name} in Retford`,
+    openGraph: {
+      title: `${business.name} - Retford, Nottinghamshire`,
+      description: business.description || `Contact and find ${business.name} in Retford`,
+      images: [ogImage],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${business.name} - Retford, Nottinghamshire`,
+      description: business.description || `Contact and find ${business.name} in Retford`,
+      images: [ogImage],
+    },
   };
 }
 

@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'What\'s On | Retford.info',
+  title: 'What\'s On - Retford, Nottinghamshire',
   description: 'Find out what\'s happening in Retford this week and beyond.',
 };
 

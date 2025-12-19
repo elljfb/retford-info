@@ -14,9 +14,26 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const article = await getArticleBySlug(params.slug);
   if (!article) return {};
+  
+  const ogImage = article.image 
+    ? `/api/og?type=article&image=${encodeURIComponent(article.image)}`
+    : `/api/og?title=${encodeURIComponent(article.title)}&subtitle=${encodeURIComponent('Article')}`;
+  
   return {
-    title: `${article.title} | Retford.info`,
+    title: `${article.title} - Retford, Nottinghamshire`,
     description: article.excerpt,
+    openGraph: {
+      title: `${article.title} - Retford, Nottinghamshire`,
+      description: article.excerpt,
+      images: [ogImage],
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${article.title} - Retford, Nottinghamshire`,
+      description: article.excerpt,
+      images: [ogImage],
+    },
   };
 }
 

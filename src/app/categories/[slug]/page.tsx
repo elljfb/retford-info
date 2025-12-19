@@ -19,10 +19,23 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const categoryName = params.slug.replace(/-/g, ' ');
   const formattedCategoryName = categoryName.replace(/\b\w/g, l => l.toUpperCase()).replace(/ And /g, ' and ');
+  
+  const ogImage = `/api/og?title=${encodeURIComponent(formattedCategoryName)}&subtitle=${encodeURIComponent('Retford, Nottinghamshire')}`;
 
   return {
     title: `${formattedCategoryName} in Retford, Nottinghamshire`,
     description: `Browse ${formattedCategoryName.toLowerCase()} in Retford. Local listings and reviews.`,
+    openGraph: {
+      title: `${formattedCategoryName} in Retford, Nottinghamshire`,
+      description: `Browse ${formattedCategoryName.toLowerCase()} in Retford. Local listings and reviews.`,
+      images: [ogImage],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${formattedCategoryName} in Retford, Nottinghamshire`,
+      description: `Browse ${formattedCategoryName.toLowerCase()} in Retford. Local listings and reviews.`,
+      images: [ogImage],
+    },
   };
 }
 

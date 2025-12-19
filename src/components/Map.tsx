@@ -91,5 +91,5 @@ export default function Map({ address, businessName, className = '' }: MapProps)
     };
   }, [address, businessName]);
 
-  return <div ref={mapRef} className={className} style={{ height: '100%', minHeight: '200px' }} />;
+  return <div ref={mapRef} className={className} style={{ height: '100%', minHeight: '200px', position: 'relative', zIndex: 1 }} />;
 }
