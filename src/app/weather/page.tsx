@@ -16,6 +16,22 @@ export default function Weather() {
       <div className="max-w-4xl mx-auto px-6 py-12">
         <h2 className="text-3xl font-bold mb-6">Retford Weather</h2>
         
+        {/* Introduction */}
+          <p className="mb-4 leading-relaxed">
+            Retford experiences a temperate climate with moderate rainfall typical of the East Midlands. 
+            Located inland in North Nottinghamshire, the town benefits from more stable weather patterns 
+            compared to coastal areas, with warm summers and cool winters perfect for exploring the historic 
+            market town and surrounding countryside.
+          </p>
+          <p className="leading-relaxed">
+            For your convenience, we have embedded a weather forecast below along with flood warnings for the area. 
+            To help you plan your day in Retford, explore our <a href="/categories/things-to-do" className="text-accent-dark hover:underline font-semibold">Things to Do</a> section 
+            featuring both indoor and outdoor activities, or browse our <a href="/categories/eat-and-drink" className="text-accent-dark hover:underline font-semibold">Eat & Drink</a> guide 
+            for cozy cafes and restaurants whatever the weather.
+          </p>
+
+          <br></br>
+        
         {/* Weather Widget */}
         <div className="bg-white rounded-lg shadow-lg mb-12 overflow-hidden">
           <iframe 
