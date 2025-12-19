@@ -36,8 +36,8 @@ export default async function NewsArticlePage({ params }: { params: { slug: stri
         style={{ backgroundImage: `url(${article.image || '/news/news-cover.jpg'})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
         <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative text-center text-white z-10">
-          <h1 className="text-5xl font-bold px-4 mb-6">{article.title}</h1>
+        <div className="relative text-center text-white z-10 px-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6">{article.title}</h1>
           <div className="flex justify-center">
             <ShareButtons title={`${article.title} | Retford.info`} />
           </div>

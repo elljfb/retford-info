@@ -17,8 +17,8 @@ export default function Home() {
       {/* Cover Section */}
       <section className="relative w-full h-96 bg-gradient-to-r from-blue-400 to-blue-300 flex items-center justify-center" style={{backgroundImage: 'url(/retford-town-hall.jpg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
         <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative text-center text-white z-10">
-          <h1 className="text-6xl font-bold mb-6">Retford in Nottinghamshire</h1>
+        <div className="relative text-center text-white z-10 px-4">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">Retford in Nottinghamshire</h1>
           <div className="flex justify-center">
             <ShareButtons title="Welcome to Retford | Retford.info" />
           </div>

@@ -10,8 +10,8 @@ export default function About() {
     <>
       <section className="relative w-full h-80 bg-gradient-to-r from-blue-400 to-blue-300 flex items-center justify-center" style={{backgroundImage: 'url(/retford-town-hall.jpg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
         <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative text-center text-white z-10">
-          <h1 className="text-6xl font-bold">About Retford.info</h1>
+        <div className="relative text-center text-white z-10 px-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">About Retford.info</h1>
         </div>
       </section>
 

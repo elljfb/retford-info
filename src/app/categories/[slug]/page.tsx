@@ -68,8 +68,8 @@ export default async function CategoryPage({ params }: { params: { slug: string 
         style={backgroundStyle}
       >
         <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative text-center text-white z-10">
-          <h1 className="text-6xl font-bold mb-6">
+        <div className="relative text-center text-white z-10 px-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             {categoryEmojis[params.slug] || '📍'} {categoryName.replace(/\b\w/g, l => l.toUpperCase())}
           </h1>
           <div className="flex justify-center">
