@@ -1,0 +1,98 @@
+Retford.info Website Brief
+
+A local community information website for the town of Retford, Nottinghamshire.
+
+Should be built with NextJS/React and be lightweight, responsive and modern but feature no over the top css transitions or animations. I want the website to be super speedy.
+
+Each page should feature a cover image with the heading H1 overlaying it with some share buttons for various social networking sites. 
+
+The homepage should be as follows:
+
+Cover image/heading
+
+h2 heading
+
+logo and introduction
+
+A grid layout of different things such as Shops and Businesses, Eat and Drink, Accomodation, Things to Do, Next Event, Latest News, Latest Article, Community and Images
+
+Where is Retford Section including description and map
+
+website description
+
+footer
+
+The navbar should just feature the logo, title and then a menu button which opens up and has links to the pages mentioned before, a search bar, whats on calendar, latest articles and latest news, with some quick links to other pages not previously mentioned such as Car Parks, Weather etc.
+
+The footer should feature the logo, copyright, links to other pages such as Privacy Policy, Terms, Contact, About and also A section about wanting to advertise your business
+
+The main category pages should be similar layout to the homepage
+
+A cover image/heading
+
+Another heading
+
+An introduction about the category in Retford
+
+Then another grid of the sub categories with images. 
+
+Then some featured listings within any of those categories.
+
+Then a map with the featured listings on.
+
+The sub category pages should be similar.
+
+A cover image/heading
+
+Another heading
+
+Category intro for Retford
+
+Listings for the businesses split up into featured and basic listings
+
+A map of the locations of the businesses.
+
+The basic business listing pages should be as follows:
+
+Cover Image/Business name
+
+Business name
+Business Category
+
+Contact Business name
+Phone Number
+
+Please mention Retford.info when contacting the business to help support us
+
+Find business
+Business Address
+
+Basic listings should feature a 'Is this your business?' section which describes its a free listing and for £2 a month it could be a premium listing with links to their website, images, links to social media, opening hours etc
+
+Featured listing pages should be as follows:
+
+Custom Cover photo/Business Name
+
+Business name heading
+
+Image carosel
+
+Contact business
+Phone Number
+Email Addres
+Website Link
+Social Media Links
+
+Business description
+
+Find business
+business address
+map.
+
+Now I want to manage the business pages easily, so I want to use a spreadsheet/csv for this. It will have the business name, slug, category, sub-category, address, phone number, is_premium which i can just mark and it turns the page into a premium listing, email, website, social media links, description, images etc. but some are allowed to be optional
+
+So for example of a main category i could have 'Places to Eat and Drink' then the sub-categories could be Cafes, Pubs and Bars, Restaurants, Takeaways and Fast Food etc.
+
+The article and news pages should be generated from markdown and each have their own main pages showing the latest 10 posts and individual articles should have links to 1-2 other articles.
+
+Appearance wise for the website I want the navbar to be a light blue colour and then the page accents should be the same colour. The main pages should be basic font black on white background, hyperlinks should be underlined with the accent colour. There should be a 'top of page' button at the top of the footer that takes the user back to the start.
