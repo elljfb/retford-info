@@ -55,7 +55,7 @@ export default function WhatsOn() {
             Have an event coming up in Retford? We'd love to feature it on our What's On page!
           </p>
           <p className="text-gray-600">
-            Contact us at <a href="mailto:info@retford.info" className="text-accent-dark hover:underline">info@retford.info</a> with event details.
+            Contact us at <a href="/contact" className="text-accent-dark hover:underline">contact</a> with event details.
           </p>
         </div>
       </div>

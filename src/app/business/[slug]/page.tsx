@@ -70,8 +70,36 @@ export default async function BusinessPage({ params }: { params: { slug: string 
 
   const backgroundStyle = getCategoryBackground();
 
+  // Schema.org structured data for SEO
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": business.name,
+    "description": business.description || `${business.name} in Retford, Nottinghamshire`,
+    ...(business.address && {
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": business.address,
+        "addressLocality": "Retford",
+        "addressRegion": "Nottinghamshire",
+        "addressCountry": "GB"
+      }
+    }),
+    ...(business.phone && { "telephone": business.phone }),
+    ...(business.email && { "email": business.email }),
+    ...(business.website && { "url": business.website }),
+    ...(business.facebook && { "sameAs": [business.facebook] }),
+    "priceRange": "$$"
+  };
+
   return (
     <>
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
+
       {/* Cover Section */}
       <section 
         className="relative w-full h-96 bg-gradient-to-r from-accent to-blue-300 flex items-center justify-center"

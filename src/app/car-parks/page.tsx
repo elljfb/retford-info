@@ -1,37 +1,60 @@
+import ShareButtons from '@/components/ShareButtons';
+
 export const metadata = {
-  title: 'Car Parks | Retford.info',
+  title: 'Car Parks - Retford, Nottinghamshire',
   description: 'Find parking information in Retford town centre.',
 };
 
 export default function CarParks() {
   const carParks = [
     {
-      name: 'Market Square Car Park',
-      spaces: 150,
-      location: 'Town centre (Market Square)',
-      cost: '£1.20 per hour',
-      details: 'Free after 6pm'
+      name: 'Carolgate Car Park',
+      spaces: 22,
+      location: 'DN22 6AS',
+      mobile: 'Yes - RingGo',
+      details: 'Free after 4pm'
     },
     {
-      name: 'Cannon Square Car Park',
-      spaces: 200,
-      location: 'Near leisure centre',
-      cost: '£1.00 per hour',
-      details: 'Free parking after 3pm'
+      name: 'Chancery Lane (North) Central Car Park',
+      spaces: 18,
+      location: 'DN22 6EU',
+      mobile: 'Yes - RingGo',
+      details: 'Free parking after 4pm'
     },
     {
-      name: 'The Arcade Car Park',
-      spaces: 120,
-      location: 'High Street',
-      cost: '£1.20 per hour',
-      details: 'Disabled spaces available'
+      name: 'Chancery Lane (South) Central Car Park',
+      spaces: 37,
+      location: 'DN22 6EU',
+      mobile: 'Yes - RingGo',
+      details: 'Free parking after 4pm'
     },
     {
-      name: 'Retford Library Car Park',
-      spaces: 80,
-      location: 'Clermont Street',
-      cost: 'Free',
-      details: 'Limited spaces'
+      name: 'Chapelgate Car Park',
+      spaces: 71,
+      location: 'DN22 6PL',
+      mobile: 'Yes - RingGo',
+      details: 'Free parking after 6pm'
+    },
+    {
+      name: 'Churchgate Central Car Park',
+      spaces: 186,
+      location: 'DN22 6PA',
+      mobile: 'Yes - RingGo',
+      details: 'Free parking after 6pm'
+    },
+    {
+      name: 'New Street Car Park',
+      spaces: 187,
+      location: 'DN22 6EA',
+      mobile: 'Yes - RingGo',
+      details: 'Free parking after 6pm'
+    },
+    {
+      name: 'West Street Central Car Park',
+      spaces: 40,
+      location: 'DN22 6ES',
+      mobile: 'Yes - RingGo',
+      details: 'Free parking after 4pm'
     }
   ];
 
@@ -41,6 +64,9 @@ export default function CarParks() {
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="relative text-center text-white z-10 px-4">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">Car Parks</h1>
+          <div className="flex justify-center">
+                      <ShareButtons title={`Car Parks - Retford, Nottinghamshire`} />
+                    </div>
         </div>
       </section>
 
@@ -58,7 +84,7 @@ export default function CarParks() {
               <div className="space-y-2 text-gray-700">
                 <p><span className="font-semibold">Location:</span> {park.location}</p>
                 <p><span className="font-semibold">Spaces:</span> {park.spaces}</p>
-                <p><span className="font-semibold">Cost:</span> {park.cost}</p>
+                <p><span className="font-semibold">Pay by Mobile:</span> {park.mobile}</p>
                 <p><span className="font-semibold">Details:</span> {park.details}</p>
               </div>
             </div>
@@ -80,7 +106,7 @@ export default function CarParks() {
           <h3 className="text-xl font-bold mb-3">Plan Your Visit</h3>
           <p className="text-gray-700">
             With convenient parking and plenty to see and do, Retford is the perfect destination 
-            for a shopping trip or day out with the family.
+            for a shopping trip or day out with the family. For more Car Park information checkout <a href="https://www.bassetlaw.gov.uk/transport-streets-parking/parking-information/council-car-parks/#retford" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">Bassetlaw Council Car Parks</a>.
           </p>
         </div>
       </div>

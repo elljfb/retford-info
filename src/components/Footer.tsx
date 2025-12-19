@@ -43,7 +43,7 @@ export default function Footer() {
               style={{ background: 'transparent', objectFit: 'cover' }}
             />
             <p className="text-sm text-gray-400">
-              © 2024 Retford.info. All rights reserved.
+              © 2026 Retford.info. All rights reserved.
             </p>
           </div>
 
