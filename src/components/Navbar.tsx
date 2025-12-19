@@ -46,7 +46,7 @@ export default function Navbar() {
     { name: 'Weather', href: '/weather' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Advertise', href: '/advertise' },
+    { name: 'Advertise', href: '/contact' },
   ];
 
   return (
