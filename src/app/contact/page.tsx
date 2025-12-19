@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ContactForm from '@/components/ContactForm';
 
 export const metadata = {
   title: 'Contact Us | Retford.info',
@@ -27,25 +28,9 @@ export default function Contact() {
             <div className="space-y-6">
               <div>
                 <h3 className="font-bold text-lg mb-2">Email</h3>
-                <a href="mailto:info@retford.info" className="text-accent-dark hover:underline">
-                  info@retford.info
+                <a href="mailto:info@retfordbusinesshub.co.uk" className="text-accent-dark hover:underline">
+                  info@retfordbusinesshub.co.uk
                 </a>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-lg mb-2">Phone</h3>
-                <a href="tel:+441777" className="text-accent-dark hover:underline">
-                  +44 (0)1777 XXXXXX
-                </a>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-lg mb-2">Hours</h3>
-                <p className="text-gray-700">
-                  Monday - Friday: 9:00 AM - 5:00 PM<br />
-                  Saturday: 10:00 AM - 2:00 PM<br />
-                  Sunday: Closed
-                </p>
               </div>
 
               <div>
@@ -61,70 +46,7 @@ export default function Contact() {
 
           {/* Contact Form */}
           <div>
-            <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
-            <form className="space-y-4">
-              <div>
-                <label className="block font-semibold mb-2" htmlFor="name">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  className="w-full border border-gray-300 rounded px-4 py-2"
-                  required
-                />
-              </div>
-
-              <div>
-                <label className="block font-semibold mb-2" htmlFor="email">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="w-full border border-gray-300 rounded px-4 py-2"
-                  required
-                />
-              </div>
-
-              <div>
-                <label className="block font-semibold mb-2" htmlFor="subject">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  className="w-full border border-gray-300 rounded px-4 py-2"
-                  required
-                />
-              </div>
-
-              <div>
-                <label className="block font-semibold mb-2" htmlFor="message">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={5}
-                  className="w-full border border-gray-300 rounded px-4 py-2"
-                  required
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-accent text-gray-900 font-semibold py-2 rounded hover:bg-accent-dark transition-colors"
-              >
-                Send Message
-              </button>
-            </form>
-            <p className="text-sm text-gray-600 mt-4">
-              We'll get back to you as soon as possible. Thank you for contacting Retford.info!
-            </p>
+            <ContactForm />
           </div>
         </div>
 
