@@ -17,10 +17,20 @@ const RSS_FEEDS = [
     source: 'BBC News'
   },
   {
+    name: 'Nottinghamshire Live',
+    url: 'https://www.nottinghampost.com/all-about/retford?service=rss',
+    source: 'Nottinghamshire Live'
+  },
+  {
+    name: 'Lincolnshire Live - Retford',
+    url: 'https://www.lincolnshirelive.co.uk/all-about/retford/?service=rss',
+    source: 'Lincolnshire Live - Retford'
+  },
+  {
     name: 'Worksop Guardian',
     url: 'https://www.worksopguardian.co.uk/topic/retford/rss',
     source: 'Worksop Guardian'
-  },
+  }
   // Add more local news sources as needed
 ];
 

@@ -1,7 +1,8 @@
 ---
 title: Things to Do This Weekend in Retford
-date: 2024-12-16
+date: 2025-12-16
 excerpt: A guide to the best activities and attractions happening this weekend in Retford.
+image: /retford-town-hall.jpg
 ---
 
 # Things to Do This Weekend

@@ -179,14 +179,14 @@ export default async function SubcategoryPage({ params }: { params: { slug: stri
       {basicBusinesses.length > 0 && (
         <section className="max-w-6xl mx-auto px-6 py-12">
           <h3 className="text-2xl font-bold mb-6">All Listings</h3>
-          <div className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {basicBusinesses.map(business => (
               <Link
                 key={business.slug}
                 href={`/business/${business.slug}`}
                 className="block group"
               >
-                <div className="border border-gray-300 rounded-lg p-4 hover:border-accent-dark hover:shadow-md transition-all">
+                <div className="border border-gray-300 rounded-lg p-4 hover:border-accent-dark hover:shadow-md transition-all h-full">
                   <div className="flex items-start justify-between">
                     <div>
                       <h4 className="text-lg font-semibold group-hover:text-accent-dark">
@@ -200,7 +200,7 @@ export default async function SubcategoryPage({ params }: { params: { slug: stri
                       </span>
                     )}
                   </div>
-                  <div className="flex gap-4 mt-2 text-sm text-gray-600">
+                  <div className="flex flex-col gap-2 mt-2 text-sm text-gray-600">
                     {business.phone && (
                       <span className="flex items-center gap-1">
                         <Phone size={16} /> {business.phone}

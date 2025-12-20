@@ -103,7 +103,7 @@ export default async function CategoryPage({ params }: { params: { slug: string 
           {categoryName.replace(/\b\w/g, l => l.toUpperCase())} in Retford
         </h2>
         <p className="text-lg leading-relaxed text-gray-700 max-w-3xl">
-          Discover the best {categoryName.toLowerCase()} options in Retford. From local favorites to new
+          Discover the best {categoryName.toLowerCase()} options in Retford. From local favourites to new
           discoveries, find everything you need to make the most of your time in our vibrant community.
         </p>
       </section>

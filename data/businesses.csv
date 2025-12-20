@@ -1,23 +1,36 @@
 name,slug,category,subcategory,address,phone,is_premium,email,website,facebook,instagram,twitter,description,images,opening_hours
-The Coffee House,the-coffee-house,Eat and Drink,Cafes,23 Market Place,01777 123456,true,hello@coffeehouse.co.uk,https://coffeehouse.co.uk,https://facebook.com/coffeehouse,https://instagram.com/coffeehouse,,We serve the finest specialty coffee and homemade pastries in Retford. Our cozy atmosphere is perfect for catching up with friends or getting some work done.,cafe1.jpg;cafe2.jpg;cafe3.jpg,"Monday - Friday: 8am - 6pm
-Saturday: 9am - 5pm
-Sunday: 10am - 4pm"
-The Cheese Shop,cheese-shop,Shops and Businesses,Food & Delicatessen,15 Grove Street,01777 654321,false,,,,,,"Local cheese and delicatessen shop",,
-The Orchard Hotel,the-orchard-hotel,Accommodation,Hotels,Chapel Lane,01777 456789,true,info@theorchard.co.uk,https://theorchard.co.uk,https://facebook.com/theorchard,https://instagram.com/theorchard,,Family-friendly hotel with 30 en-suite rooms. Located in the heart of Retford with easy access to local attractions. Breakfast included with all bookings.,hotel1.jpg;hotel2.jpg;hotel3.jpg;hotel4.jpg,"Check-in: 3pm
-Check-out: 11am
-Reception: 24 hours"
-Mario's Italian Restaurant,marios-italian,Eat and Drink,Restaurants,West Street,01777 789012,true,reserve@marios.co.uk,https://marios.co.uk,https://facebook.com/marios,https://instagram.com/marios,,"Authentic Italian cuisine prepared with fresh ingredients. Family-owned for over 20 years. Award-winning pasta and wood-fired pizzas.",restaurant1.jpg;restaurant2.jpg;restaurant3.jpg;restaurant4.jpg;restaurant5.jpg,"Monday - Thursday: 5pm - 11pm
-Friday - Saturday: 12pm - 12am
-Sunday: 12pm - 10:30pm
-Closed Tuesdays"
-The Retford Museum,retford-museum,Things to Do,Museums,Clermont Street,01777 987654,false,,,,,,Learn about the rich history of Retford and Bassetlaw,,
-Smith & Co Bookshop,smith-bookshop,Shops and Businesses,Books,North Street,01777 111222,false,,,,,,Independent bookshop with a selection of fiction and non-fiction,,
-The Three Lions Pub,three-lions-pub,Eat and Drink,Pubs and Bars,High Street,01777 222333,true,info@threelions.co.uk,https://threelions.co.uk,https://facebook.com/threelions,https://instagram.com/threelions,,Traditional English pub with a great selection of real ales and hearty food. Perfect for families and dog-friendly.,pub1.jpg;pub2.jpg;pub3.jpg,"Monday - Wednesday: 11am - 11pm
-Thursday - Saturday: 11am - 12am
-Sunday: 12pm - 10:30pm
-Food: 12pm - 9pm Daily"
-The Bakery,retford-bakery,Shops and Businesses,Food & Delicatessen,Market Square,01777 333444,false,,,,,,Fresh bread and pastries baked daily,,
-West Retford Leisure Centre,leisure-centre,Things to Do,Sports & Recreation,Retford Road,01777 444555,false,,,,,,Swimming pool swimming lessons fitness classes,,
-Sarah's Beauty Salon,sarahs-beauty,Shops and Businesses,Beauty & Wellness,Chapel Lane,01777 555666,true,book@sarahsbeauty.co.uk,,https://facebook.com/sarahsbeauty,https://instagram.com/sarahsbeauty,,Professional beauty treatments including facials massages and nail care in a relaxing environment.,salon1.jpg;salon2.jpg,"Monday - Friday: 9am - 5:30pm
-Saturday: 9am - 4pm
-Sunday: Closed"
+The Kiwi Cafe,the-kiwi-cafe,Eat and Drink,Cafes,"5 Glasby Square, Retford DN22 6EP",01777811335,FALSE,,,,,,,,
+Honey & Fig,honey-fig,Eat and Drink,Cafes,"41 Carolgate, Retford DN22 6BZ",01777948610,FALSE,,,,,,,,
+Mamma Giusi's,mamma-giusis,Eat and Drink,Cafes,"18 Carolgate, Retford DN22 6BU",07967447438,FALSE,,,,,,,,
+Town Best Cafe,town-best-cafe,Eat and Drink,Cafes,"3 Market Pl, Retford DN22 6DR",01777869944,FALSE,,,,,,,,
+Cafe De Bella,cafe-de-bella,Eat and Drink,Cafes,"4 Spa Rd, Retford DN22 6EA",01777949871,FALSE,,,,,,,,
+Oliver’s Cafe,olivers-cafe,Eat and Drink,Cafes,"22 The Sq, Retford DN22 6DQ",01777717740,FALSE,,,,,,,,
+The Vault Retford,the-vault-retford,Eat and Drink,Restaurants,"27 The Sq, Retford DN22 6DQ",,FALSE,,,,,,,,
+Taste,taste,Eat and Drink,Coffee Shops,"2 New St, Retford DN22 6EG",01777710425,FALSE,,,,,,,,
+Harrys Coffee House,harrys-coffee-house,Eat and Drink,Cafes,"6 Chapelgate, Retford DN22 6PJ",01777706005,FALSE,,,,,,,,
+The Glass Lounge Retford,the-glass-lounge-retford,Eat and Drink,Cafes,"3, Jubilee Courtyard, 18 The Sq, Retford DN22 6BN",01777717595,FALSE,,,,,,,,
+Playwell Corner,playwell-corner,Eat and Drink,Cafes,"44 Chapelgate, Retford DN22 6PJ",07779153666,FALSE,,,,,,,,
+Leaky Teacup,leaky-teacup,Eat and Drink,Cafes,"25 Bridgegate, Retford DN22 7UX",07884956868,FALSE,,,,,,,,
+Baytree Bistro & Bar,baytree-bistro-bar,Eat and Drink,Bistros,"86 Carolgate, Retford DN22 6AS",01777710488,FALSE,,,,,,,,
+Kings Coffee Shop,kings-coffee-shop,Eat and Drink,Cafes,"2 Beardsall's Row, Retford DN22 6JX",07940405898,FALSE,,,,,,,,
+Little Leaf Cafe,little-leaf-cafe,Eat and Drink,Cafes,"3 Grove St, Retford DN22 6JP",07369229078,FALSE,,,,,,,,
+Rondo Lounge,rondo-lounge,Eat and Drink,Cafes,"20 The Sq, Retford DN22 6DQ",01777933138,FALSE,,,,,,,,
+10 Green Bottles,10-green-bottles,Eat and Drink,Cafes,"15 The Sq, Retford DN22 6DQ",07729655639,FALSE,,,,,,,,
+Edi'z Kitchen Retford,ediz-kitchen-retford,Eat and Drink,Restaurants,"32 Carolgate, Retford DN22 6DY",01777820500,FALSE,,,,,,,,
+Retford Tabletop Cafe,retford-tabletop-cafe,Eat and Drink,Cafes,"25 Bridgegate, Retford DN22 7UX",01777820500,FALSE,,,,,,,,
+The Apron Cafe,the-apron-cafe,Eat and Drink,Cafes,"Gamston Airport, Ollerton Rd, Retford DN22 0QL",01777801144,FALSE,,,,,,,,
+The Diner At Number Four,the-diner-at-number-four,Eat and Drink,Restaurants,"4 Churchgate, Retford DN22 6PQ",01777710001,FALSE,,,,,,,,
+Orangery,orangery,Eat and Drink,Restaurants,"24 North Rd, Retford DN22 7XG",01777706333,FALSE,,,,,,,,
+Country Kitchen Cafe,country-kitchen-cafe,Eat and Drink,Cafes,"Ferryboat Inn, Church Laneham, Retford DN22 0NQ",01777228350,FALSE,,,,,,,,
+The Leys Bakery & Café,the-leys-bakery-caf,Eat and Drink,Cafes,"Sturton Rd, South Wheatley, Retford DN22 9DH",,FALSE,,,,,,,,
+Take A Break,take-a-break,Eat and Drink,Cafes,"7 Aurillac Way, Retford DN22 7PX",01777706060,FALSE,,,,,,,,
+Deli & Dine,deli-dine,Eat and Drink,Cafes,"80 Carolgate, Retford DN22 6EF",01777710700,FALSE,,,,,,,,
+Costa Coffee,costa-coffee,Eat and Drink,Coffee Shops,"18a Carolgate, Retford DN22 6BU",03330035883,FALSE,,,,,,,,
+Mollie Rocker Bakery,mollie-rocker-bakery,Eat and Drink,Bakerys,Retford DN22 6BP,07359033373,FALSE,,,,,,,,
+Nicole Olivia Cake Designs,nicole-olivia-cake-designs,Eat and Drink,Bakerys,"8, Bridgegate Centre, Retford DN22 6AJ",01777471148,FALSE,,,,,,,,
+Fagan Scaffolding,fagan-scaffolding,Shops and Businesses,Trades and Services,Retford,07539453269,FALSE,,,,,,,,
+TJFabrications,tjfabrications,Shops and Businesses,Trades and Services,Retford,07950 219108,FALSE,,,,,,,,
+JRB Auto Body Repairs,jrb-auto-body-repairs,Shops and Businesses,Automotive and Petrol Stations,"Drayton Rd, Retford DN22 0JZ",07939050614,FALSE,,,,,,,,
+Sundown Adventureland,sundown-adventureland,Things to Do,Theme Parks,"Treswell Rd, Rampton, Retford DN22 0HX",01777248274,FALSE,,,,,,,,
+Squiggles Playden Retford,squiggles-playden-retford,Things to Do,Soft Plays,"Unit C, Randall Business Centre, Randall Park Way, Retford DN22 7WF",01777801170,FALSE,,,,,,,,
+The West Retford Hotel,the-west-retford-hotel,Accommodation,Hotels,"24 North Rd, Retford DN22 7XG",01777706333,,,,,,,,,

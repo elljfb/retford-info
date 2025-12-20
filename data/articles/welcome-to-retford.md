@@ -1,7 +1,8 @@
 ---
 title: Welcome to Retford
-date: 2024-12-19
+date: 2025-12-19
 excerpt: Discover what makes Retford such a special place to visit and live.
+image: /main-cover.jpg
 ---
 
 # Welcome to Retford

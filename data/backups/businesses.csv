@@ -1,0 +1,23 @@
+name,slug,category,subcategory,address,phone,is_premium,email,website,facebook,instagram,twitter,description,images,opening_hours
+The Coffee House,the-coffee-house,Eat and Drink,Cafes,23 Market Place,01777 123456,true,hello@coffeehouse.co.uk,https://coffeehouse.co.uk,https://facebook.com/coffeehouse,https://instagram.com/coffeehouse,,We serve the finest specialty coffee and homemade pastries in Retford. Our cozy atmosphere is perfect for catching up with friends or getting some work done.,cafe1.jpg;cafe2.jpg;cafe3.jpg,"Monday - Friday: 8am - 6pm
+Saturday: 9am - 5pm
+Sunday: 10am - 4pm"
+The Cheese Shop,cheese-shop,Shops and Businesses,Food & Delicatessen,15 Grove Street,01777 654321,false,,,,,,"Local cheese and delicatessen shop",,
+The Orchard Hotel,the-orchard-hotel,Accommodation,Hotels,Chapel Lane,01777 456789,true,info@theorchard.co.uk,https://theorchard.co.uk,https://facebook.com/theorchard,https://instagram.com/theorchard,,Family-friendly hotel with 30 en-suite rooms. Located in the heart of Retford with easy access to local attractions. Breakfast included with all bookings.,hotel1.jpg;hotel2.jpg;hotel3.jpg;hotel4.jpg,"Check-in: 3pm
+Check-out: 11am
+Reception: 24 hours"
+Mario's Italian Restaurant,marios-italian,Eat and Drink,Restaurants,West Street,01777 789012,true,reserve@marios.co.uk,https://marios.co.uk,https://facebook.com/marios,https://instagram.com/marios,,"Authentic Italian cuisine prepared with fresh ingredients. Family-owned for over 20 years. Award-winning pasta and wood-fired pizzas.",restaurant1.jpg;restaurant2.jpg;restaurant3.jpg;restaurant4.jpg;restaurant5.jpg,"Monday - Thursday: 5pm - 11pm
+Friday - Saturday: 12pm - 12am
+Sunday: 12pm - 10:30pm
+Closed Tuesdays"
+The Retford Museum,retford-museum,Things to Do,Museums,Clermont Street,01777 987654,false,,,,,,Learn about the rich history of Retford and Bassetlaw,,
+Smith & Co Bookshop,smith-bookshop,Shops and Businesses,Books,North Street,01777 111222,false,,,,,,Independent bookshop with a selection of fiction and non-fiction,,
+The Three Lions Pub,three-lions-pub,Eat and Drink,Pubs and Bars,High Street,01777 222333,true,info@threelions.co.uk,https://threelions.co.uk,https://facebook.com/threelions,https://instagram.com/threelions,,Traditional English pub with a great selection of real ales and hearty food. Perfect for families and dog-friendly.,pub1.jpg;pub2.jpg;pub3.jpg,"Monday - Wednesday: 11am - 11pm
+Thursday - Saturday: 11am - 12am
+Sunday: 12pm - 10:30pm
+Food: 12pm - 9pm Daily"
+The Bakery,retford-bakery,Shops and Businesses,Food & Delicatessen,Market Square,01777 333444,false,,,,,,Fresh bread and pastries baked daily,,
+West Retford Leisure Centre,leisure-centre,Things to Do,Sports & Recreation,Retford Road,01777 444555,false,,,,,,Swimming pool swimming lessons fitness classes,,
+Sarah's Beauty Salon,sarahs-beauty,Shops and Businesses,Beauty & Wellness,Chapel Lane,01777 555666,true,book@sarahsbeauty.co.uk,,https://facebook.com/sarahsbeauty,https://instagram.com/sarahsbeauty,,Professional beauty treatments including facials massages and nail care in a relaxing environment.,salon1.jpg;salon2.jpg,"Monday - Friday: 9am - 5:30pm
+Saturday: 9am - 4pm
+Sunday: Closed"

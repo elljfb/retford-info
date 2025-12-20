@@ -157,12 +157,16 @@ export default async function BusinessPage({ params }: { params: { slug: string 
                 <h3 className="text-xl font-bold mb-4">Contact {business.name}</h3>
                 {business.phone && (
                   <div className="mb-4">
-                    <p className="text-sm text-gray-600 mb-1">Phone</p>
-                    <a href={`tel:${business.phone}`} className="text-lg font-semibold text-accent-dark hover:underline">
-                      {business.phone}
+                    <a href={`tel:${business.phone}`} className="block w-full bg-accent text-white text-center px-6 py-3 rounded-lg hover:bg-accent-dark transition-colors font-semibold text-lg">
+                      📞 {business.phone}
                     </a>
                   </div>
                 )}
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
+                  <p className="text-xs text-gray-700">
+                    Please mention <span className="font-semibold">Retford.info</span> when contacting this business!
+                  </p>
+                </div>
                 {business.email && (
                   <div className="mb-4">
                     <p className="text-sm text-gray-600 mb-1">Email</p>
@@ -233,20 +237,19 @@ export default async function BusinessPage({ params }: { params: { slug: string 
               )}
               <section>
                 <h3 className="text-xl font-bold mb-4">Contact {business.name}</h3>
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
-                  <p className="text-sm text-gray-700">
-                    Please mention <span className="font-semibold">Retford.info</span> when contacting this business, it helps support us!
-                  </p>
-                </div>
                 <div className="space-y-3">
                   {business.phone && (
                     <div>
-                      <p className="text-sm text-gray-600 mb-1">Phone</p>
-                      <a href={`tel:${business.phone}`} className="text-lg font-semibold text-accent-dark hover:underline">
-                        {business.phone}
+                      <a href={`tel:${business.phone}`} className="block w-full bg-accent text-white text-center px-6 py-3 rounded-lg hover:bg-accent-dark hover:text-white transition-colors font-semibold text-lg">
+                        📞 {business.phone}
                       </a>
                     </div>
                   )}
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
+                    <p className="text-xs text-gray-700">
+                      Please mention <span className="font-semibold">Retford.info</span> when contacting this business, it helps support us!
+                    </p>
+                  </div>
                   {business.email && (
                     <div>
                       <p className="text-sm text-gray-600 mb-1">Email</p>
@@ -289,7 +292,7 @@ export default async function BusinessPage({ params }: { params: { slug: string 
               </section>
               {business.address && (
                 <section>
-                  <h3 className="text-xl font-bold mb-4">Find Us</h3>
+                  <h3 className="text-xl font-bold mb-4">Find {business.name}</h3>
                   <div className="flex gap-2 text-gray-700">
                     <MapPin className="flex-shrink-0 text-accent-dark mt-1" />
                     <address className="not-italic">
@@ -311,7 +314,7 @@ export default async function BusinessPage({ params }: { params: { slug: string 
                   <li>Website and social media links</li>
                   <li>Priority placement in category pages</li>
                 </ul>
-                <a href="/advertise" className="inline-block mt-4 bg-accent text-white px-4 py-2 rounded hover:bg-accent-dark">
+                <a href="/advertise" className="inline-block mt-4 bg-accent text-white px-4 py-2 rounded hover:bg-accent-dark hover:text-white transition-colors font-semibold">
                   See upgrade options
                 </a>
               </div>
