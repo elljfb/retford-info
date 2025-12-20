@@ -1,19 +1,21 @@
 import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://retford.info';
+
 export const metadata = {
   title: 'Contact Us - Retford, Nottinghamshire',
   description: 'Get in touch with Retford.info for business listings, advertising, or general inquiries.',
   openGraph: {
     title: 'Contact Us - Retford, Nottinghamshire',
     description: 'Get in touch with Retford.info for business listings, advertising, or general inquiries.',
-    images: ['/api/og?title=Contact%20Us&subtitle=Retford.info'],
+    images: [`${siteUrl}/api/og?title=Contact%20Us&subtitle=Retford.info`],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Contact Us - Retford, Nottinghamshire',
     description: 'Get in touch with Retford.info for business listings, advertising, or general inquiries.',
-    images: ['/api/og?title=Contact%20Us&subtitle=Retford.info'],
+    images: [`${siteUrl}/api/og?title=Contact%20Us&subtitle=Retford.info`],
   },
 };
 

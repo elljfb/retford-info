@@ -3,19 +3,21 @@ import { formatDate } from '@/lib/utils';
 import Image from 'next/image';
 import { ExternalLink } from 'lucide-react';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://retford.info';
+
 export const metadata = {
-  title: 'Latest News for Retford, Nottinghamshire',
-  description: 'Stay updated with the latest news from Retford and surrounding areas.',
+  title: 'Local News - Retford, Nottinghamshire',
+  description: 'Stay updated with the latest news from Retford and surrounding areas',
   openGraph: {
-    title: 'Latest News for Retford, Nottinghamshire',
-    description: 'Stay updated with the latest news from Retford and surrounding areas.',
-    images: ['/api/og?title=Latest%20News&subtitle=Retford.info'],
+    title: 'Local News - Retford, Nottinghamshire',
+    description: 'Stay updated with the latest news from Retford and surrounding areas',
+    images: [`${siteUrl}/api/og?title=Latest%20News&subtitle=Retford.info`],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Latest News for Retford, Nottinghamshire',
-    description: 'Stay updated with the latest news from Retford and surrounding areas.',
-    images: ['/api/og?title=Latest%20News&subtitle=Retford.info'],
+    title: 'Local News - Retford, Nottinghamshire',
+    description: 'Stay updated with the latest news from Retford and surrounding areas',
+    images: [`${siteUrl}/api/og?title=Latest%20News&subtitle=Retford.info`],
   },
 };
 

@@ -6,8 +6,8 @@ export const runtime = 'edge';
 export async function GET(req: NextRequest) {
   try {
     const { searchParams, origin } = new URL(req.url);
-    const title = searchParams.get('title') || 'Retford.info';
-    const subtitle = searchParams.get('subtitle') || '';
+    const title = decodeURIComponent(searchParams.get('title') || 'Retford.info');
+    const subtitle = decodeURIComponent(searchParams.get('subtitle') || '');
     const type = searchParams.get('type') || 'page';
 
     // For articles/news with featured images
@@ -36,8 +36,6 @@ export async function GET(req: NextRequest) {
     }
 
     // Default OG image with logo and text
-    const logoUrl = `${origin}/retfordinfo.png`;
-    
     return new ImageResponse(
       (
         <div
@@ -48,32 +46,35 @@ export async function GET(req: NextRequest) {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            backgroundColor: 'white',
+            background: 'linear-gradient(135deg, #87CEEB 0%, #4A90E2 100%)',
             padding: '60px',
           }}
         >
-          {/* Logo */}
-          <img
-            src={logoUrl}
-            alt="Retford.info Logo"
-            width="180"
-            height="180"
+          {/* Retford.info text logo */}
+          <div
             style={{
+              fontSize: '80px',
+              fontWeight: 'bold',
+              color: 'white',
+              textAlign: 'center',
               marginBottom: '40px',
-              borderRadius: '50%',
+              textShadow: '0 4px 6px rgba(0,0,0,0.1)',
             }}
-          />
+          >
+            Retford.info
+          </div>
           
           {/* Title */}
           <div
             style={{
               fontSize: '60px',
               fontWeight: 'bold',
-              color: '#1a1a1a',
+              color: 'white',
               textAlign: 'center',
               marginBottom: subtitle ? '20px' : '0',
               maxWidth: '90%',
               lineHeight: '1.2',
+              textShadow: '0 2px 4px rgba(0,0,0,0.1)',
             }}
           >
             {title}
@@ -83,8 +84,8 @@ export async function GET(req: NextRequest) {
           {subtitle && (
             <div
               style={{
-                fontSize: '40px',
-                color: '#4A90E2',
+                fontSize: '36px',
+                color: 'rgba(255,255,255,0.9)',
                 textAlign: 'center',
                 maxWidth: '90%',
               }}

@@ -2,19 +2,21 @@ import Link from 'next/link';
 import { getLatestArticles } from '@/lib/articles';
 import { formatDate } from '@/lib/utils';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://retford.info';
+
 export const metadata = {
   title: 'Latest Articles for Retford, Nottinghamshire',
   description: 'Read the latest articles and stories from Retford.',
   openGraph: {
     title: 'Latest Articles for Retford, Nottinghamshire',
     description: 'Read the latest articles and stories from Retford.',
-    images: ['/api/og?title=Latest%20Articles&subtitle=Retford.info'],
+    images: [`${siteUrl}/api/og?title=Latest%20Articles&subtitle=Retford.info`],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Latest Articles for Retford, Nottinghamshire',
     description: 'Read the latest articles and stories from Retford.',
-    images: ['/api/og?title=Latest%20Articles&subtitle=Retford.info'],
+    images: [`${siteUrl}/api/og?title=Latest%20Articles&subtitle=Retford.info`],
   },
 };
 

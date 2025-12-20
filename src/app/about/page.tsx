@@ -1,18 +1,20 @@
 import Link from 'next/link';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://retford.info';
+
 export const metadata = {
   title: 'About Retford.info',
   description: 'Learn about Retford.info and our mission to support the local community.',
   openGraph: {
     title: 'About Retford.info',
     description: 'Learn about Retford.info and our mission to support the local community.',
-    images: ['/api/og?title=About%20Us&subtitle=Retford.info'],
+    images: [`${siteUrl}/api/og?title=About%20Us&subtitle=Retford.info`],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'About Retford.info',
     description: 'Learn about Retford.info and our mission to support the local community.',
-    images: ['/api/og?title=About%20Us&subtitle=Retford.info'],
+    images: [`${siteUrl}/api/og?title=About%20Us&subtitle=Retford.info`],
   },
 };
 
