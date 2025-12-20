@@ -8,10 +8,11 @@ interface ShareButtonsProps {
 }
 
 export default function ShareButtons({ title, url }: ShareButtonsProps) {
-  const shareUrl = typeof window !== 'undefined' ? window.location.href : url || '';
   const shareTitle = title || 'Retford.info';
 
   const handleShare = (platform: string) => {
+    // Get the URL at the time of sharing, not at render time
+    const shareUrl = url || (typeof window !== 'undefined' ? window.location.href : '');
     let shareLink = '';
     
     switch (platform) {
@@ -31,7 +32,8 @@ export default function ShareButtons({ title, url }: ShareButtonsProps) {
         shareLink = `mailto:?subject=${encodeURIComponent(shareTitle)}&body=${encodeURIComponent(shareUrl)}`;
         break;
       case 'copy':
-        navigator.clipboard.writeText(shareUrl);
+        const copyUrl = url || (typeof window !== 'undefined' ? window.location.href : '');
+        navigator.clipboard.writeText(copyUrl);
         return;
       case 'print':
         window.print();

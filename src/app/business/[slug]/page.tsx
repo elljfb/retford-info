@@ -20,7 +20,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const business = await getBusinessBySlug(params.slug);
   if (!business) return {};
   
-  const ogImage = `/api/og?title=${encodeURIComponent(business.name)}&subtitle=${encodeURIComponent(business.category)}${business.subcategory ? `%20•%20${encodeURIComponent(business.subcategory)}` : ''}`;
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://retford.info';
+  const ogImage = `${siteUrl}/api/og?title=${encodeURIComponent(business.name)}&subtitle=${encodeURIComponent(business.category)}${business.subcategory ? `%20•%20${encodeURIComponent(business.subcategory)}` : ''}`;
   
   return {
     title: `${business.name} - Retford, Nottinghamshire`,
@@ -29,6 +30,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       title: `${business.name} - Retford, Nottinghamshire`,
       description: business.description || `Contact and find ${business.name} in Retford`,
       images: [ogImage],
+      url: `${siteUrl}/business/${business.slug}`,
+      type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
