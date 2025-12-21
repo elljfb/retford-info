@@ -3,6 +3,7 @@ import { getBusinessesByCategory, getCategories, getSubcategoriesByCategory } fr
 import { notFound } from 'next/navigation';
 import ShareButtons from '@/components/ShareButtons';
 import dynamic from 'next/dynamic';
+import NextImage from 'next/image';
 
 const MultiMap = dynamic(() => import('@/components/MultiMap'), {
   ssr: false,
@@ -144,21 +145,43 @@ export default async function CategoryPage({ params }: { params: { slug: string 
           <section className="max-w-6xl mx-auto px-6 py-12">
             <h3 className="text-2xl font-bold mb-6 text-accent-dark">Featured Businesses</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {premiumBusinesses.map(business => (
-                <Link
-                  key={business.slug}
-                  href={`/business/${business.slug}`}
-                  className="group"
-                >
-                  <div className="bg-gradient-to-br from-accent to-blue-300 h-48 rounded-lg flex items-center justify-center text-white font-bold text-xl hover:shadow-lg transition-shadow">
-                    {business.name}
-                  </div>
-                  <h4 className="text-lg font-semibold mt-3 group-hover:text-accent-dark">
-                    {business.name}
-                  </h4>
-                  <p className="text-gray-600 text-sm">{business.subcategory}</p>
-                </Link>
-              ))}
+              {premiumBusinesses.map(business => {
+                const images = business.images ? business.images.split(',').map(img => img.trim()) : [];
+                const hasImage = images.length > 0;
+                
+                return (
+                  <Link
+                    key={business.slug}
+                    href={`/business/${business.slug}`}
+                    className="group"
+                  >
+                    <div className="relative h-48 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                      {hasImage ? (
+                        <>
+                          <NextImage
+                            src={images[0]}
+                            alt={business.name}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          />
+                          <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <span className="text-white font-bold text-xl text-center px-4">{business.name}</span>
+                          </div>
+                        </>
+                      ) : (
+                        <div className="bg-gradient-to-br from-accent to-blue-300 h-full flex items-center justify-center text-white font-bold text-xl">
+                          {business.name}
+                        </div>
+                      )}
+                    </div>
+                    <h4 className="text-lg font-semibold mt-3 group-hover:text-accent-dark">
+                      {business.name}
+                    </h4>
+                    <p className="text-gray-600 text-sm">{business.subcategory}</p>
+                  </Link>
+                );
+              })}
             </div>
           </section>
 

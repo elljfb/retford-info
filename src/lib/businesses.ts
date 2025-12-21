@@ -42,7 +42,7 @@ export async function getBusinesses(): Promise<Business[]> {
             subcategory: row.subcategory,
             address: row.address,
             phone: row.phone,
-            is_premium: row.is_premium === 'true' || row.is_premium === '1',
+            is_premium: row.is_premium?.toUpperCase() === 'TRUE' || row.is_premium === '1',
             email: row.email || undefined,
             website: row.website || undefined,
             facebook: row.facebook || undefined,

@@ -68,7 +68,7 @@ export default function Map({ address, businessName, className = '' }: MapProps)
         console.error('Error geocoding address:', error);
         
         // Fallback to Retford center
-        if (mapRef.current) {
+        if (mapRef.current && !mapInstanceRef.current) {
           const map = L.map(mapRef.current).setView([53.3225, -0.9417], 13);
           mapInstanceRef.current = map;
 

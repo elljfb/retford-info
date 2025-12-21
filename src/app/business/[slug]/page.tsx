@@ -3,6 +3,8 @@ import { getBusinessBySlug, getBusinesses } from '@/lib/businesses';
 import { notFound } from 'next/navigation';
 import ShareButtons from '@/components/ShareButtons';
 import dynamic from 'next/dynamic';
+import { marked } from 'marked';
+import Image from 'next/image';
 
 const Map = dynamic(() => import('@/components/Map'), {
   ssr: false,
@@ -50,9 +52,21 @@ export default async function BusinessPage({ params }: { params: { slug: string 
   }
 
   const images = business.images ? business.images.split(',').map(img => img.trim()) : [];
+  
+  // Parse markdown description if it exists
+  const descriptionHtml = business.description ? await marked.parse(business.description) : '';
 
-  // Get background image for basic listings based on category
-  const getCategoryBackground = () => {
+  // Get background image for cover section
+  const getCoverStyle = () => {
+    // Premium businesses with images: use first image as cover
+    if (business.is_premium && images.length > 0) {
+      return { 
+        backgroundImage: `url(${images[0]})`, 
+        backgroundSize: 'cover', 
+        backgroundPosition: 'center' 
+      };
+    }
+    // Basic listings: use category background
     if (!business.is_premium) {
       const category = business.category.toLowerCase();
       if (category === 'eat and drink') {
@@ -68,10 +82,11 @@ export default async function BusinessPage({ params }: { params: { slug: string 
         return { backgroundImage: 'url(/businesses/accommodation/accommodation.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' };
       }
     }
+    // Default gradient
     return {};
   };
 
-  const backgroundStyle = getCategoryBackground();
+  const coverStyle = getCoverStyle();
 
   // Schema.org structured data for SEO
   const schemaData = {
@@ -106,9 +121,9 @@ export default async function BusinessPage({ params }: { params: { slug: string 
       {/* Cover Section */}
       <section 
         className="relative w-full h-96 bg-gradient-to-r from-accent to-blue-300 flex items-center justify-center"
-        style={backgroundStyle}
+        style={coverStyle}
       >
-        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="absolute inset-0 bg-black opacity-40"></div>
         <div className="relative text-center text-white z-10 px-4">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">{business.name}</h1>
           <div className="flex justify-center">
@@ -127,8 +142,18 @@ export default async function BusinessPage({ params }: { params: { slug: string 
         {/* Image Carousel (Premium) */}
         {business.is_premium && images.length > 0 && (
           <section className="mb-12">
-            <div className="bg-gray-200 h-96 rounded-lg flex items-center justify-center">
-              <p className="text-gray-500">[Image Carousel: {images.length} images]</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {images.map((image, index) => (
+                <div key={index} className="relative h-64 rounded-lg overflow-hidden">
+                  <Image
+                    src={image}
+                    alt={`${business.name} - Image ${index + 1}`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
+              ))}
             </div>
           </section>
         )}
@@ -136,18 +161,19 @@ export default async function BusinessPage({ params }: { params: { slug: string 
         {business.is_premium ? (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Main Content */}
-            <div className="md:col-span-2">
+            <div className="md:col-span-2 order-2 md:order-1">
               {business.description && (
                 <section className="mb-8">
-                  <h2 className="text-2xl font-bold mb-4">About</h2>
-                  <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">
-                    {business.description}
-                  </p>
+                  <h2 className="text-2xl font-bold mb-4">About {business.name}</h2>
+                  <div 
+                    className="text-gray-700 leading-relaxed markdown-content"
+                    dangerouslySetInnerHTML={{ __html: descriptionHtml }}
+                  />
                 </section>
               )}
               {business.opening_hours && (
                 <section className="mb-8">
-                  <h2 className="text-2xl font-bold mb-4">Opening Hours</h2>
+                  <h2 className="text-2xl font-bold mb-4">{business.name} Opening Hours</h2>
                   <p className="text-gray-700 whitespace-pre-wrap">
                     {business.opening_hours}
                   </p>
@@ -155,12 +181,12 @@ export default async function BusinessPage({ params }: { params: { slug: string 
               )}
             </div>
             {/* Sidebar */}
-            <div className="md:col-span-1">
+            <div className="md:col-span-1 order-1 md:order-2">
               <div className="bg-gray-50 p-6 rounded-lg mb-6">
                 <h3 className="text-xl font-bold mb-4">Contact {business.name}</h3>
                 {business.phone && (
                   <div className="mb-4">
-                    <a href={`tel:${business.phone}`} className="block w-full bg-accent text-white text-center px-6 py-3 rounded-lg hover:bg-accent-dark transition-colors font-semibold text-lg">
+                    <a href={`tel:${business.phone}`} className="block w-full bg-accent text-white text-center px-6 py-3 rounded-lg hover:bg-accent-dark hover:text-white transition-colors font-semibold text-lg">
                       📞 {business.phone}
                     </a>
                   </div>
@@ -187,30 +213,30 @@ export default async function BusinessPage({ params }: { params: { slug: string 
                   </div>
                 )}
                 {(business.facebook || business.instagram || business.twitter) && (
-                  <div className="mt-6 pt-6 border-t border-gray-300">
-                    <p className="text-sm text-gray-600 mb-3">Follow Us</p>
-                    <div className="flex gap-3">
-                      {business.facebook && (
-                        <a href={business.facebook} target="_blank" rel="noopener noreferrer" className="text-accent-dark hover:text-accent">
-                          <Facebook size={20} />
-                        </a>
-                      )}
-                      {business.instagram && (
-                        <a href={business.instagram} target="_blank" rel="noopener noreferrer" className="text-accent-dark hover:text-accent">
-                          <Instagram size={20} />
-                        </a>
-                      )}
-                      {business.twitter && (
-                        <a href={business.twitter} target="_blank" rel="noopener noreferrer" className="text-accent-dark hover:text-accent">
-                          <Twitter size={20} />
-                        </a>
-                      )}
-                    </div>
+                  <div className="space-y-3">
+                    {business.facebook && (
+                      <a href={business.facebook} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full bg-blue-600 text-white text-center px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                        <Facebook size={20} />
+                        Facebook
+                      </a>
+                    )}
+                    {business.instagram && (
+                      <a href={business.instagram} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full bg-gradient-to-br from-purple-600 to-pink-500 text-white text-center px-6 py-3 rounded-lg hover:from-purple-700 hover:to-pink-600 transition-colors font-semibold">
+                        <Instagram size={20} />
+                        Instagram
+                      </a>
+                    )}
+                    {business.twitter && (
+                      <a href={business.twitter} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full bg-black text-white text-center px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors font-semibold">
+                        <Twitter size={20} />
+                        Twitter / X
+                      </a>
+                    )}
                   </div>
                 )}
               </div>
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold mb-4">Find Us</h3>
+                <h3 className="text-xl font-bold mb-4">Find {business.name}</h3>
                 {business.address && (
                   <>
                     <div className="flex gap-2 text-gray-700 mb-4">
@@ -270,25 +296,25 @@ export default async function BusinessPage({ params }: { params: { slug: string 
                     </div>
                   )}
                   {(business.facebook || business.instagram || business.twitter) && (
-                    <div className="mt-6 pt-6 border-t border-gray-300">
-                      <p className="text-sm text-gray-600 mb-3">Follow Us</p>
-                      <div className="flex gap-3">
-                        {business.facebook && (
-                          <a href={business.facebook} target="_blank" rel="noopener noreferrer" className="text-accent-dark hover:text-accent">
-                            <Facebook size={20} />
-                          </a>
-                        )}
-                        {business.instagram && (
-                          <a href={business.instagram} target="_blank" rel="noopener noreferrer" className="text-accent-dark hover:text-accent">
-                            <Instagram size={20} />
-                          </a>
-                        )}
-                        {business.twitter && (
-                          <a href={business.twitter} target="_blank" rel="noopener noreferrer" className="text-accent-dark hover:text-accent">
-                            <Twitter size={20} />
-                          </a>
-                        )}
-                      </div>
+                    <div className="space-y-3">
+                      {business.facebook && (
+                        <a href={business.facebook} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full bg-blue-600 text-white text-center px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                          <Facebook size={20} />
+                          Facebook
+                        </a>
+                      )}
+                      {business.instagram && (
+                        <a href={business.instagram} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full bg-gradient-to-br from-purple-600 to-pink-500 text-white text-center px-6 py-3 rounded-lg hover:from-purple-700 hover:to-pink-600 transition-colors font-semibold">
+                          <Instagram size={20} />
+                          Instagram
+                        </a>
+                      )}
+                      {business.twitter && (
+                        <a href={business.twitter} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full bg-black text-white text-center px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors font-semibold">
+                          <Twitter size={20} />
+                          Twitter / X
+                        </a>
+                      )}
                     </div>
                   )}
                 </div>

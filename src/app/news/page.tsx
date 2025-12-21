@@ -5,6 +5,9 @@ import { ExternalLink } from 'lucide-react';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://retford.info';
 
+// Revalidate every 15 minutes (900 seconds)
+export const revalidate = 900;
+
 export const metadata = {
   title: 'Local News - Retford, Nottinghamshire',
   description: 'Stay updated with the latest news from Retford and surrounding areas',
