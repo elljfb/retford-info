@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Home, Search, MapPin } from 'lucide-react';
 
 export const metadata = {
-  title: '404 - Page Not Found | Retford.info',
+  title: '404 - Page Not Found - Retford, Nottinghamshire',
   description: 'The page you are looking for could not be found.',
 };
 
@@ -34,7 +34,7 @@ export default function NotFound() {
           </Link>
 
           <Link
-            href="/categories/eat-and-drink"
+            href="/categories/shops-and-businesses"
             className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow"
           >
             <Search className="w-12 h-12 text-accent-dark mb-4" />
