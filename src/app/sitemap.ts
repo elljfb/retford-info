@@ -3,7 +3,7 @@ import { getBusinesses, getCategories, getSubcategoriesByCategory } from '@/lib/
 import { getArticles, getNews } from '@/lib/articles';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://retford.info';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://retford.info';
 
   // Static pages
   const staticPages = [
