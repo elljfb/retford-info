@@ -22,8 +22,12 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const business = await getBusinessBySlug(params.slug);
   if (!business) return {};
   
+  // Handle single or multiple categories
+  const firstCategory = Array.isArray(business.category) ? business.category[0] : business.category;
+  const firstSubcategory = Array.isArray(business.subcategory) ? business.subcategory[0] : business.subcategory;
+  
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://retford.info';
-  const ogImage = `${siteUrl}/api/og?title=${encodeURIComponent(business.name)}&subtitle=${encodeURIComponent(business.category)}${business.subcategory ? `%20•%20${encodeURIComponent(business.subcategory)}` : ''}`;
+  const ogImage = `${siteUrl}/api/og?title=${encodeURIComponent(business.name)}&subtitle=${encodeURIComponent(firstCategory)}${firstSubcategory ? `%20•%20${encodeURIComponent(firstSubcategory)}` : ''}`;
   
   return {
     title: `${business.name} - Retford, Nottinghamshire`,
@@ -66,9 +70,9 @@ export default async function BusinessPage({ params }: { params: { slug: string 
         backgroundPosition: 'center' 
       };
     }
-    // Basic listings: use category background
+    // Basic listings: use category background (use first category if multiple)
     if (!business.is_premium) {
-      const category = business.category.toLowerCase();
+      const category = (Array.isArray(business.category) ? business.category[0] : business.category).toLowerCase();
       if (category === 'eat and drink') {
         return { backgroundImage: 'url(/businesses/eat-and-drink/eat-drink.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' };
       }
@@ -136,7 +140,14 @@ export default async function BusinessPage({ params }: { params: { slug: string 
         {/* Business Header */}
         <div className="mb-12">
           <h1 className="text-4xl font-bold mb-2">{business.name}</h1>
-          <p className="text-lg text-gray-600">{business.subcategory}</p>
+          <div className="flex flex-wrap gap-2">
+            {(Array.isArray(business.subcategory) ? business.subcategory : [business.subcategory]).map((sub, index) => (
+              <span key={index} className="text-lg text-gray-600">
+                {sub}
+                {index < (Array.isArray(business.subcategory) ? business.subcategory.length : 1) - 1 && ' • '}
+              </span>
+            ))}
+          </div>
         </div>
 
         {/* Image Carousel (Premium) */}

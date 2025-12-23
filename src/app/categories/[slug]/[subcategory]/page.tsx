@@ -53,14 +53,26 @@ export default async function SubcategoryPage({ params }: { params: { slug: stri
   const categoryName = params.slug.replace(/-/g, ' ');
   
   const allBusinesses = await getBusinessesByCategory(categoryName);
-  // Match by comparing slugified versions
+  // Match by comparing slugified versions - handle both single and array subcategories
   const businesses = allBusinesses.filter(b => {
-    const businessSubcategorySlug = b.subcategory.toLowerCase().replace(/&/g, 'and').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-    return businessSubcategorySlug === params.subcategory;
+    const subcategories = Array.isArray(b.subcategory) ? b.subcategory : [b.subcategory];
+    return subcategories.some(sub => {
+      const businessSubcategorySlug = sub.toLowerCase().replace(/&/g, 'and').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+      return businessSubcategorySlug === params.subcategory;
+    });
   });
   
-  // Get the actual subcategory name from the first business
-  const subcategoryName = businesses.length > 0 ? businesses[0].subcategory : params.subcategory.replace(/-/g, ' ');
+  // Get the actual subcategory name from the first business that matches
+  let subcategoryName = params.subcategory.replace(/-/g, ' ');
+  if (businesses.length > 0) {
+    const firstBusiness = businesses[0];
+    const subcategories = Array.isArray(firstBusiness.subcategory) ? firstBusiness.subcategory : [firstBusiness.subcategory];
+    const matchingSub = subcategories.find(sub => {
+      const slug = sub.toLowerCase().replace(/&/g, 'and').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+      return slug === params.subcategory;
+    });
+    if (matchingSub) subcategoryName = matchingSub;
+  }
 
   if (businesses.length === 0) {
     notFound();
@@ -98,10 +110,10 @@ export default async function SubcategoryPage({ params }: { params: { slug: stri
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="relative text-center text-white z-10 px-4">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            {subcategoryName.replace(/\b\w/g, l => l.toUpperCase())}
+            {subcategoryName.replace(/\b\w/g, (l: string) => l.toUpperCase())}
           </h1>
           <div className="flex justify-center">
-            <ShareButtons title={`${subcategoryName.replace(/\b\w/g, l => l.toUpperCase())} in Retford | Retford.info`} />
+            <ShareButtons title={`${subcategoryName.replace(/\b\w/g, (l: string) => l.toUpperCase())} in Retford | Retford.info`} />
           </div>
         </div>
       </section>
@@ -112,11 +124,11 @@ export default async function SubcategoryPage({ params }: { params: { slug: stri
           <Link href="/" className="hover:text-accent-dark">Home</Link>
           {' / '}
           <Link href={`/categories/${params.slug}`} className="hover:text-accent-dark">
-            {categoryName.replace(/\b\w/g, l => l.toUpperCase())}
+            {categoryName.replace(/\b\w/g, (l: string) => l.toUpperCase())}
           </Link>
           {' / '}
           <span className="text-gray-900 font-semibold">
-            {subcategoryName.replace(/\b\w/g, l => l.toUpperCase())}
+            {subcategoryName.replace(/\b\w/g, (l: string) => l.toUpperCase())}
           </span>
         </div>
       </section>
@@ -124,7 +136,7 @@ export default async function SubcategoryPage({ params }: { params: { slug: stri
       {/* Subcategory Intro */}
       <section className="max-w-6xl mx-auto px-6 py-8">
         <h2 className="text-4xl font-bold mb-6">
-          {subcategoryName.replace(/\b\w/g, l => l.toUpperCase())} in Retford
+          {subcategoryName.replace(/\b\w/g, (l: string) => l.toUpperCase())} in Retford
         </h2>
         <p className="text-lg leading-relaxed text-gray-700 max-w-3xl">
           Explore our selection of {subcategoryName.toLowerCase()} in Retford. 
@@ -171,7 +183,11 @@ export default async function SubcategoryPage({ params }: { params: { slug: stri
                     <h4 className="text-lg font-semibold mt-3 group-hover:text-accent-dark">
                       {business.name}
                     </h4>
-                    <p className="text-gray-600 text-sm">{business.subcategory}</p>
+                    <p className="text-gray-600 text-sm">
+                      {Array.isArray(business.subcategory) 
+                        ? business.subcategory.join(' • ') 
+                        : business.subcategory}
+                    </p>
                   </Link>
                 );
               })}
@@ -197,7 +213,11 @@ export default async function SubcategoryPage({ params }: { params: { slug: stri
                       <h4 className="text-lg font-semibold group-hover:text-accent-dark">
                         {business.name}
                       </h4>
-                      <p className="text-gray-600 text-sm">{business.subcategory}</p>
+                      <p className="text-gray-600 text-sm">
+                        {Array.isArray(business.subcategory) 
+                          ? business.subcategory.join(' • ') 
+                          : business.subcategory}
+                      </p>
                     </div>
                     {business.is_premium && (
                       <span className="bg-accent text-gray-900 px-2 py-1 rounded text-xs font-semibold">

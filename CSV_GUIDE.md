@@ -49,6 +49,9 @@ The businesses CSV file contains the following columns (in order):
   - "Things to Do"
   - (or other custom categories you define)
 - Case-sensitive
+- **For multiple categories**: Separate with semicolons (no spaces after semicolons)
+- Example single: "Eat and Drink"
+- Example multiple: "Eat and Drink;Things to Do"
 
 ### subcategory
 - Required
@@ -57,6 +60,9 @@ The businesses CSV file contains the following columns (in order):
   - For "Accommodation": Hotels, Bed & Breakfast, Self-catering
   - For "Shops": Clothes, Books, Food & Delicatessen
   - For "Things to Do": Museums, Sports, Entertainment
+- **For multiple subcategories**: Separate with semicolons (no spaces after semicolons)
+- Example single: "Restaurants"
+- Example multiple: "Pubs and Bars;Restaurants"
 
 ### address
 - Required
@@ -228,7 +234,22 @@ Before uploading, ensure:
 - [ ] Category and subcategory are spelled correctly
 - [ ] is_premium is either "true" or "false"
 - [ ] No extra spaces at start/end of fields
+- [ ] Multiple categories/subcategories are separated by semicolons only (no spaces after semicolons)
 - [ ] File is saved as CSV UTF-8 format
+
+## Multiple Categories Example
+
+For businesses that fit into multiple categories (e.g., a pub that also serves restaurant-quality food):
+
+```csv
+name,slug,category,subcategory,...
+"The Red Lion","the-red-lion","Eat and Drink","Pubs and Bars;Restaurants",...
+"Village Hall & Cafe","village-hall-cafe","Things to Do;Eat and Drink","Community Centers;Cafes",...
+```
+
+This allows:
+- The Red Lion to appear in both "Pubs and Bars" AND "Restaurants" listings
+- Village Hall to appear in both categories and both subcategories
 
 ## Troubleshooting
 
