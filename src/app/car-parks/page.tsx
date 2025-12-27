@@ -1,7 +1,7 @@
 import ShareButtons from '@/components/ShareButtons';
 
 export const metadata = {
-  title: 'Car Parks - Retford, Nottinghamshire',
+  title: 'Car Parks in Retford - Retford, Nottinghamshire',
   description: 'Find parking information in Retford town centre.',
 };
 
@@ -74,7 +74,13 @@ export default function CarParks() {
         <h2 className="text-3xl font-bold mb-6">Parking in Retford</h2>
         <p className="text-lg text-gray-700 mb-12">
           Retford town centre has several convenient car parks with reasonable rates. 
-          Most parking is free or low-cost, making it easy to visit our local shops and attractions.
+          Most parking around the town centre is council operated but is low-cost, making it easy to visit our local shops and attractions.
+        </p>
+        <br></br>
+        <h3 className="text-3xl font-bold mb-6">Free Parking in Retford</h3>
+        <p className="text-lg text-gray-700 mb-12">
+          Around the town there are side streets with free parking and the major supermarkets around the town allow 2 hours free parking for customers.
+          Also most of the council car parks in Retford offer free parking after 6pm on weekdays and all day on Sundays. For quick visits to the town centre you can park in the Asda Overflow car park next to Kings Park for 2 hours free parking.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">

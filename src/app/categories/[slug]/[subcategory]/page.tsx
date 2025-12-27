@@ -139,9 +139,7 @@ export default async function SubcategoryPage({ params }: { params: { slug: stri
           {subcategoryName.replace(/\b\w/g, (l: string) => l.toUpperCase())} in Retford
         </h2>
         <p className="text-lg leading-relaxed text-gray-700 max-w-3xl">
-          Explore our selection of {subcategoryName.toLowerCase()} in Retford. 
-          Find the perfect {subcategoryName.toLowerCase()} for your needs.
-        </p>
+          Explore our selection of {subcategoryName.toLowerCase()} in Retford, making it easier to find the right option for your needs. Whether you are comparing local businesses, looking for a trusted provider, or simply exploring what is available in the area, this page brings together a range of {subcategoryName.toLowerCase()} serving Retford and the surrounding areas, helping you make an informed choice based on your preferences and requirements.</p>
       </section>
 
       {/* Premium Listings */}

@@ -1,0 +1,42 @@
+{
+  "public\\main-cover.jpg": {
+    "hash": "8b1517586c9e08b9008b8452e2da2f40",
+    "size": 808.7060546875
+  },
+  "public\\retford-town-hall.jpg": {
+    "hash": "8b28415be824dbc1229571987f1cccdd",
+    "size": 564.5361328125
+  },
+  "public\\articles\\articles-cover.jpg": {
+    "hash": "8b28415be824dbc1229571987f1cccdd",
+    "size": 564.5361328125
+  },
+  "public\\news\\news-cover.jpg": {
+    "hash": "257e8b7ed839748b10ec49203b00462f",
+    "size": 67.736328125
+  },
+  "public\\businesses\\accommodation\\accommodation.jpg": {
+    "hash": "b93da1c26e9b693c578367856c60d59f",
+    "size": 175.3828125
+  },
+  "public\\businesses\\eat-and-drink\\eat-drink.jpg": {
+    "hash": "162a2f08fe4fe8d14f0d0355c846f25e",
+    "size": 62.3203125
+  },
+  "public\\businesses\\shops-and-businesses\\businesses.jpg": {
+    "hash": "508a2a0d9520acbdabee1309c5788baf",
+    "size": 214.54296875
+  },
+  "public\\businesses\\things-to-do\\things-to-do.jpg": {
+    "hash": "8b1517586c9e08b9008b8452e2da2f40",
+    "size": 808.7060546875
+  },
+  "public\\retfordinfo.png": {
+    "hash": "96b162772556d6f12a3c36b68223bde2",
+    "size": 129.6123046875
+  },
+  "public\\businesses\\eat-and-drink\\freds-1.png": {
+    "hash": "72058548b407eab0786ec8f1001de7a7",
+    "size": 390.5693359375
+  }
+}

@@ -104,8 +104,7 @@ export default async function CategoryPage({ params }: { params: { slug: string 
           {categoryName.replace(/\b\w/g, l => l.toUpperCase())} in Retford
         </h2>
         <p className="text-lg leading-relaxed text-gray-700 max-w-3xl">
-          Discover the best {categoryName.toLowerCase()} options in Retford. From local favourites to new
-          discoveries, find everything you need to make the most of your time in our vibrant community.
+          Discover a wide range of {params.slug === 'eat-and-drink' ? 'places to ' : ''}{categoryName.toLowerCase()} in Retford, from well-established local favourites to newer additions across the town. Explore what's available and find the places that help you make the most of your time in Retford.
         </p>
       </section>
 
