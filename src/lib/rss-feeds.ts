@@ -90,13 +90,18 @@ async function fetchRSSFeed(feedUrl: string, sourceName: string): Promise<NewsIt
         image = undefined;
       }
 
+      // Use default image if none found
+      if (!image) {
+        image = '/retford-town-hall.jpg';
+      }
+
       if (title && link) {
         items.push({
           title: title.trim(),
           link: link.trim(),
           description: stripHtml(description).substring(0, 200) + '...',
           pubDate: pubDate.trim(),
-          image: image?.trim(),
+          image: image.trim(),
           source: sourceName
         });
       }
