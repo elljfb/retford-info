@@ -38,5 +38,13 @@
   "public\\businesses\\eat-and-drink\\freds-1.png": {
     "hash": "72058548b407eab0786ec8f1001de7a7",
     "size": 390.5693359375
+  },
+  "public\\articles\\crimean-war.jpg": {
+    "hash": "5ba54467734fb3a06f9cb7d04afeb414",
+    "size": 536.5791015625
+  },
+  "public\\articles\\retford-cannon.jpg": {
+    "hash": "b04e3edcc8ec78ec160f3f17a678d082",
+    "size": 616.8359375
   }
 }
