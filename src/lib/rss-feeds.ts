@@ -30,6 +30,11 @@ const RSS_FEEDS = [
     name: 'Worksop Guardian',
     url: 'https://www.worksopguardian.co.uk/topic/retford/rss',
     source: 'Worksop Guardian'
+  },
+  {
+    name: 'West Bridgeford Wire',
+    url: 'https://westbridgfordwire.com/search/retford/feed/rss2/',
+    source: 'West Bridgeford Wire'
   }
   // Add more local news sources as needed
 ];
