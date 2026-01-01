@@ -15,7 +15,7 @@ CACHE_FILE = Path(".image_compression_cache.json")
 QUALITY = 85  # 85 is a good balance between quality and file size
 MAX_WIDTH = 1920  # Maximum width for images
 MAX_HEIGHT = 1920  # Maximum height for images
-SUPPORTED_FORMATS = {'.jpg', '.jpeg', '.png', '.webp'}
+SUPPORTED_FORMATS = {'.jpg', '.jpeg', '.png', '.webp', '.JPG'}
 
 def get_file_size_kb(filepath):
     """Get file size in KB."""

@@ -123,6 +123,39 @@ a:hover {
   margin: 1.5rem 0;
 }
 
+.article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  display: block;
+}
+
+.article-content thead {
+  background-color: #87CEEB;
+  color: white;
+}
+
+.article-content th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: bold;
+  border: 1px solid #87CEEB;
+}
+
+.article-content td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #E5E7EB;
+}
+
+.article-content tbody tr:nth-child(even) {
+  background-color: #F9FAFB;
+}
+
+.article-content tbody tr:hover {
+  background-color: #F3F4F6;
+}
+
 /* Markdown Content Styling (for business descriptions) */
 .markdown-content h1 {
   font-size: 2rem;
@@ -202,4 +235,37 @@ a:hover {
   margin: 1.5rem 0;
   font-style: italic;
   color: #4B5563;
+}
+
+.markdown-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  display: block;
+}
+
+.markdown-content thead {
+  background-color: #87CEEB;
+  color: white;
+}
+
+.markdown-content th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: bold;
+  border: 1px solid #87CEEB;
+}
+
+.markdown-content td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #E5E7EB;
+}
+
+.markdown-content tbody tr:nth-child(even) {
+  background-color: #F9FAFB;
+}
+
+.markdown-content tbody tr:hover {
+  background-color: #F3F4F6;
 }

@@ -46,5 +46,69 @@
   "public\\articles\\retford-cannon.jpg": {
     "hash": "b04e3edcc8ec78ec160f3f17a678d082",
     "size": 616.8359375
+  },
+  "public/retford-town-hall.jpg": {
+    "hash": "a4ce2738c001f1d51b5076e2c9b7cdec",
+    "size": 564.55859375
+  },
+  "public/main-cover.jpg": {
+    "hash": "fbddbf27c785f348330e2901ba6d46f0",
+    "size": 808.5400390625
+  },
+  "public/articles/retford-chinese-takeaway-menus.jpg": {
+    "hash": "829390e444234a4e391ec396e3df89c1",
+    "size": 410.421875
+  },
+  "public/articles/crimean-war.jpg": {
+    "hash": "1921c87adada1b83bf592092030b65ec",
+    "size": 536.19921875
+  },
+  "public/articles/articles-cover.jpg": {
+    "hash": "a4ce2738c001f1d51b5076e2c9b7cdec",
+    "size": 564.55859375
+  },
+  "public/articles/retford-cannon.jpg": {
+    "hash": "c39d859e6e7d2b97519976ccf297dbdd",
+    "size": 616.634765625
+  },
+  "public/news/news-cover.jpg": {
+    "hash": "d460006a0a1a0c41940f047d1e652f62",
+    "size": 67.736328125
+  },
+  "public/businesses/eat-and-drink/eat-drink.jpg": {
+    "hash": "684ae4c43a2eeef784c8eb8f4d7272e3",
+    "size": 62.2822265625
+  },
+  "public/businesses/accommodation/accommodation.jpg": {
+    "hash": "cd700b642ebcca8dd686fd0a189ca5d3",
+    "size": 175.380859375
+  },
+  "public/businesses/shops-and-businesses/businesses.jpg": {
+    "hash": "71550f5c43b9932ca185cf113f5eec4f",
+    "size": 214.5546875
+  },
+  "public/businesses/things-to-do/things-to-do.jpg": {
+    "hash": "fbddbf27c785f348330e2901ba6d46f0",
+    "size": 808.5400390625
+  },
+  "public/retfordinfo.png": {
+    "hash": "533b7f5950172c352e5eac0f3245e7dd",
+    "size": 129.4384765625
+  },
+  "public/articles/lucky-days.png": {
+    "hash": "ff75d79b6363cee4a6f877f146b35e05",
+    "size": 1104.357421875
+  },
+  "public/businesses/eat-and-drink/freds-1.png": {
+    "hash": "e4cdea1fc54d1300703c82288628d312",
+    "size": 389.4267578125
+  },
+  "public/articles/clarks1.JPG": {
+    "hash": "dfa2833949c01c036f49876e14ce6e9e",
+    "size": 591.384765625
+  },
+  "public/articles/clarks2.JPG": {
+    "hash": "cb529e95bb469471d798d27e67c938bc",
+    "size": 837.6669921875
   }
 }

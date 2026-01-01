@@ -50,7 +50,7 @@ export default async function ArticlesPage() {
               From historical insights to modern developments, our articles provide a closer look at life in Retford.
             </p>
             <p className="text-lg leading-relaxed text-gray-700">
-              <strong>Organizing a local event?</strong> We'd love to cover it! If you want us to write about your community event, 
+              <strong>Organising a local event?</strong> We'd love to cover it! If you want us to write about your community event, 
               fundraiser, or local initiative, please <a href="/contact" className="text-accent-dark hover:underline font-semibold">contact us</a>. 
               We offer free coverage for genuine local community events and are always looking for stories that matter to Retford residents.
             </p>
