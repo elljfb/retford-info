@@ -15,13 +15,7 @@ export default function WhatsOn() {
 
       <div className="max-w-4xl mx-auto px-6 py-12">
         <h2 className="text-3xl font-bold mb-6">Events in Retford</h2>
-        
-        <div className="bg-yellow-50 border border-yellow-200 p-6 rounded-lg mb-12">
-          <p className="text-gray-700">
-            Coming soon! Our events calendar is currently under development. 
-            Check back regularly for the latest events, festivals, and activities happening in Retford.
-          </p>
-        </div>
+      
 
         <div className="space-y-6">
           <div className="border-l-4 border-accent p-6 bg-gray-50">
