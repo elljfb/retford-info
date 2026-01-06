@@ -49,7 +49,7 @@ To ensure residents can meet the team and ask questions, a series of drop-in eve
 
 If you cannot attend an event in person, you can still view the proposals and submit your feedback through the following channels:
 
--   **Online:** Visit [stepfusion.com/consultation](https://www.google.com/search?q=https://stepfusion.com/consultation) to complete the feedback form.
+-   **Online:** Visit [stepfusion.com/consultation](https://stepfusion.com/consultation) to complete the feedback form.
 
 -   **Post:** Send your thoughts to 'FREEPOST STEP FUSION' (no stamp required).
 
