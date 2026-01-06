@@ -1,35 +1,35 @@
 {
   "public\\main-cover.jpg": {
-    "hash": "8b1517586c9e08b9008b8452e2da2f40",
-    "size": 808.7060546875
+    "hash": "ae837665477c8bd1cefe761f4d32b14a",
+    "size": 808.3515625
   },
   "public\\retford-town-hall.jpg": {
-    "hash": "8b28415be824dbc1229571987f1cccdd",
-    "size": 564.5361328125
+    "hash": "66555982d92df90f32f3374667818616",
+    "size": 564.52734375
   },
   "public\\articles\\articles-cover.jpg": {
-    "hash": "8b28415be824dbc1229571987f1cccdd",
-    "size": 564.5361328125
+    "hash": "66555982d92df90f32f3374667818616",
+    "size": 564.52734375
   },
   "public\\news\\news-cover.jpg": {
-    "hash": "257e8b7ed839748b10ec49203b00462f",
+    "hash": "d460006a0a1a0c41940f047d1e652f62",
     "size": 67.736328125
   },
   "public\\businesses\\accommodation\\accommodation.jpg": {
-    "hash": "b93da1c26e9b693c578367856c60d59f",
-    "size": 175.3828125
+    "hash": "67adb01469a206b243b3dcd37f6909d2",
+    "size": 175.384765625
   },
   "public\\businesses\\eat-and-drink\\eat-drink.jpg": {
-    "hash": "162a2f08fe4fe8d14f0d0355c846f25e",
-    "size": 62.3203125
+    "hash": "4af265d23368c690eb64a8c925c66aae",
+    "size": 62.28125
   },
   "public\\businesses\\shops-and-businesses\\businesses.jpg": {
-    "hash": "508a2a0d9520acbdabee1309c5788baf",
-    "size": 214.54296875
+    "hash": "9d8fbfc82ec470bceb0c446ce8e085c6",
+    "size": 214.5068359375
   },
   "public\\businesses\\things-to-do\\things-to-do.jpg": {
-    "hash": "8b1517586c9e08b9008b8452e2da2f40",
-    "size": 808.7060546875
+    "hash": "ae837665477c8bd1cefe761f4d32b14a",
+    "size": 808.3515625
   },
   "public\\retfordinfo.png": {
     "hash": "96b162772556d6f12a3c36b68223bde2",
@@ -40,12 +40,12 @@
     "size": 390.5693359375
   },
   "public\\articles\\crimean-war.jpg": {
-    "hash": "5ba54467734fb3a06f9cb7d04afeb414",
-    "size": 536.5791015625
+    "hash": "eeb9fdbcef8c22a54b5d383da5bf5a5e",
+    "size": 536.072265625
   },
   "public\\articles\\retford-cannon.jpg": {
-    "hash": "b04e3edcc8ec78ec160f3f17a678d082",
-    "size": 616.8359375
+    "hash": "7d7edc16cb7c95879b9380177de8c437",
+    "size": 616.4228515625
   },
   "public/retford-town-hall.jpg": {
     "hash": "a4ce2738c001f1d51b5076e2c9b7cdec",
@@ -110,5 +110,33 @@
   "public/articles/clarks2.JPG": {
     "hash": "cb529e95bb469471d798d27e67c938bc",
     "size": 837.6669921875
+  },
+  "public\\articles\\clarks1.JPG": {
+    "hash": "768ffbd961dd44dde21a13c5b03681a1",
+    "size": 591.4873046875
+  },
+  "public\\articles\\clarks2.JPG": {
+    "hash": "4b8d2e3dae7409a54738e7d0c3cb2efa",
+    "size": 837.6318359375
+  },
+  "public\\articles\\fusion-flyer1.jpg": {
+    "hash": "6307e0f4a6340b5993d38a09e09ec1d3",
+    "size": 174.2705078125
+  },
+  "public\\articles\\fusion-flyer2.jpg": {
+    "hash": "2e2444f4d0d3ecd4373db4c8a12dede5",
+    "size": 144.37890625
+  },
+  "public\\articles\\retford-chinese-takeaway-menus.jpg": {
+    "hash": "784b256a53019eb48d5466b5832e57e3",
+    "size": 410.3857421875
+  },
+  "public\\articles\\west-burton-retford.jpg": {
+    "hash": "089fdc217fb255d840a5e83118aa6fa0",
+    "size": 212.880859375
+  },
+  "public\\articles\\lucky-days.png": {
+    "hash": "6aa331626c791e8178986fb77a7ad6b4",
+    "size": 1107.224609375
   }
 }
