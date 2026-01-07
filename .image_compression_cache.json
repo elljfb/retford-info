@@ -138,5 +138,21 @@
   "public\\articles\\lucky-days.png": {
     "hash": "6aa331626c791e8178986fb77a7ad6b4",
     "size": 1107.224609375
+  },
+  "public\\articles\\mayflower-pilgrims.webp": {
+    "hash": "c107e26ecfdef0dbb5a88d46624f099f",
+    "size": 368.8359375
+  },
+  "public\\articles\\babworth-church.jpg": {
+    "hash": "06a204afca769aee58be713c2f6f0437",
+    "size": 289.28515625
+  },
+  "public\\articles\\babworth-church2.jpg": {
+    "hash": "d3b239ae56c6d78d862d29f09794cda4",
+    "size": 265.935546875
+  },
+  "public\\articles\\bassetlaw-museum.jpg": {
+    "hash": "8ca7f8b3775c8ece8df35488ac794f85",
+    "size": 578.17578125
   }
 }
