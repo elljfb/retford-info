@@ -25,6 +25,8 @@ export default function Footer() {
     { name: 'Terms & Conditions', href: '/terms' },
     { name: 'Contact', href: '/contact' },
     { name: 'About', href: '/about' },
+    { name: 'Worksop.info', href: 'https://worksop.info' },
+    { name: 'Ingoldmells.info', href: 'https://ingoldmells.info' },
   ];
 
   return (
