@@ -87,7 +87,7 @@ The story of Retford's connection to the Mayflower reminds us that history is ma
 
 Today, North Nottinghamshire proudly celebrates this heritage. The Pilgrim Roots project has developed trails, educational programmes, and events that bring this story to life for new generations. Visitors from America regularly make the pilgrimage in reverse, travelling to these quiet English villages to walk the paths their ancestors walked and to see the church where it all began.
 
-Beyond the Market Square, beyond the pleasant [cafés](categories/eat-and-drink/cafes) and historic buildings of modern Retford, lies a story of global significance. It is a story that begins with a country parson preaching radical ideas in a village church, continues through the courage of those willing to risk everything for their beliefs, and culminates in the establishment of principles that would influence not just America but democratic societies worldwide. This is Retford's remarkable gift to history—a legacy of religious freedom, self-governance, and the courage to challenge unjust authority that resonates to this day.
+Beyond the Market Square, beyond the pleasant [cafés](/categories/eat-and-drink/cafes) and historic buildings of modern Retford, lies a story of global significance. It is a story that begins with a country parson preaching radical ideas in a village church, continues through the courage of those willing to risk everything for their beliefs, and culminates in the establishment of principles that would influence not just America but democratic societies worldwide. This is Retford's remarkable gift to history—a legacy of religious freedom, self-governance, and the courage to challenge unjust authority that resonates to this day.
 
 **Image Sources**
 
