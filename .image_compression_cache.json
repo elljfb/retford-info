@@ -154,5 +154,21 @@
   "public\\articles\\bassetlaw-museum.jpg": {
     "hash": "8ca7f8b3775c8ece8df35488ac794f85",
     "size": 578.17578125
+  },
+  "public\\articles\\a1-retford.jpg": {
+    "hash": "cfdb69c7b43cf6539c518e0c164fa0fd",
+    "size": 56.072265625
+  },
+  "public\\articles\\steam-train-retford.jpg": {
+    "hash": "1c0b470355587d5588035b91e138f76f",
+    "size": 120.9990234375
+  },
+  "public\\articles\\train-station.jpg": {
+    "hash": "78e26d3e82ca59dd85f66a8ffa5f46a1",
+    "size": 140.70703125
+  },
+  "public\\articles\\canal-boat.png": {
+    "hash": "c7134249bc0eec5aec11ce6dc1ec726a",
+    "size": 1685.2373046875
   }
 }
