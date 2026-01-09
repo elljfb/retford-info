@@ -170,5 +170,13 @@
   "public\\articles\\canal-boat.png": {
     "hash": "c7134249bc0eec5aec11ce6dc1ec726a",
     "size": 1685.2373046875
+  },
+  "public\\articles\\retford-fire-1528.png": {
+    "hash": "dada71d1885ac76288c2491e6dacd151",
+    "size": 2978.4462890625
+  },
+  "public\\articles\\retford-fire.png": {
+    "hash": "dc55e4012b5dba0501b74434d07d1477",
+    "size": 2532.9033203125
   }
 }
