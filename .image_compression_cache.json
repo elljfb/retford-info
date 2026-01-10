@@ -178,5 +178,33 @@
   "public\\articles\\retford-fire.png": {
     "hash": "dc55e4012b5dba0501b74434d07d1477",
     "size": 2532.9033203125
+  },
+  "public\\articles\\clumber-park-1.JPG": {
+    "hash": "c7326a8bb7afa1deeb89c95f89af3670",
+    "size": 503.5859375
+  },
+  "public\\articles\\clumber-park-2.JPG": {
+    "hash": "355e4816a0da3dd75f17f2886883c665",
+    "size": 636.181640625
+  },
+  "public\\articles\\idle-valley-1.JPG": {
+    "hash": "99c46f1011efd8d9465d89aa2fd9a8b9",
+    "size": 936.994140625
+  },
+  "public\\articles\\idle-valley-lake.jpg": {
+    "hash": "715ef3e5d73000f2a191fd96c4573e2d",
+    "size": 373.33203125
+  },
+  "public\\articles\\rufford-lake.jpg": {
+    "hash": "520d934e9bba66529426619619dc7e14",
+    "size": 612.40625
+  },
+  "public\\articles\\sherwood-pines-1.JPG": {
+    "hash": "8ce9162b81fa65f8e197278a6611140e",
+    "size": 1067.8896484375
+  },
+  "public\\articles\\sherwood-pines-2.JPG": {
+    "hash": "4d6814663f5a21f11f5170d8b1460fd5",
+    "size": 988.0146484375
   }
 }
