@@ -30,6 +30,7 @@ export default function RootLayout({
       <head>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6766680365418435"
           crossOrigin="anonymous"></script>
+          <script src="https://analytics.ahrefs.com/analytics.js" data-key="2SixlHm47EpoLQhXu//XrA" async></script>
       </head>
       <body className="flex flex-col min-h-screen">
         <Navbar />
