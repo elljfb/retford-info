@@ -1,9 +1,13 @@
+import { getUpcomingEvents, formatEventDate } from '@/lib/events';
+
 export const metadata = {
   title: 'What\'s On - Retford, Nottinghamshire',
   description: 'Find out what\'s happening in Retford this week and beyond.',
 };
 
 export default function WhatsOn() {
+  const upcomingEvents = getUpcomingEvents();
+
   return (
     <>
       <section className="relative w-full h-80 bg-gradient-to-r from-blue-400 to-blue-300 flex items-center justify-center" style={{backgroundImage: 'url(/retford-town-hall.jpg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
@@ -14,34 +18,28 @@ export default function WhatsOn() {
       </section>
 
       <div className="max-w-4xl mx-auto px-6 py-12">
-        <h2 className="text-3xl font-bold mb-6">Events in Retford</h2>
+        <h2 className="text-3xl font-bold mb-6">What's on in Retford</h2>
+        
+        <p className="text-gray-700 mb-8 leading-relaxed">
+          This page lists Retford's upcoming events for the benefit of people living in, and visiting, the historic market town. From traditional farmers markets and seasonal celebrations to community festivals and special occasions, discover what's happening in Retford and the surrounding area. Whether you're a long-time resident or planning a visit, check back regularly to stay up to date with all the latest events and activities taking place in our vibrant town centre and beyond.
+        </p>
+
+        <h3 className="text-3xl font-bold mb-6">Upcoming Events in Retford</h3>
       
-
-        <div className="space-y-6">
-          <div className="border-l-4 border-accent p-6 bg-gray-50">
-            <h3 className="text-xl font-bold mb-2">Community Week</h3>
-            <p className="text-gray-600 mb-2">Upcoming Event</p>
-            <p className="text-gray-700">
-              A week-long celebration of local community with markets, entertainment, and special events.
-            </p>
+        {upcomingEvents.length === 0 ? (
+          <p className="text-gray-600 mb-8">No upcoming events at the moment. Check back soon!</p>
+        ) : (
+          <div className="space-y-6">
+            {upcomingEvents.map((event, index) => (
+              <div key={index} className="border-l-4 border-accent p-6 bg-gray-50">
+                <h3 className="text-xl font-bold mb-2">{event.name}</h3>
+                <p className="text-gray-600 mb-1">📅 {formatEventDate(event.date)}</p>
+                <p className="text-gray-600 mb-2">📍 {event.location}</p>
+                <p className="text-gray-700">{event.description}</p>
+              </div>
+            ))}
           </div>
-
-          <div className="border-l-4 border-accent p-6 bg-gray-50">
-            <h3 className="text-xl font-bold mb-2">Christmas Markets</h3>
-            <p className="text-gray-600 mb-2">Seasonal Event</p>
-            <p className="text-gray-700">
-              Browse local crafts, gifts, and festive treats at our town centre Christmas markets.
-            </p>
-          </div>
-
-          <div className="border-l-4 border-accent p-6 bg-gray-50">
-            <h3 className="text-xl font-bold mb-2">Farmers Market</h3>
-            <p className="text-gray-600 mb-2">Monthly Event</p>
-            <p className="text-gray-700">
-              Fresh local produce, baked goods, and artisan products. Usually held on the third Saturday.
-            </p>
-          </div>
-        </div>
+        )}
 
         <div className="mt-12 p-6 bg-gray-100 rounded-lg">
           <h3 className="text-xl font-bold mb-4">Submit an Event</h3>
