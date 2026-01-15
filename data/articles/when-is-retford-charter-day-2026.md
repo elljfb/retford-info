@@ -5,7 +5,7 @@ excerpt: Retford Charter Day is the town's beloved annual food, craft, and festi
 image: /articles/charter-day-header.jpg
 ---
 
-**Retford Charter Day 2026 will take place on Bank-Holiday Monday, 4th May 2026, from 10am until 4pm across historic Retford in north Nottinghamshire.**
+**Retford Charter Day 2026 will take place on Bank-Holiday Monday, 4th May 2026, across historic Retford in north Nottinghamshire.**
 
 ## What is Retford Charter Day?
 
@@ -19,7 +19,7 @@ Based on the tremendous success of previous years, Charter Day 2025 attracted ov
 
 ### Timing and Location
 
-The event runs from **10am to 4pm** across historic Retford, providing six hours of continuous entertainment and activities for all ages. The festivities spread throughout the town centre, allowing visitors to explore Retford's charming streets whilst enjoying the various attractions and stalls.
+The event runs all day across historic Retford, providing hours of continuous entertainment and activities for all ages. The festivities spread throughout the town centre and Kings Park, allowing visitors to explore Retford's charming streets whilst enjoying the various attractions and stalls.
 
 ### Stallholder Variety
 
@@ -74,7 +74,7 @@ This volunteer ethos means that every penny raised goes back into making the eve
 
 ### When to Arrive
 
-With the event running from 10am to 4pm, we recommend arriving early to make the most of your day. The morning tends to be slightly quieter, giving you a chance to browse the stalls before the crowds build up. However, the atmosphere throughout the day is wonderful, so arrive whenever suits your family best.
+With the event running pretty much all day, we recommend arriving early to make the most of your day. The morning tends to be slightly quieter, giving you a chance to browse the stalls before the crowds build up. However, the atmosphere throughout the day is wonderful, so arrive whenever suits your family best.
 
 ### What to Bring
 
@@ -111,7 +111,6 @@ With over 10,000 attendees expected, diverse stalls offering everything from han
 ## Mark Your Calendars
 
 **Monday, 4th May 2026**
-**10am - 4pm**
 **Historic Retford, North Nottinghamshire**
 
 Whether you're planning to visit, considering becoming a stallholder, or thinking about volunteering, Retford Charter Day 2026 is an event that celebrates the best of this historic market town. It's a day when medieval heritage meets modern community spirit, when local businesses thrive, and when thousands of people come together to celebrate all that makes Retford special.
