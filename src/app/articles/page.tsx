@@ -1,6 +1,5 @@
-import Link from 'next/link';
 import { getLatestArticles } from '@/lib/articles';
-import { formatDate } from '@/lib/utils';
+import ArticlesList from '@/components/ArticlesList';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://retford.info';
 
@@ -21,7 +20,8 @@ export const metadata = {
 };
 
 export default async function ArticlesPage() {
-  const articles = await getLatestArticles(10);
+  const initialArticles = await getLatestArticles(30);
+  const totalArticles = await getLatestArticles(1000);
 
   return (
     <>
@@ -60,48 +60,7 @@ export default async function ArticlesPage() {
 
       {/* Articles List */}
       <section className="max-w-6xl mx-auto px-6 py-12">
-        {articles.length === 0 ? (
-          <div className="text-center py-12">
-            <p className="text-gray-600 text-lg">No articles yet. Check back soon!</p>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {articles.map(article => (
-              <Link
-                key={article.slug}
-                href={`/articles/${article.slug}`}
-                className="block group bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden"
-              >
-                {article.image && (
-                  <div className="relative h-48 bg-gray-200">
-                    <img
-                      src={article.image}
-                      alt={article.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                )}
-                {!article.image && (
-                  <div className="h-48 bg-gradient-to-br from-accent to-blue-300 flex items-center justify-center">
-                    <span className="text-6xl">📝</span>
-                  </div>
-                )}
-                <div className="p-4">
-                  <time className="text-xs text-gray-500">{formatDate(article.date)}</time>
-                  <h2 className="text-lg font-bold my-2 group-hover:text-accent-dark line-clamp-2">
-                    {article.title}
-                  </h2>
-                  <p className="text-gray-700 text-sm leading-relaxed line-clamp-3">
-                    {article.excerpt}
-                  </p>
-                  <span className="inline-block mt-3 text-accent-dark text-sm font-semibold group-hover:underline">
-                    Read More →
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        )}
+        <ArticlesList initialArticles={initialArticles} totalCount={totalArticles.length} />
       </section>
     </>
   );
