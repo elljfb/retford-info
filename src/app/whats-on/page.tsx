@@ -1,8 +1,21 @@
 import { getUpcomingEvents, formatEventDate } from '@/lib/events';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://retford.info';
+
 export const metadata = {
   title: 'What\'s On - Retford, Nottinghamshire',
   description: 'Find out what\'s happening in Retford this week and beyond.',
+  openGraph: {
+    title: 'What\'s On - Retford, Nottinghamshire',
+    description: 'Find out what\'s happening in Retford this week and beyond.',
+    images: [`${siteUrl}/api/og?title=What%27s%20On&subtitle=Retford.info`],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'What\'s On - Retford, Nottinghamshire',
+    description: 'Find out what\'s happening in Retford this week and beyond.',
+    images: [`${siteUrl}/api/og?title=What%27s%20On&subtitle=Retford.info`],
+  },
 };
 
 export default function WhatsOn() {
