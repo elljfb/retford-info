@@ -230,5 +230,13 @@
   "public\\articles\\ramsdale-park-golf-centre.webp": {
     "hash": "ef735b7a02452fdaede674d737099f82",
     "size": 52.236328125
+  },
+  "public\\articles\\charter-day-2026.jpg": {
+    "hash": "2dde80d763933a7fbcecd6a8bba846c5",
+    "size": 60.810546875
+  },
+  "public\\articles\\charter-day-header.jpg": {
+    "hash": "d90cf08ee78b47b3d2d3ed0217e9580e",
+    "size": 877.9521484375
   }
 }
