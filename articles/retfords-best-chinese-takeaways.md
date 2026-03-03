@@ -14,7 +14,7 @@ From 50-year-old local legends to modern online-friendly kitchens, here is how R
 
 **Location:** 35 Grove Street, Retford, DN22 6JP **Established:** 1972
 
-Holding the top spot on TripAdvisor for Chinese cuisine in Retford, [Fred's Cantonese Restaurant](/business/freds-cantonese-restaurant) is a local institution that has served the town for over 50 years. It is highly regarded for its consistent quality and traditional approach.
+Holding the top spot on TripAdvisor for Chinese cuisine in Retford, Fred's Cantonese Restaurant is a local institution that has served the town for over 50 years. It is highly regarded for its consistent quality and traditional approach.
 
 -   **Signature Dishes:** Their extensive menu features local favorites like **Sesame Prawn Toast (£5.50)** and **Salted Chilli Spare Ribs (£8.60)**.
 
@@ -27,7 +27,7 @@ Holding the top spot on TripAdvisor for Chinese cuisine in Retford, [Fred's Cant
 
 **Location:** 16 Church Gate, Retford, DN22 6PQ
 
-Coming in at number two, [China Kitchen](/business/china-kitchen) is favored for its wide-ranging menu and reliable delivery service. It's a go-to for families looking for a classic "big" takeaway night.
+Coming in at number two, China Kitchen is favored for its wide-ranging menu and reliable delivery service. It's a go-to for families looking for a classic "big" takeaway night.
 
 -   **Standout Value:** Their **"Salt & Pepper Share Box" (£14.50)** is a community favorite, packing ribs, chicken balls, and chips into one feast.
 
@@ -40,7 +40,7 @@ Coming in at number two, [China Kitchen](/business/china-kitchen) is favored for
 
 **Location:** 20 Bridgegate, Retford, DN22 6AA
 
-Ranked third on TripAdvisor, [Lucky Days](/business/lucky-days) is praised for its fresh ingredients and "meal deal" trays that offer great value for solo diners or couples.
+Ranked third on TripAdvisor, Lucky Days is praised for its fresh ingredients and "meal deal" trays that offer great value for solo diners or couples.
 
 -   **Popular Choice:** Their **House Special Fried Rice** is frequently cited as a meal in itself, loaded with various meats and vegetables.
 
@@ -51,7 +51,7 @@ Ranked third on TripAdvisor, [Lucky Days](/business/lucky-days) is praised for i
 
 **Location:** 24 London Road, Retford, DN22 6AY
 
-[Open Kitchen](/business/open-kitchen) takes the fourth spot, appealing to those who want a mix of Chinese and English dishes (like sirloin steaks or omelettes) alongside traditional favorites.
+Open Kitchen takes the fourth spot, appealing to those who want a mix of Chinese and English dishes (like sirloin steaks or omelettes) alongside traditional favorites.
 
 -   **Tech-Friendly:** They are one of the few in town that allow for **online ordering** via their website for both delivery and collection.
 
@@ -89,6 +89,5 @@ To ensure this guide is the most accurate resource for Retford residents, we did
 
 **Note:** Some TripAdvisor listings aren't included in this list as we haven't checked out their menus personally. The full TripAdvisor list can be found [here.](https://www.tripadvisor.co.uk/FindRestaurants?geo=661690&sort=POPULARITY&cuisines=5379&broadened=false)
 
-**Want to see other Retford Takeaways?** Checkout our directory [here.](/categories/eat-and-drink/takeaways
-)
+
 
