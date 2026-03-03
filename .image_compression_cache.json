@@ -1,242 +1,66 @@
 {
-  "public\\main-cover.jpg": {
-    "hash": "ae837665477c8bd1cefe761f4d32b14a",
-    "size": 808.3515625
+  "public\\images\\kids-zone.png": {
+    "hash": "b84585524309d1ea8000e09a4144b7c1",
+    "size": 2295.9990234375
   },
-  "public\\retford-town-hall.jpg": {
-    "hash": "66555982d92df90f32f3374667818616",
-    "size": 564.52734375
+  "public\\images\\chesterfield-canal-worksop.jpg": {
+    "hash": "9b92ff99851c259548a029cf5ac60f7f",
+    "size": 411.923828125
   },
-  "public\\articles\\articles-cover.jpg": {
-    "hash": "66555982d92df90f32f3374667818616",
-    "size": 564.52734375
+  "public\\images\\clumber-lake.jpg": {
+    "hash": "c60494dc288ccfe7aaf5b1371000deec",
+    "size": 361.6220703125
   },
-  "public\\news\\news-cover.jpg": {
-    "hash": "d460006a0a1a0c41940f047d1e652f62",
-    "size": 67.736328125
+  "public\\images\\clumber-park.jpg": {
+    "hash": "cb328d14b4bfbb881815f33235e9d71e",
+    "size": 750.23828125
   },
-  "public\\businesses\\accommodation\\accommodation.jpg": {
-    "hash": "67adb01469a206b243b3dcd37f6909d2",
-    "size": 175.384765625
+  "public\\images\\lincoln.jpg": {
+    "hash": "df9ce843972a74281d2479ea7cad43fa",
+    "size": 505.015625
   },
-  "public\\businesses\\eat-and-drink\\eat-drink.jpg": {
-    "hash": "4af265d23368c690eb64a8c925c66aae",
-    "size": 62.28125
+  "public\\images\\sheffield.jpg": {
+    "hash": "46d46354982391e470400980766d4c69",
+    "size": 528.79296875
   },
-  "public\\businesses\\shops-and-businesses\\businesses.jpg": {
-    "hash": "9d8fbfc82ec470bceb0c446ce8e085c6",
-    "size": 214.5068359375
+  "public\\images\\worksop-abandoned-pumping-station.jpg": {
+    "hash": "3419cafdb712b710eb6e46dbafa3d5f9",
+    "size": 443.2822265625
   },
-  "public\\businesses\\things-to-do\\things-to-do.jpg": {
-    "hash": "ae837665477c8bd1cefe761f4d32b14a",
-    "size": 808.3515625
+  "public\\images\\worksop-history.jpg": {
+    "hash": "58d944e79d576caa189d3388ff6693e1",
+    "size": 191.37890625
   },
-  "public\\retfordinfo.png": {
-    "hash": "96b162772556d6f12a3c36b68223bde2",
-    "size": 129.6123046875
+  "public\\images\\worksop-hotels.jpg": {
+    "hash": "133c5f14d1950f25ecd469f79027b258",
+    "size": 171.7451171875
   },
-  "public\\businesses\\eat-and-drink\\freds-1.png": {
-    "hash": "72058548b407eab0786ec8f1001de7a7",
-    "size": 390.5693359375
+  "public\\images\\worksop-priory.jpg": {
+    "hash": "24b22da1698bbe534dee38bab41db275",
+    "size": 486.0517578125
   },
-  "public\\articles\\crimean-war.jpg": {
-    "hash": "eeb9fdbcef8c22a54b5d383da5bf5a5e",
-    "size": 536.072265625
+  "public\\images\\worksop-pumping-station.jpg": {
+    "hash": "597cfc63cd9ea3ceb5b3898304e7a201",
+    "size": 177.4755859375
   },
-  "public\\articles\\retford-cannon.jpg": {
-    "hash": "7d7edc16cb7c95879b9380177de8c437",
-    "size": 616.4228515625
+  "public\\images\\shopping-worksop.webp": {
+    "hash": "bdc9255c9080cac42bb6242945c859d5",
+    "size": 37.013671875
   },
-  "public/retford-town-hall.jpg": {
-    "hash": "a4ce2738c001f1d51b5076e2c9b7cdec",
-    "size": 564.55859375
+  "public\\images\\valley-school-worksop.png": {
+    "hash": "c1d03bfa0dd8107752c09542dd40c5cb",
+    "size": 326.0263671875
   },
-  "public/main-cover.jpg": {
-    "hash": "fbddbf27c785f348330e2901ba6d46f0",
-    "size": 808.5400390625
+  "public\\images\\canal-path.jpg": {
+    "hash": "e2b4a899927c115b5892c623ba3a371f",
+    "size": 420.19140625
   },
-  "public/articles/retford-chinese-takeaway-menus.jpg": {
-    "hash": "829390e444234a4e391ec396e3df89c1",
-    "size": 410.421875
+  "public\\images\\worksop-college.jpg": {
+    "hash": "dce6690aa306b86633d376633bcf17a5",
+    "size": 608.7978515625
   },
-  "public/articles/crimean-war.jpg": {
-    "hash": "1921c87adada1b83bf592092030b65ec",
-    "size": 536.19921875
-  },
-  "public/articles/articles-cover.jpg": {
-    "hash": "a4ce2738c001f1d51b5076e2c9b7cdec",
-    "size": 564.55859375
-  },
-  "public/articles/retford-cannon.jpg": {
-    "hash": "c39d859e6e7d2b97519976ccf297dbdd",
-    "size": 616.634765625
-  },
-  "public/news/news-cover.jpg": {
-    "hash": "d460006a0a1a0c41940f047d1e652f62",
-    "size": 67.736328125
-  },
-  "public/businesses/eat-and-drink/eat-drink.jpg": {
-    "hash": "684ae4c43a2eeef784c8eb8f4d7272e3",
-    "size": 62.2822265625
-  },
-  "public/businesses/accommodation/accommodation.jpg": {
-    "hash": "cd700b642ebcca8dd686fd0a189ca5d3",
-    "size": 175.380859375
-  },
-  "public/businesses/shops-and-businesses/businesses.jpg": {
-    "hash": "71550f5c43b9932ca185cf113f5eec4f",
-    "size": 214.5546875
-  },
-  "public/businesses/things-to-do/things-to-do.jpg": {
-    "hash": "fbddbf27c785f348330e2901ba6d46f0",
-    "size": 808.5400390625
-  },
-  "public/retfordinfo.png": {
-    "hash": "533b7f5950172c352e5eac0f3245e7dd",
-    "size": 129.4384765625
-  },
-  "public/articles/lucky-days.png": {
-    "hash": "ff75d79b6363cee4a6f877f146b35e05",
-    "size": 1104.357421875
-  },
-  "public/businesses/eat-and-drink/freds-1.png": {
-    "hash": "e4cdea1fc54d1300703c82288628d312",
-    "size": 389.4267578125
-  },
-  "public/articles/clarks1.JPG": {
-    "hash": "dfa2833949c01c036f49876e14ce6e9e",
-    "size": 591.384765625
-  },
-  "public/articles/clarks2.JPG": {
-    "hash": "cb529e95bb469471d798d27e67c938bc",
-    "size": 837.6669921875
-  },
-  "public\\articles\\clarks1.JPG": {
-    "hash": "768ffbd961dd44dde21a13c5b03681a1",
-    "size": 591.4873046875
-  },
-  "public\\articles\\clarks2.JPG": {
-    "hash": "4b8d2e3dae7409a54738e7d0c3cb2efa",
-    "size": 837.6318359375
-  },
-  "public\\articles\\fusion-flyer1.jpg": {
-    "hash": "6307e0f4a6340b5993d38a09e09ec1d3",
-    "size": 174.2705078125
-  },
-  "public\\articles\\fusion-flyer2.jpg": {
-    "hash": "2e2444f4d0d3ecd4373db4c8a12dede5",
-    "size": 144.37890625
-  },
-  "public\\articles\\retford-chinese-takeaway-menus.jpg": {
-    "hash": "784b256a53019eb48d5466b5832e57e3",
-    "size": 410.3857421875
-  },
-  "public\\articles\\west-burton-retford.jpg": {
-    "hash": "089fdc217fb255d840a5e83118aa6fa0",
-    "size": 212.880859375
-  },
-  "public\\articles\\lucky-days.png": {
-    "hash": "6aa331626c791e8178986fb77a7ad6b4",
-    "size": 1107.224609375
-  },
-  "public\\articles\\mayflower-pilgrims.webp": {
-    "hash": "c107e26ecfdef0dbb5a88d46624f099f",
-    "size": 368.8359375
-  },
-  "public\\articles\\babworth-church.jpg": {
-    "hash": "06a204afca769aee58be713c2f6f0437",
-    "size": 289.28515625
-  },
-  "public\\articles\\babworth-church2.jpg": {
-    "hash": "d3b239ae56c6d78d862d29f09794cda4",
-    "size": 265.935546875
-  },
-  "public\\articles\\bassetlaw-museum.jpg": {
-    "hash": "8ca7f8b3775c8ece8df35488ac794f85",
-    "size": 578.17578125
-  },
-  "public\\articles\\a1-retford.jpg": {
-    "hash": "cfdb69c7b43cf6539c518e0c164fa0fd",
-    "size": 56.072265625
-  },
-  "public\\articles\\steam-train-retford.jpg": {
-    "hash": "1c0b470355587d5588035b91e138f76f",
-    "size": 120.9990234375
-  },
-  "public\\articles\\train-station.jpg": {
-    "hash": "78e26d3e82ca59dd85f66a8ffa5f46a1",
-    "size": 140.70703125
-  },
-  "public\\articles\\canal-boat.png": {
-    "hash": "c7134249bc0eec5aec11ce6dc1ec726a",
-    "size": 1685.2373046875
-  },
-  "public\\articles\\retford-fire-1528.png": {
-    "hash": "dada71d1885ac76288c2491e6dacd151",
-    "size": 2978.4462890625
-  },
-  "public\\articles\\retford-fire.png": {
-    "hash": "dc55e4012b5dba0501b74434d07d1477",
-    "size": 2532.9033203125
-  },
-  "public\\articles\\clumber-park-1.JPG": {
-    "hash": "c7326a8bb7afa1deeb89c95f89af3670",
-    "size": 503.5859375
-  },
-  "public\\articles\\clumber-park-2.JPG": {
-    "hash": "355e4816a0da3dd75f17f2886883c665",
-    "size": 636.181640625
-  },
-  "public\\articles\\idle-valley-1.JPG": {
-    "hash": "99c46f1011efd8d9465d89aa2fd9a8b9",
-    "size": 936.994140625
-  },
-  "public\\articles\\idle-valley-lake.jpg": {
-    "hash": "715ef3e5d73000f2a191fd96c4573e2d",
-    "size": 373.33203125
-  },
-  "public\\articles\\rufford-lake.jpg": {
-    "hash": "520d934e9bba66529426619619dc7e14",
-    "size": 612.40625
-  },
-  "public\\articles\\sherwood-pines-1.JPG": {
-    "hash": "8ce9162b81fa65f8e197278a6611140e",
-    "size": 1067.8896484375
-  },
-  "public\\articles\\sherwood-pines-2.JPG": {
-    "hash": "4d6814663f5a21f11f5170d8b1460fd5",
-    "size": 988.0146484375
-  },
-  "public\\articles\\lincoln-golf-centre.jpg": {
-    "hash": "bdc84fface241a2e376cb99d38d18776",
-    "size": 134.7197265625
-  },
-  "public\\articles\\retford-golf-club-chris-morgan.jpg": {
-    "hash": "87249d39002a405991650c7723aee220",
-    "size": 72.78515625
-  },
-  "public\\articles\\retford-golf-club.jpg": {
-    "hash": "d0121d1f5584dc9ad6707a6c7c2b311a",
-    "size": 333.3984375
-  },
-  "public\\articles\\styrrup-driving-range.jpg": {
-    "hash": "9a30670cd6edd2ed1dfef56538659778",
-    "size": 102.0087890625
-  },
-  "public\\articles\\doncaster-golf-range.png": {
-    "hash": "7344895ddf2315df2848ec52b999e37f",
-    "size": 518.8505859375
-  },
-  "public\\articles\\ramsdale-park-golf-centre.webp": {
-    "hash": "ef735b7a02452fdaede674d737099f82",
-    "size": 52.236328125
-  },
-  "public\\articles\\charter-day-2026.jpg": {
-    "hash": "2dde80d763933a7fbcecd6a8bba846c5",
-    "size": 60.810546875
-  },
-  "public\\articles\\charter-day-header.jpg": {
-    "hash": "d90cf08ee78b47b3d2d3ed0217e9580e",
-    "size": 877.9521484375
+  "public\\images\\worksop-train-station.jpg": {
+    "hash": "8e315572720ccde91ed403783ed2a12f",
+    "size": 154.7109375
   }
 }

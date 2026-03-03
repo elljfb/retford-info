@@ -1,5 +1,5 @@
 """
-Image Compression Script for Retford.info
+Image Compression Script for Worksop.info
 Compresses images in the /public directory while maintaining good quality.
 """
 
