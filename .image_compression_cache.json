@@ -62,5 +62,161 @@
   "public\\images\\worksop-train-station.jpg": {
     "hash": "8e315572720ccde91ed403783ed2a12f",
     "size": 154.7109375
+  },
+  "public\\images\\mayflower-pilgrims.webp": {
+    "hash": "28dd4ffdf706e7c59df4b1f84d8d5bb1",
+    "size": 362.56640625
+  },
+  "public\\images\\ramsdale-park-golf-centre.webp": {
+    "hash": "b03aab3fdd03f65bfd74bcb2cfa880e9",
+    "size": 50.5390625
+  },
+  "public\\images\\canal-boat.png": {
+    "hash": "c7134249bc0eec5aec11ce6dc1ec726a",
+    "size": 1685.2373046875
+  },
+  "public\\images\\doncaster-golf-range.png": {
+    "hash": "7344895ddf2315df2848ec52b999e37f",
+    "size": 518.8505859375
+  },
+  "public\\images\\lucky-days.png": {
+    "hash": "6aa331626c791e8178986fb77a7ad6b4",
+    "size": 1107.224609375
+  },
+  "public\\images\\retford-fire-1528.png": {
+    "hash": "dada71d1885ac76288c2491e6dacd151",
+    "size": 2978.4462890625
+  },
+  "public\\images\\retford-fire.png": {
+    "hash": "dc55e4012b5dba0501b74434d07d1477",
+    "size": 2532.9033203125
+  },
+  "public\\images\\retford-info.png": {
+    "hash": "246715f44c81dcdb3d1cb394b7d3a0d6",
+    "size": 124.1337890625
+  },
+  "public\\images\\a1-retford.jpg": {
+    "hash": "df63e77d95535159d0323ff13f858111",
+    "size": 56.0048828125
+  },
+  "public\\images\\articles-cover.jpg": {
+    "hash": "303460ae54e3a13b401d50ac2edabe20",
+    "size": 564.5927734375
+  },
+  "public\\images\\babworth-church.jpg": {
+    "hash": "188259318762a3ae5fa623c4a2007866",
+    "size": 289.2265625
+  },
+  "public\\images\\babworth-church2.jpg": {
+    "hash": "f08dfc09f4465e70fc54f9228265be1e",
+    "size": 265.921875
+  },
+  "public\\images\\bassetlaw-museum.jpg": {
+    "hash": "21248a4469ae6109fc50dfb1d2fdbf01",
+    "size": 577.0830078125
+  },
+  "public\\images\\charter-day-2026.jpg": {
+    "hash": "05a7d4f3136cd2d33d4d8ae0915f0f4d",
+    "size": 61.05078125
+  },
+  "public\\images\\charter-day-header.jpg": {
+    "hash": "165d7b86865841da998849e75da408fb",
+    "size": 877.4560546875
+  },
+  "public\\images\\clarks1.JPG": {
+    "hash": "abf608d970efb4d2578bbd08ea76353b",
+    "size": 591.462890625
+  },
+  "public\\images\\clarks2.JPG": {
+    "hash": "16661fb6aa870d6f03490a22ef02aa09",
+    "size": 837.572265625
+  },
+  "public\\images\\clumber-park-1.JPG": {
+    "hash": "58800834f21e497f6133960a3175f710",
+    "size": 503.7890625
+  },
+  "public\\images\\clumber-park-2.JPG": {
+    "hash": "eb5869b4da52b285686420c46ff40004",
+    "size": 636.5693359375
+  },
+  "public\\images\\crimean-war.jpg": {
+    "hash": "120f59258c3b0cf168bd5dcf4472529e",
+    "size": 536.013671875
+  },
+  "public\\images\\fusion-flyer1.jpg": {
+    "hash": "88dffbe7015c17d15dbc227dba0c3773",
+    "size": 174.265625
+  },
+  "public\\images\\fusion-flyer2.jpg": {
+    "hash": "8bc6d4054f9ed676c61af778f79d316a",
+    "size": 144.3701171875
+  },
+  "public\\images\\idle-valley-1.JPG": {
+    "hash": "c746963a70dc63ee212b5419e8d55335",
+    "size": 937.14453125
+  },
+  "public\\images\\idle-valley-lake.jpg": {
+    "hash": "631a73d5485561e7e033f5b16644ce98",
+    "size": 373.8623046875
+  },
+  "public\\images\\john-alcock.jpg": {
+    "hash": "5cb19e4bd877a915dde7669ca26cb221",
+    "size": 316.009765625
+  },
+  "public\\images\\liam-lawrence.jpg": {
+    "hash": "f22d724a12e6de7c4ae59c87ee7e9b2d",
+    "size": 230.1533203125
+  },
+  "public\\images\\lincoln-golf-centre.jpg": {
+    "hash": "937f72de2ebc6a87ca038084a8e3fedc",
+    "size": 134.6259765625
+  },
+  "public\\images\\retford-cannon.jpg": {
+    "hash": "e87625a2d580564ccc29449c8965f08d",
+    "size": 616.41015625
+  },
+  "public\\images\\retford-chinese-takeaway-menus.jpg": {
+    "hash": "ef76b30e081e3ae68fc4461dea8f2277",
+    "size": 410.3466796875
+  },
+  "public\\images\\retford-golf-club-chris-morgan.jpg": {
+    "hash": "71795d19d9178fcd0341d06493d3edcc",
+    "size": 72.89453125
+  },
+  "public\\images\\retford-golf-club.jpg": {
+    "hash": "9f07bd6ae8ce412e89fda94f30aa6c4d",
+    "size": 333.3388671875
+  },
+  "public\\images\\rufford-lake.jpg": {
+    "hash": "dc34d176e3f13abe8b468e7936329c86",
+    "size": 612.3916015625
+  },
+  "public\\images\\sherwood-pines-1.JPG": {
+    "hash": "dba7536f5d0166f410fdb3983bd9ee0b",
+    "size": 1067.2568359375
+  },
+  "public\\images\\sherwood-pines-2.JPG": {
+    "hash": "981f49b13c22e81ae0f127ff03fffe77",
+    "size": 987.65234375
+  },
+  "public\\images\\steam-train-retford.jpg": {
+    "hash": "f60f3e457067bd2017cfb7a6744cd600",
+    "size": 121.033203125
+  },
+  "public\\images\\styrrup-driving-range.jpg": {
+    "hash": "b8a326bd2bb74a296be2c264f315d1f3",
+    "size": 101.98828125
+  },
+  "public\\images\\train-station.jpg": {
+    "hash": "5708aafb03203113c8fe217cd48f381d",
+    "size": 140.7373046875
+  },
+  "public\\images\\west-burton-retford.jpg": {
+    "hash": "16cb6a660bcb712a5a6081729379ae97",
+    "size": 213.509765625
+  },
+  "public\\images\\william-brewster.jpg": {
+    "hash": "2fc7e3d9466a3e1b9602bc347415e654",
+    "size": 259.2119140625
   }
 }
