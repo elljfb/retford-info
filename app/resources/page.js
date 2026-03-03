@@ -173,7 +173,7 @@ export default function Resources() {
             <div className="bg-gray-50 rounded-lg p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Primary Schools</h3>
               <p className="text-gray-700">
-                Retford has numerous primary schools serving different areas of the town. School admissions are managed by Nottinghamshire County Council. For detailed information, see our <Link href="/articles/retford-schools-guide" className="text-blue-600 hover:text-blue-700 font-medium">schools guide</Link>.
+                Retford has numerous primary schools serving different areas of the town. School admissions are managed by Nottinghamshire County Council.
               </p>
             </div>
 
@@ -351,7 +351,7 @@ export default function Resources() {
             <div className="bg-gray-50 rounded-lg p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Sports Clubs</h3>
               <p className="text-gray-700">
-                Retford has football clubs, cricket clubs, rugby, tennis, bowls, and many other sports organizations. For more information, see our <Link href="/articles/retford-sports-and-recreation" className="text-blue-600 hover:text-blue-700 font-medium">sports and recreation guide</Link>.
+                Retford has football clubs, cricket clubs, rugby, tennis, bowls, and many other sports organizations.
               </p>
             </div>
 
@@ -363,9 +363,9 @@ export default function Resources() {
             </div>
 
             <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Kids Zone</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Squiggles Playden</h3>
               <p className="text-gray-700">
-                Popular indoor play centre for children offering soft play, activities, and parties. Located in Retford. See our <Link href="/articles/kids-zone-review" className="text-blue-600 hover:text-blue-700 font-medium">Kids Zone review</Link> for details.
+                Popular indoor play centre for children offering soft play, activities, and parties. Located in Retford.
               </p>
             </div>
           </div>
