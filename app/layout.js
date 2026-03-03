@@ -40,10 +40,7 @@ export const metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  verification: {
-    google: "add-your-google-verification-code-here",
-  },
+  }
 };
 
 export default function RootLayout({ children }) {

@@ -127,7 +127,11 @@ body {
 }
 
 .prose table {
+  display: block;
   width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   border-collapse: collapse;
   margin: 1.5rem 0;
   font-size: 0.95rem;
@@ -143,6 +147,7 @@ body {
   padding: 0.65rem 0.75rem;
   text-align: left;
   vertical-align: top;
+  white-space: nowrap;
 }
 
 .prose th {

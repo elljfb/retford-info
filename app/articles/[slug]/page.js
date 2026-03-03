@@ -3,6 +3,8 @@ import markdownToHtml from '@/lib/markdown';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+export const revalidate = 86400;
+
 export async function generateStaticParams() {
   const slugs = getArticleSlugs();
   return slugs.map((slug) => ({
@@ -38,6 +40,8 @@ export async function generateMetadata({ params }) {
 export default async function Article({ params }) {
   const { slug } = await params;
   const article = getArticleBySlug(slug);
+  const reviewedDate = new Date();
+  const reviewedDateIso = reviewedDate.toISOString().split('T')[0];
   
   if (!article) {
     notFound();
@@ -70,12 +74,35 @@ export default async function Article({ params }) {
               />
             </div>
           )}
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 md:p-5">
+            <p className="text-sm text-gray-700">
+              <strong>Author:</strong> Retford.info Editorial Team
+            </p>
+            <p className="text-sm text-gray-700 mt-1">
+              <strong>Last reviewed:</strong>{' '}
+              <time dateTime={reviewedDateIso}>{formatArticleDate(reviewedDateIso)}</time>
+            </p>
+          </div>
         </header>
 
         <div 
           className="prose prose-lg max-w-none"
           dangerouslySetInnerHTML={{ __html: content }}
         />
+
+        <div className="mt-12 bg-blue-50 border border-blue-200 rounded-lg p-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-2">Corrections and Updates</h2>
+          <p className="text-gray-700">
+            We aim for accuracy and keep articles under review. If you spot an error or have updated local information, please see our{' '}
+            <Link href="/editorial-policy" className="text-blue-600 hover:text-blue-700 font-medium">
+              editorial policy
+            </Link>{' '}
+            or{' '}
+            <Link href="/contact" className="text-blue-600 hover:text-blue-700 font-medium">
+              contact us
+            </Link>.
+          </p>
+        </div>
 
         <div className="mt-12 pt-8 border-t border-gray-200">
           <Link href="/articles" className="text-blue-600 hover:text-blue-700 font-medium transition-colors">
