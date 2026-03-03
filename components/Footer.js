@@ -77,8 +77,8 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               <li>
-                <Link href="https://retford.info" className="text-gray-600 hover:text-blue-700 transition-colors">
-                  Retford.info
+                <Link href="https://worksop.info" className="text-gray-600 hover:text-blue-700 transition-colors">
+                  Worksop.info
                 </Link>
               </li>
               <li>
@@ -92,7 +92,7 @@ export default function Footer() {
 
         <div className="mt-8 pt-8 border-t border-gray-200">
           <p className="text-center text-gray-500 text-sm">
-            © {currentYear} <Link href="https://801web.co">801 Web Co</Link>. All rights reserved.
+            © {currentYear} Retford.info - All rights reserved.
           </p>
         </div>
       </div>
