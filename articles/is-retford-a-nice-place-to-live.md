@@ -48,8 +48,8 @@ One of Retford's biggest draws is its relative affordability, especially given i
 
 According to Rightmove, the average house price in Retford in 2022 was **£189,000**. To give a clearer picture:
 
--   **2-bedroom terraced house:** around £100,000
--   **3-bedroom semi-detached house:** around £160,000
+-   **2-bedroom terraced house:** around £120,000
+-   **3-bedroom semi-detached house:** around £180,000
 -   **4-bedroom detached house:** around £350,000
 
 The surrounding villages are popular and can command a premium. As with everywhere in the UK, ongoing economic pressures may influence prices going forward, so it's worth keeping an eye on the market.
