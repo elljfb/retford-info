@@ -218,5 +218,33 @@
   "public\\images\\william-brewster.jpg": {
     "hash": "2fc7e3d9466a3e1b9602bc347415e654",
     "size": 259.2119140625
+  },
+  "public\\images\\chesterfield-canal-1.JPG": {
+    "hash": "a9837f7667e9d6da23e12dcb7527e10b",
+    "size": 1021.703125
+  },
+  "public\\images\\kings-park-gates.JPG": {
+    "hash": "b27261623008fa69129d80d9e470a95e",
+    "size": 1026.05859375
+  },
+  "public\\images\\kings-park-path.JPG": {
+    "hash": "6c7bbea224ebe38278d788da000bac56",
+    "size": 1086.267578125
+  },
+  "public\\images\\kings-park-river-2.JPG": {
+    "hash": "456ff6226f275fab95837db4a2636fbb",
+    "size": 899.72265625
+  },
+  "public\\images\\kings-park-river-3.JPG": {
+    "hash": "2a6593e87216f76ba25b12bc1aeedfd1",
+    "size": 1116.25390625
+  },
+  "public\\images\\kings-park-river.JPG": {
+    "hash": "9282fc395f406d3f19ee4e58aaeb8e0e",
+    "size": 803.7744140625
+  },
+  "public\\images\\kings-park-splashpark-sign.JPG": {
+    "hash": "6864bd19ba7fb246fd6bb0006504291f",
+    "size": 567.2626953125
   }
 }
