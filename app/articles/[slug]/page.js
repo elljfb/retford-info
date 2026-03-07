@@ -1,4 +1,4 @@
-import { formatArticleDate, getArticleBySlug, getArticleSlugs } from '@/lib/articles';
+import { formatArticleDate, getAllArticles, getArticleBySlug, getArticleSlugs } from '@/lib/articles';
 import markdownToHtml from '@/lib/markdown';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -40,6 +40,9 @@ export async function generateMetadata({ params }) {
 export default async function Article({ params }) {
   const { slug } = await params;
   const article = getArticleBySlug(slug);
+  const relatedArticles = getAllArticles()
+    .filter((item) => item.slug !== slug)
+    .slice(0, 3);
   const reviewedDate = new Date();
   const reviewedDateIso = reviewedDate.toISOString().split('T')[0];
   
@@ -103,6 +106,44 @@ export default async function Article({ params }) {
             </Link>.
           </p>
         </div>
+
+        {relatedArticles.length > 0 && (
+          <section className="mt-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">You Might Also Like</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {relatedArticles.map((relatedArticle) => (
+                <article
+                  key={relatedArticle.slug}
+                  className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow"
+                >
+                  <Link href={`/articles/${relatedArticle.slug}`} className="block">
+                    {relatedArticle.meta.image ? (
+                      <div className="relative h-40">
+                        <img
+                          src={relatedArticle.meta.image}
+                          alt={relatedArticle.meta.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    ) : (
+                      <div className="h-40 bg-gray-100" />
+                    )}
+                  </Link>
+                  <div className="p-4">
+                    <h3 className="text-lg font-semibold text-gray-900 leading-snug">
+                      <Link
+                        href={`/articles/${relatedArticle.slug}`}
+                        className="hover:text-blue-700 transition-colors"
+                      >
+                        {relatedArticle.meta.title}
+                      </Link>
+                    </h3>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
 
         <div className="mt-12 pt-8 border-t border-gray-200">
           <Link href="/articles" className="text-blue-600 hover:text-blue-700 font-medium transition-colors">
