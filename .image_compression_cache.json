@@ -250,5 +250,13 @@
   "public\\images\\retford-cemetary.jpg": {
     "hash": "4a56b9c4cbb3b4bf834032df01d0d433",
     "size": 601.0322265625
+  },
+  "public\\images\\skate-park-retford.jpeg": {
+    "hash": "df93cf898fe2be5a69156c872e653baf",
+    "size": 499.5849609375
+  },
+  "public\\images\\splash-park-retford.jpeg": {
+    "hash": "2d7bc908d8a0089b17eea8bfcc09177b",
+    "size": 379.4208984375
   }
 }
