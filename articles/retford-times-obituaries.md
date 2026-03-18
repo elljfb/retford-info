@@ -1,32 +1,53 @@
 ---
 title: Retford Times Obituaries
-date: 2026-02-10
-excerpt: As the Retford Times is owned and operated by the Lincolnshire Live digital news channel, it no longer has its own website and method of displaying obituaries online.
+date: 2026-03-18
+excerpt: Where to find Retford death notices online, how the Retford Times fits into the wider Reach and Lincolnshire Live network, and practical help for arranging a funeral notice locally.
 image: /images/retford-cemetary.jpg
 ---
 
-As the Retford Times is owned and operated by the Lincolnshire Live digital news channel, it no longer has its own website and method of displaying obituaries online.
+# Retford Times Obituaries
 
-To find deaths in Retford please visit [funeral-notices.co.uk](https://funeral-notices.co.uk/east+midlands-nottinghamshire-retford/death-notices) for up to date obituaries from Retford and and surrounding areas such as East Markham, Barnby Moor, Leverton and Sturton-Le-Steeple.
+If you have come here looking for a recent death notice in Retford, the quickest place to start is usually [funeral-notices.co.uk](https://funeral-notices.co.uk/east+midlands-nottinghamshire-retford/death-notices). Many local funeral directors and families now use it for notices, funeral details, donation requests, and tribute messages.
 
-Funeral Arrangements in Retford
--------------------------------
+## Why Retford Times notices are harder to find than they used to be
 
-If you are looking for funeral arrangements in Retford there are a number of local funeral directors who can offer their services. A few local funeral directors are:
+For many local families, the familiar name is still the *Retford Times*. It has been part of life in the town since the nineteenth century and remains a recognised local newspaper brand. Historically, families expected bereavement notices to appear in the local paper itself, either in print or on a dedicated newspaper website.
 
--   GD Hall Funeral Directors located on Bridgegate, Retford.
--   E Hurton and Sons Funeral Directors located on Grove Street, Retford.
--   Lincolnshire Co-Op Funeral Directors located on Moorgate, Retford.
--   Hancock Funeral Directors located on Bridgegate, Retford.
+That has changed as local newspaper publishing has been consolidated into larger regional groups. The *Retford Times* was founded in 1869 and later became part of the Northcliffe local newspaper portfolio. In 2012, Daily Mail and General Trust sold Northcliffe Media into Local World, a new regional publishing group. In 2015, Local World was bought by Trinity Mirror, the company now known as Reach plc. As a result, Retford coverage now sits within a much broader regional publishing network rather than under a standalone *Retford Times* website.
 
-About the Retford Times
------------------------
+## What Lincolnshire Live is
 
-The Retford Times is a weekly newspaper founded in 1869. It is distributed in and around the area of the North Nottinghamshire market town of East Retford. The newspaper contains local news and views from residents of Retford as well as local job listings, death notices and properties for sale in the area.
+Lincolnshire Live is Reach plc's regional news website for Lincolnshire and nearby communities. Retford stories are often surfaced there because Reach now organises much of its local online reporting through larger regional digital brands instead of running a separate full-service site for every historic newspaper title.
 
-About Retford
--------------
+That means someone searching for "Retford Times obituaries" may land on Lincolnshire Live pages, Reach network pages, or an obituary platform instead of a dedicated Retford-only notices section.
 
-Retford is a town in Nottinghamshire, England, 28 miles east of Sheffield and 31 miles west of Lincoln. The population at the 2011 census was 22,000, making it the fourth largest town in Nottinghamshire at the time.
+## How funeral-notices.co.uk works
 
-Retford is situated along the River Idle and nearby to the River Trent. The Chesterfield Canal also runs through the town. The East Coast Mainline also goes through Retford as well as the Sheffield to Lincoln Train-line. Close-by is the A1 which offers Retford connections to the local area and beyond.
+Funeral-notices.co.uk is a specialist notice and tribute platform used by funeral directors and newspaper groups across the UK. A notice normally has its own page, and that page can include:
+
+- The full death announcement
+- Funeral date, time and venue
+- Family flowers or donation requests
+- A link to the funeral director
+- Online condolence messages
+- Photos, candles, and shared memories
+
+Because each notice has a permanent page, it is often easier for relatives and friends to share than a printed newspaper notice alone.
+
+## How to search for a Retford notice
+
+If you are trying to find a specific person, search by full surname first and then narrow by place. It also helps to try nearby villages such as Barnby Moor, Clarborough, Ordsall, East Markham, Sutton, or Sturton-le-Steeple, especially if the family lived just outside the town but used a Retford funeral director.
+
+## Arranging a funeral notice in Retford
+
+Most families do not need to deal with the notice site directly unless they want to. In many cases, the funeral director will arrange the wording, submit the notice, and help you decide whether to place it online only, in print, or both. If you are arranging a funeral in Retford, ask:
+
+- Where the notice will appear
+- Whether it will include a tribute page
+- How donations should be handled
+- Whether you can amend the wording after publication
+- How long the notice will stay online
+
+Retford funeral directors such as G.D. Hall on Bridgegate, E Hurton & Sons on Grove Street, and Lincolnshire Co-op Funeral Services on Moorgate can usually explain the options clearly.
+
+In a difficult week, the main thing to know is this: if you cannot find an obituary on an old-style *Retford Times* page, that does not mean no notice has been published. Today, the most reliable route is usually the funeral-notices.co.uk Retford listings, with local funeral directors able to confirm details if needed.

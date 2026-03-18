@@ -4,7 +4,7 @@ export const metadata = {
 };
 
 export default function PrivacyPolicy() {
-  const lastUpdated = "2 January 2026";
+  const lastUpdated = "18 March 2026";
 
   return (
     <div className="bg-white">
@@ -60,6 +60,9 @@ export default function PrivacyPolicy() {
           <h2 className="text-3xl font-bold text-gray-900 mt-8 mb-4">Advertising</h2>
           <p className="text-gray-700 mb-4">
             We may display third-party advertisements on our website. These advertisements may use cookies and other tracking technologies to collect information about your browsing activities in order to provide relevant advertising. We do not have control over these third-party cookies.
+          </p>
+          <p className="text-gray-700 mb-4">
+            We use Google AdSense to display advertising, which uses cookies to serve personalised and non-personalised ads; you can read more in Google&apos;s <a href="https://policies.google.com/technologies/ads?hl=en-GB" className="text-blue-600 hover:text-blue-700 font-medium">advertising and cookie policy</a>.
           </p>
 
           <h2 className="text-3xl font-bold text-gray-900 mt-8 mb-4">Security of Your Information</h2>

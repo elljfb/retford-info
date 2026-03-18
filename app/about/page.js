@@ -50,6 +50,14 @@ export default function About() {
             Our team consists of local residents, history enthusiasts, and experienced content creators who are passionate about Retford and its heritage. We combine local knowledge with thorough research to ensure every article meets high standards of accuracy and usefulness. Each piece of content is carefully fact-checked and regularly updated to reflect changes in the town.
           </p>
 
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-4">Local Author</h2>
+          <p className="text-gray-700 mb-4">
+            Brenda Cooper is one of the named contributors behind Retford.info. Brenda has longstanding family ties to Retford and helps shape our coverage with practical local knowledge of the town centre, its history, and the everyday questions visitors and residents actually ask.
+          </p>
+          <p className="text-gray-700 mb-4">
+            When we publish guides about places, services, and local life in Retford, we want readers to know that the work is informed by someone with a real connection to the area rather than by an anonymous editorial label alone.
+          </p>
+
           <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-4">What We Cover</h2>
           <div className="grid md:grid-cols-2 gap-6 my-8">
             <div className="bg-gray-50 rounded-lg p-6">

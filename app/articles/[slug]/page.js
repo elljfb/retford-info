@@ -1,4 +1,4 @@
-import { formatArticleDate, getAllArticles, getArticleBySlug, getArticleSlugs } from '@/lib/articles';
+import { formatArticleDate, getAllArticles, getArticleBySlug } from '@/lib/articles';
 import markdownToHtml from '@/lib/markdown';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation';
 export const revalidate = 86400;
 
 export async function generateStaticParams() {
-  const slugs = getArticleSlugs();
+  const slugs = getAllArticles().map((article) => `${article.slug}.md`);
   return slugs.map((slug) => ({
     slug: slug.replace(/\.md$/, ''),
   }));
@@ -16,7 +16,7 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const article = getArticleBySlug(slug);
   
-  if (!article) {
+  if (!article || !article.meta.published) {
     return {
       title: 'Article Not Found',
     };
@@ -46,7 +46,7 @@ export default async function Article({ params }) {
   const reviewedDate = new Date();
   const reviewedDateIso = reviewedDate.toISOString().split('T')[0];
   
-  if (!article) {
+  if (!article || !article.meta.published) {
     notFound();
   }
   
@@ -79,7 +79,7 @@ export default async function Article({ params }) {
           )}
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 md:p-5">
             <p className="text-sm text-gray-700">
-              <strong>Author:</strong> Retford.info Editorial Team
+              <strong>Author:</strong> Brenda Cooper
             </p>
             <p className="text-sm text-gray-700 mt-1">
               <strong>Last reviewed:</strong>{' '}
