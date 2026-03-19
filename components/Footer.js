@@ -72,21 +72,6 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-            <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4 mt-8">
-              Sister Sites
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href="https://worksop.info" className="text-gray-600 hover:text-blue-700 transition-colors">
-                  Worksop.info
-                </Link>
-              </li>
-              <li>
-                <Link href="https://ingoldmells.info" className="text-gray-600 hover:text-blue-700 transition-colors">
-                  Ingoldmells.info
-                </Link>
-              </li>
-            </ul>
           </div>
         </div>
 
