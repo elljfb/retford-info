@@ -9,7 +9,7 @@ Finding the perfect balance of activities to keep children entertained while ens
 
 ## King’s Park: The Crown Jewel of Family Fun
 
-When talking about family activities in Retford, the conversation invariably starts with King’s Park. Located just a short stroll from the vibrant town square, King’s Park is an award-winning green space that consistently earns its Green Flag status. It is a stunning, beautifully maintained park that brilliantly caters to families of all ages.
+When talking about family activities in Retford, the conversation invariably starts with [King’s Park](/articles/a-guide-to-kings-park-retford). Located just a short stroll from the vibrant town square, King’s Park is an award-winning green space that consistently earns its Green Flag status. It is a stunning, beautifully maintained park that brilliantly caters to families of all ages.
 
 The park features wide open expanses of manicured grass perfect for impromptu games of football, frisbee, or a relaxed family picnic. The winding River Idle flows serenely through the park, offering opportunities to feed the ducks and swans—a timeless activity that never fails to enchant the little ones.
 
@@ -33,7 +33,7 @@ Additionally, the park includes multi-use games areas (MUGAs) for basketball and
 
 ## Educational Outings: The Bassetlaw Museum
 
-Injecting a bit of educational fun into a family day out is incredibly easy in Retford thanks to the excellent Bassetlaw Museum. 
+Injecting a bit of educational fun into a family day out is incredibly easy in Retford thanks to the excellent [Bassetlaw Museum](/articles/a-guide-to-bassetlaw-museum-retford). 
 
 ![Bassetlaw Museum](/images/bassetlaw-museum.jpg)
 
@@ -43,7 +43,7 @@ The museum does a remarkable job of bringing local history to life. Kids can exp
 
 ## Connecting with Nature: Idle Valley Nature Reserve
 
-Just on the fringes of Retford lies the Idle Valley Nature Reserve, managed extensively by the Nottinghamshire Wildlife Trust. It is a vast, spectacular wetland site offering a phenomenal outdoor experience for adventurous families. 
+Just on the fringes of Retford lies the [Idle Valley Nature Reserve](/articles/idle-valley-nature-reserve-guide), managed extensively by the Nottinghamshire Wildlife Trust. It is a vast, spectacular wetland site offering a phenomenal outdoor experience for adventurous families. 
 
 The reserve features an extensive network of footpaths varying in distance, making them suitable for tiny legs as well as seasoned hikers. The paths are generally flat and well-maintained, perfect for pushchairs and family bike rides. Children will love the wildlife spotting opportunities here; the reserve is a haven for myriad bird species, and in recent years, it has become famous for the reintroduction of beavers. 
 

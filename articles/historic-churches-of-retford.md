@@ -35,7 +35,7 @@ Among the regular congregation were significant historical figures, notably Will
 
 ![William Brewster](/images/william-brewster.jpg)
 
-These men were inspired by Clyfton's teaching to illegally separate from the established church. Facing severe religious persecution, they ultimately fled England, traversing to Holland before making the legendary voyage across the Atlantic Ocean aboard the *Mayflower* in 1620. They established the Plymouth Colony and became forever known as the Pilgrim Fathers.
+These men were inspired by Clyfton's teaching to illegally separate from the established church. Facing severe religious persecution, they ultimately fled England, traversing to Holland before making the legendary voyage across the Atlantic Ocean aboard the *Mayflower* in 1620. They established the Plymouth Colony and became forever known as the [Pilgrim Fathers](/articles/retford-and-the-mayflower-pilgrims).
 
 Today, visitors can walk the very paths these Pilgrims trod, culminating at Babworth Church. Inside, the church contains fascinating exhibitions and literature detailing the incredible, dangerous journey of its former congregation. It is a profound, incredibly moving historical site that attracts international tourists year after year.
 

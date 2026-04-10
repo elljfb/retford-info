@@ -13,7 +13,7 @@ To understand the significance of Retford Market, we have to travel back over se
 
 Throughout the medieval period, the market was the critical lifeblood of the town's economy. The broad, elegant square we see today was specifically designed to accommodate the sprawling stalls and the vast influx of livestock, grain, and textile traders. Over the centuries, the market adapted and evolved. During the Georgian and Victorian eras, significant improvements were made to the surrounding market square, leading to the handsome, red-brick architecture that frames the market today.
 
-The French-inspired Town Hall, constructed in 1868, proudly overlooks the market square, serving as a magnificent backdrop. Standing proudly within the square is the Broad Stone, which, according to local legend, was the base of an old market cross where during times of plague, money was washed in vinegar to prevent the spread of disease.
+The French-inspired Town Hall, constructed in 1868, proudly overlooks the market square, serving as a magnificent backdrop. Standing proudly within the square is the Broad Stone, which, according to local legend, was the base of an old market cross where during times of plague, money was washed in vinegar to prevent the spread of disease. You can learn more about these landmarks in our [Retford town centre walking tour](/articles/retford-town-centre-walking-tour).
 
 ![Retford High Street](/images/retford-high-street.jpg)
 
@@ -51,7 +51,7 @@ Furthermore, the market square acts as a vital social space. In an age where dig
 
 A trip to Retford Market is perfectly complemented by the excellent amenities surrounding the square. Flanking the market are numerous independent cafes, tearooms, and historic public houses. After a busy morning of shopping, there is nothing quite like retreating to a welcoming cafe for a pot of tea and a slice of locally baked cake.
 
-Many of these establishments purposefully source their ingredients from the market itself, creating a wonderful synergy between the stallholders and the hospitality sector. Moreover, the market square is just a stone's throw away from King's Park—an award-winning green space that offers a serene escape from the hustle and bustle of trading.
+Many of these establishments purposefully source their ingredients from the market itself, creating a wonderful synergy between the stallholders and the hospitality sector. Moreover, the market square is just a stone's throw away from [King's Park](/articles/a-guide-to-kings-park-retford)—an award-winning green space that offers a serene escape from the hustle and bustle of trading.
 
 ## Practical Information: Getting There and Parking
 
