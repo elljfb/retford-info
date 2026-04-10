@@ -278,5 +278,41 @@
   "public\\images\\doncaster-airport.jpg": {
     "hash": "cd6edbe55493bb06c49cbf117c5de435",
     "size": 182.1328125
+  },
+  "public\\images\\all-hallows-church-ordsall-retford.jpg": {
+    "hash": "96a1864b10968ff461561f5f92f1d09f",
+    "size": 81.35546875
+  },
+  "public\\images\\chesterfield-canal-lock-retford.jpg": {
+    "hash": "83166550250e0860f6cf217a882b85f9",
+    "size": 122.39453125
+  },
+  "public\\images\\public-path-retford-golf-club.jpg": {
+    "hash": "864c022f6474da3573c1ddb71e94f4f4",
+    "size": 110.43359375
+  },
+  "public\\images\\retford-boundry-sign.jpg": {
+    "hash": "6f546d0a8867dae8fe83f49cf1e6e2a4",
+    "size": 109.2529296875
+  },
+  "public\\images\\retford-canal-town-lock.jpg": {
+    "hash": "413fe89e3b6999e16246f8ffee496b38",
+    "size": 95.5322265625
+  },
+  "public\\images\\retford-high-street.jpg": {
+    "hash": "32caf447d3d6733f7cc160b9e10f0c72",
+    "size": 179.158203125
+  },
+  "public\\images\\retford-market.jpg": {
+    "hash": "028a75e553c3b67ebc5bbf06af0143ab",
+    "size": 187.9560546875
+  },
+  "public\\images\\snow-in-retford.jpg": {
+    "hash": "435e1059c5a4eeaa6faf073d35d08506",
+    "size": 80.439453125
+  },
+  "public\\images\\steam-train-through-retford.jpg": {
+    "hash": "3479b49adf03defccddd56ac3fbe046e",
+    "size": 115.4404296875
   }
 }
