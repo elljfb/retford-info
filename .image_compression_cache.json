@@ -314,5 +314,13 @@
   "public\\images\\steam-train-through-retford.jpg": {
     "hash": "3479b49adf03defccddd56ac3fbe046e",
     "size": 115.4404296875
+  },
+  "public\\images\\saucy-pizza-co.jpg": {
+    "hash": "684a1849f637f62a72b934e2e4ccad9b",
+    "size": 94.9453125
+  },
+  "public\\images\\meatcastles.webp": {
+    "hash": "832e69b7bf92b54138f64b6dfaab4e6d",
+    "size": 102.271484375
   }
 }
