@@ -14,7 +14,7 @@ export default function Footer() {
               <div className="text-2xl font-bold text-blue-700">Retford.info</div>
             </Link>
             <p className="mt-4 text-gray-600 max-w-md">
-              Your complete guide to Retford, Nottinghamshire. Discover local attractions, history, events, and everything you need to know about this charming market town.
+              Independent local guides to Retford, with named authorship, reviewed practical pages, and straightforward information for visitors and residents.
             </p>
           </div>
 
@@ -29,18 +29,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/authors/brenda-cooper" className="text-gray-600 hover:text-blue-700 transition-colors">
+                  Contributor
+                </Link>
+              </li>
+              <li>
                 <Link href="/articles" className="text-gray-600 hover:text-blue-700 transition-colors">
                   Articles
-                </Link>
-              </li>
-              <li>
-                <Link href="/faq" className="text-gray-600 hover:text-blue-700 transition-colors">
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <Link href="/resources" className="text-gray-600 hover:text-blue-700 transition-colors">
-                  Local Resources
                 </Link>
               </li>
               <li>
@@ -77,7 +72,7 @@ export default function Footer() {
 
         <div className="mt-8 pt-8 border-t border-gray-200">
           <p className="text-center text-gray-500 text-sm">
-            © {currentYear} Retford.info - All rights reserved.
+            &copy; {currentYear} Retford.info - All rights reserved.
           </p>
         </div>
       </div>

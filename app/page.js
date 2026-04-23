@@ -3,279 +3,218 @@ import { formatArticleDate, getAllArticles } from '@/lib/articles';
 
 export const metadata = {
   title: "Retford in Nottinghamshire | Information for Residents and Visitors",
-  description: "Welcome to Retford.info, your comprehensive guide to Retford, Nottinghamshire. Discover local attractions, history, events, and things to do.",
+  description: "Retford.info is an independent local guide to Retford, Nottinghamshire, with reviewed articles on things to do, local history, practical information, and everyday life in the town.",
+  alternates: {
+    canonical: "/",
+  },
 };
 
+const featuredGuides = [
+  'one-day-in-retford-a-first-time-visitors-itinerary',
+  'the-ultimate-retford-takeaway-guide',
+  'is-retford-a-nice-place-to-live',
+  'retford-and-the-mayflower-pilgrims',
+];
+
 export default function Home() {
-  const articles = getAllArticles().slice(0, 6);
+  const articles = getAllArticles();
+  const reviewedArticles = articles.filter((article) => article.meta.reviewedDate);
+  const latestReviewed = reviewedArticles.slice(0, 3);
+  const featuredArticles = featuredGuides
+    .map((slug) => articles.find((article) => article.slug === slug))
+    .filter(Boolean);
+  const sourceCount = articles.reduce((total, article) => total + article.meta.sources.length, 0);
 
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-b from-blue-50 to-white py-16 md:py-24">
+      <section
+        className="relative min-h-[72vh] flex items-end bg-gray-900"
+        style={{
+          backgroundImage: "linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.75)), url('/images/articles-cover.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <p className="text-sm font-semibold uppercase tracking-wide text-blue-200">Independent Local Guide</p>
+          <h1 className="mt-4 max-w-4xl text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+            Retford guides with real review dates, named authorship, and local context.
+          </h1>
+          <p className="mt-6 max-w-3xl text-lg md:text-xl text-blue-50">
+            Retford.info covers the town as a place people actually use: where to go, what has changed, what is worth seeing, and which details still need checking with official sources.
+          </p>
+          <div className="mt-8 flex flex-col sm:flex-row gap-4">
+            <Link
+              href="/articles"
+              className="inline-flex items-center justify-center px-8 py-3 text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+            >
+              Explore reviewed guides
+            </Link>
+            <Link
+              href="/authors/brenda-cooper"
+              className="inline-flex items-center justify-center px-8 py-3 border border-white/50 text-base font-medium rounded-md text-white hover:bg-white/10 transition-colors"
+            >
+              Meet the contributor
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 border-b border-gray-200 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Welcome to Retford
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Discover the charm of this historic Nottinghamshire market town. Your complete guide to local attractions, history, and things to do.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/articles"
-                className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
-              >
-                Explore Articles
-              </Link>
-              <Link
-                href="/about"
-                className="inline-flex items-center justify-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
-              >
-                Learn More
-              </Link>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            <div>
+              <div className="text-3xl font-bold text-gray-900">{articles.length}</div>
+              <div className="mt-1 text-sm text-gray-600">published guides</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-gray-900">{reviewedArticles.length}</div>
+              <div className="mt-1 text-sm text-gray-600">with dated editorial review</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-gray-900">{sourceCount}</div>
+              <div className="mt-1 text-sm text-gray-600">source notes currently shown</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-gray-900">1</div>
+              <div className="mt-1 text-sm text-gray-600">named local contributor page</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* About Retford Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Discover Historic Retford
-              </h2>
-              <div className="prose prose-lg text-gray-600">
-                <p className="mb-4">
-                  Nestled in the heart of North Nottinghamshire, Retford is a thriving market town with over 1,000 years of recorded history. Mentioned in the Domesday Book of 1086, this ancient settlement has evolved from a medieval trading centre into a modern community while retaining its historic character and charm.
-                </p>
-                <p className="mb-4">
-                  Retford has long been an important market and coaching town in North Nottinghamshire, with heritage landmarks including St Swithun&apos;s Church, the historic market square, and elegant Georgian streets.
-                </p>
-                <p className="mb-4">
-                  The town has strong transport links via the A1, A620 and A638, plus direct rail services to London, Doncaster, Lincoln and beyond. Retford town centre combines traditional market character with independent shops, cafes, and everyday services.
-                </p>
-                <p>
-                  Whether you're planning to visit for the rich historical heritage, explore the surrounding countryside and nature reserves, or discover local attractions, Retford provides an authentic English market town experience with modern amenities and warm community spirit.
-                </p>
-              </div>
-            </div>
-            <div className="mt-8 lg:mt-0">
-              <div className="bg-blue-50 rounded-lg p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Essential Information</h3>
-                <ul className="space-y-4">
-                  <li className="flex items-start">
-                    <svg className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <div>
-                      <strong className="text-gray-900">Location:</strong>
-                      <span className="text-gray-600"> North Nottinghamshire, England. District: Bassetlaw</span>
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                    </svg>
-                    <div>
-                      <strong className="text-gray-900">Population:</strong>
-                      <span className="text-gray-600"> Market town serving the wider Bassetlaw area</span>
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <div>
-                      <strong className="text-gray-900">Heritage:</strong>
-                      <span className="text-gray-600"> Founded before 1086, Domesday Book entry</span>
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                    <div>
-                      <strong className="text-gray-900">Transport:</strong>
-                      <span className="text-gray-600"> Rail station with services to major cities</span>
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                    </svg>
-                    <div>
-                      <strong className="text-gray-900">Nickname:</strong>
-                      <span className="text-gray-600"> Historic market town</span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Visit Retford Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Visit Retford?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From historic landmarks to natural beauty, Retford offers diverse attractions for every visitor
+          <div className="max-w-3xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">What makes this site useful</h2>
+            <p className="mt-4 text-lg text-gray-600">
+              This site works best when it is transparent about what is fixed, what is current, and what is still based on a wider local reading of the town rather than one official source.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg p-8 shadow-md">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Rich History & Heritage</h3>
-              <p className="text-gray-600">
-                Explore St Swithun&apos;s Church, Bassetlaw Museum, and Retford&apos;s historic streets to discover the town&apos;s local heritage.
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="rounded-lg border border-gray-200 p-6">
+              <h3 className="text-lg font-semibold text-gray-900">Named authorship</h3>
+              <p className="mt-3 text-gray-600">
+                Articles now link to a real contributor page instead of hiding behind a generic site label.
               </p>
             </div>
-            <div className="bg-white rounded-lg p-8 shadow-md">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Natural Beauty & Parks</h3>
-              <p className="text-gray-600">
-                Enjoy nearby green spaces including Kings&apos; Park, Idle Valley Nature Reserve, and walks along the Chesterfield Canal.
+            <div className="rounded-lg border border-gray-200 p-6">
+              <h3 className="text-lg font-semibold text-gray-900">Real review dates</h3>
+              <p className="mt-3 text-gray-600">
+                Time-sensitive guides show fixed review dates rather than pretending every page was checked today.
               </p>
             </div>
-            <div className="bg-white rounded-lg p-8 shadow-md">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Shopping & Markets</h3>
-              <p className="text-gray-600">
-                Traditional market town with two shopping centres, regular outdoor markets, independent retailers, and a vibrant town centre atmosphere with cafes and restaurants.
+            <div className="rounded-lg border border-gray-200 p-6">
+              <h3 className="text-lg font-semibold text-gray-900">Source notes</h3>
+              <p className="mt-3 text-gray-600">
+                Where a guide depends on organisers, public listings, or official information, those checks are shown below the article.
               </p>
             </div>
-            <div className="bg-white rounded-lg p-8 shadow-md">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Local Heritage</h3>
-              <p className="text-gray-600">
-                Discover Retford&apos;s market-town character through its civic buildings, churches, and long-standing local traditions.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg p-8 shadow-md">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Excellent Location</h3>
-              <p className="text-gray-600">
-                Ideally positioned between Sheffield, Nottingham, and Lincoln. Easy access via A-roads and direct rail links make Retford a perfect base for exploring the region.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg p-8 shadow-md">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Community & Culture</h3>
-              <p className="text-gray-600">
-                Welcoming community with regular events, festivals, local pubs, sports facilities, and a strong sense of local identity. Experience authentic English market town life.
+            <div className="rounded-lg border border-gray-200 p-6">
+              <h3 className="text-lg font-semibold text-gray-900">Corrections welcome</h3>
+              <p className="mt-3 text-gray-600">
+                Readers can report changes and errors directly so practical pages can be reviewed rather than left to drift.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Latest Articles */}
-      {articles.length > 0 && (
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Latest Articles
-              </h2>
-              <p className="text-xl text-gray-600">
-                Discover more about Retford through our informative guides
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+            <div className="max-w-3xl">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Start with the strongest guides</h2>
+              <p className="mt-4 text-lg text-gray-600">
+                These are the pages most likely to help a first-time visitor, a new resident, or someone trying to make sense of Retford beyond a generic town summary.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {articles.map((article) => (
-                <article key={article.slug} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                  {article.meta.image && (
-                    <Link href={`/articles/${article.slug}`}>
-                      <div className="relative h-48 w-full overflow-hidden bg-gray-200">
-                        <img
-                          src={article.meta.image}
-                          alt={article.meta.title}
-                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    </Link>
-                  )}
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <Link href={`/articles/${article.slug}`} className="hover:text-blue-700 transition-colors">
-                        {article.meta.title}
-                      </Link>
-                    </h3>
-                    <p className="text-gray-600 mb-4 line-clamp-3">{article.meta.description}</p>
-                    <div className="flex items-center justify-between">
-                      <time className="text-sm text-gray-500" dateTime={article.meta.date}>
-                        {formatArticleDate(article.meta.date)}
-                      </time>
-                      <Link
-                        href={`/articles/${article.slug}`}
-                        className="text-blue-600 hover:text-blue-700 font-medium transition-colors"
-                      >
-                        Read more →
-                      </Link>
+            <Link href="/articles" className="text-blue-700 hover:text-blue-800 font-medium">
+              View all articles
+            </Link>
+          </div>
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+            {featuredArticles.map((article) => (
+              <article key={article.slug} className="rounded-lg overflow-hidden bg-white border border-gray-200">
+                {article.meta.image && (
+                  <Link href={`/articles/${article.slug}`} className="block">
+                    <div className="h-56 bg-gray-200 overflow-hidden">
+                      <img
+                        src={article.meta.image}
+                        alt={article.meta.title}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
+                  </Link>
+                )}
+                <div className="p-6">
+                  <div className="flex flex-wrap gap-3 text-sm text-gray-500">
+                    <time dateTime={article.meta.date}>Published {formatArticleDate(article.meta.date)}</time>
+                    {article.meta.reviewedDate && (
+                      <span className="text-blue-700">Reviewed {formatArticleDate(article.meta.reviewedDate)}</span>
+                    )}
                   </div>
+                  <h3 className="mt-3 text-2xl font-bold text-gray-900">
+                    <Link href={`/articles/${article.slug}`} className="hover:text-blue-700 transition-colors">
+                      {article.meta.title}
+                    </Link>
+                  </h3>
+                  <p className="mt-3 text-gray-600">{article.meta.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {latestReviewed.length > 0 && (
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Recently reviewed</h2>
+              <p className="mt-4 text-lg text-gray-600">
+                A small but growing set of guides now carries explicit review dates and source notes.
+              </p>
+            </div>
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+              {latestReviewed.map((article) => (
+                <article key={article.slug} className="rounded-lg border border-gray-200 p-6">
+                  <div className="text-sm text-blue-700">
+                    Reviewed {formatArticleDate(article.meta.reviewedDate)}
+                  </div>
+                  <h3 className="mt-3 text-xl font-bold text-gray-900">
+                    <Link href={`/articles/${article.slug}`} className="hover:text-blue-700 transition-colors">
+                      {article.meta.title}
+                    </Link>
+                  </h3>
+                  <p className="mt-3 text-gray-600">{article.meta.description}</p>
                 </article>
               ))}
-            </div>
-            <div className="text-center mt-12">
-              <Link
-                href="/articles"
-                className="inline-flex items-center justify-center px-6 py-3 border border-blue-600 text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50 transition-colors"
-              >
-                View All Articles
-              </Link>
             </div>
           </div>
         </section>
       )}
 
-      {/* CTA Section */}
       <section className="py-16 bg-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Plan Your Visit to Retford
-          </h2>
-          <p className="text-xl text-blue-50 mb-8 max-w-2xl mx-auto">
-            Explore our comprehensive guides to make the most of your time in this historic Nottinghamshire town.
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-white">Help keep the practical pages accurate</h2>
+          <p className="mt-4 text-xl text-blue-50 max-w-3xl">
+            Local information changes quickly. If a venue closes, an event moves, or a guide needs correcting, please send it in so the next review pass starts from something real.
           </p>
-          <Link
-            href="/articles"
-            className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50 transition-colors"
-          >
-            Start Exploring
-          </Link>
+          <div className="mt-8 flex flex-col sm:flex-row gap-4">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center px-8 py-3 text-base font-medium rounded-md text-blue-700 bg-white hover:bg-blue-50 transition-colors"
+            >
+              Contact Retford.info
+            </Link>
+            <Link
+              href="/editorial-policy"
+              className="inline-flex items-center justify-center px-8 py-3 border border-white/40 text-base font-medium rounded-md text-white hover:bg-white/10 transition-colors"
+            >
+              Read the editorial policy
+            </Link>
+          </div>
         </div>
       </section>
     </div>

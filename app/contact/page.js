@@ -41,6 +41,9 @@ export default function Contact() {
           <p className="text-gray-700 mb-4">
             Our team includes local residents, researchers, and experienced content creators who are passionate about sharing the story of Retford with visitors and residents. We maintain strict editorial standards and are committed to accuracy, transparency, and providing genuine value to our readers.
           </p>
+          <p className="text-gray-700 mb-4">
+            If your message concerns a correction to one of our guides, please include the page URL and, if possible, the official or first-hand source you want us to check against. That makes it much easier to review practical information properly.
+          </p>
 
           <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-4">What We Can Help With</h2>
           

@@ -51,11 +51,23 @@ export default function About() {
           </p>
 
           <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-4">Local Author</h2>
+          <div className="my-8 max-w-xs">
+            <Image
+              src="/images/brenda-cooper.jpg"
+              alt="Brenda Cooper"
+              width={320}
+              height={400}
+              className="rounded-lg border border-gray-200"
+            />
+          </div>
           <p className="text-gray-700 mb-4">
-            Brenda Cooper is one of the named contributors behind Retford.info. Brenda has longstanding family ties to Retford and helps shape our coverage with practical local knowledge of the town centre, its history, and the everyday questions visitors and residents actually ask.
+            <a href="/authors/brenda-cooper" className="text-blue-600 hover:text-blue-700 font-medium">Brenda Cooper</a> is one of the named contributors behind Retford.info. Brenda has longstanding family ties to Retford and helps shape our coverage with practical local knowledge of the town centre, its history, and the everyday questions visitors and residents actually ask.
           </p>
           <p className="text-gray-700 mb-4">
             When we publish guides about places, services, and local life in Retford, we want readers to know that the work is informed by someone with a real connection to the area rather than by an anonymous editorial label alone.
+          </p>
+          <p className="text-gray-700 mb-4">
+            We now show fixed review dates on articles instead of automatically refreshing them on every page load. Where a guide depends on organisers, public listings, or official information, we also aim to show source notes directly on the page.
           </p>
 
           <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-4">What We Cover</h2>

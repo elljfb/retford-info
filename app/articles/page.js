@@ -4,6 +4,9 @@ import { formatArticleDate, getAllArticles } from '@/lib/articles';
 export const metadata = {
   title: "Articles",
   description: "Browse our collection of informative articles and guides about Retford, Nottinghamshire. Discover local attractions, history, and things to do.",
+  alternates: {
+    canonical: "/articles",
+  },
 };
 
 export default function Articles() {
@@ -17,7 +20,7 @@ export default function Articles() {
             Articles & Guides
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl">
-            Explore our comprehensive collection of articles about Retford, covering local attractions, history, events, and practical information for visitors and residents.
+            Explore our collection of practical, reviewed guides about Retford, covering local attractions, history, events, and everyday information for visitors and residents.
           </p>
         </div>
       </div>
@@ -49,15 +52,22 @@ export default function Articles() {
                     </Link>
                   </h2>
                   <p className="text-gray-600 mb-4">{article.meta.description}</p>
-                  <div className="flex items-center justify-between">
-                    <time className="text-sm text-gray-500" dateTime={article.meta.date}>
-                      {formatArticleDate(article.meta.date)}
-                    </time>
+                  <div className="flex items-center justify-between gap-4">
+                    <div className="space-y-1">
+                      <time className="block text-sm text-gray-500" dateTime={article.meta.date}>
+                        Published {formatArticleDate(article.meta.date)}
+                      </time>
+                      {article.meta.reviewedDate && (
+                        <span className="block text-sm text-blue-700">
+                          Reviewed {formatArticleDate(article.meta.reviewedDate)}
+                        </span>
+                      )}
+                    </div>
                     <Link
                       href={`/articles/${article.slug}`}
                       className="text-blue-600 hover:text-blue-700 font-medium transition-colors"
                     >
-                      Read article →
+                      Read article
                     </Link>
                   </div>
                 </div>

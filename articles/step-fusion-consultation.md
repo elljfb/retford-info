@@ -3,6 +3,11 @@ title: Public Consultation Launched for STEP Fusion Project at West Burton
 date: 2026-01-06
 excerpt: Residents across Retford and the surrounding villages are being invited to have their say on the UK’s flagship fusion energy programme, which is set to transform the site of the former West Burton power station.
 image: /images/west-burton-retford.jpg
+author: Brenda Cooper
+authorSlug: brenda-cooper
+reviewedDate: 2026-04-23
+noindex: true
+reportingNote: The consultation deadline in this article has now passed. The page remains live for reference but is excluded from search indexing because it no longer serves as current practical guidance.
 ---
 
 **Residents across Retford and the surrounding villages are being invited to have their say on the UK's flagship fusion energy programme, which is set to transform the site of the former West Burton power station.**

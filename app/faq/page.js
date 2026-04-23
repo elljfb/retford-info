@@ -1,6 +1,10 @@
 export const metadata = {
   title: "Frequently Asked Questions About Retford | Retford.info",
   description: "Find answers to common questions about visiting, living in, and exploring Retford, Nottinghamshire. Your comprehensive FAQ guide to this historic market town.",
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function FAQ() {

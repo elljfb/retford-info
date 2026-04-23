@@ -8,9 +8,8 @@ export async function GET() {
     '',
     '/about',
     '/articles',
+    '/authors/brenda-cooper',
     '/contact',
-    '/faq',
-    '/resources',
     '/editorial-policy',
     '/privacy-policy',
     '/terms-of-service',
@@ -18,7 +17,9 @@ export async function GET() {
 
   const urls = [
     ...staticRoutes.map((route) => `${baseUrl}${route}`),
-    ...articles.map((article) => `${baseUrl}/articles/${article.slug}`),
+    ...articles
+      .filter((article) => !article.meta.noindex)
+      .map((article) => `${baseUrl}/articles/${article.slug}`),
   ];
 
   return new Response(`${urls.join('\n')}\n`, {

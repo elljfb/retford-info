@@ -20,7 +20,7 @@ export const metadata = {
   publisher: "Retford.info",
   metadataBase: new URL("https://retford.info"),
   alternates: {
-    canonical: "https://retford.info",
+    canonical: "/",
   },
   openGraph: {
     title: "Retford.info - Your Guide to Retford, Nottinghamshire",

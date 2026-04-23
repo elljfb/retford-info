@@ -3,9 +3,18 @@ title: "One Day in Retford: A First-Time Visitor's Itinerary"
 date: 2025-06-17
 excerpt: If you only have one day in Retford, this itinerary gives you a practical way to see the market town at its best, from historic streets and museums to riverside walks and an easy lunch stop.
 image: /images/a1-retford.jpg
+author: Brenda Cooper
+authorSlug: brenda-cooper
+reviewedDate: 2026-04-23
+reportingNote: This itinerary is designed as a realistic walking day rather than a claim that every venue will always be open. Before travelling, check the latest museum opening hours and event information if your visit depends on a specific stop.
+sources:
+  - title: Bassetlaw Museum visitor information
+    url: https://bassetlawmuseum.org.uk/?page_id=35
+    note: Checked in April 2026 for location and current visitor guidance.
+  - title: Kings Park, Retford - Bassetlaw District Council
+    url: https://www.bassetlaw.gov.uk/parks-and-open-spaces/kings-park/
+    note: Used for park access, facilities, and general practical context.
 ---
-
-# One Day in Retford: A First-Time Visitor's Itinerary
 
 Retford is the sort of town that rewards a slower pace. It is not a place of giant landmarks or one overwhelming attraction that dominates the day. Instead, its appeal comes from how well the pieces fit together: a historic market-town centre, a museum that gives useful local context, riverside green space, independent businesses, and easy walks that never feel far from a cup of tea or a lunch stop.
 

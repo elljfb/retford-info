@@ -1,124 +1,80 @@
 ---
 title: When is Retford Charter Day in 2026?
 date: 2026-01-15
-excerpt: Retford Charter Day is the town's beloved annual food, craft, and festival, but when is Charter Day being held in 2026?
+excerpt: Retford Charter Day returns on Bank Holiday Monday in 2026. Here is the confirmed date, what the event is, and where to check official updates before you go.
 image: /images/charter-day-header.jpg
+author: Brenda Cooper
+authorSlug: brenda-cooper
+reviewedDate: 2026-04-23
+reportingNote: This page was reviewed on 23 April 2026 against the public event listings from Bassetlaw District Council and Discover Retford. Timings, entertainment, and stall details can still change close to the event.
+sources:
+  - title: Bassetlaw District Council event listing for Charter Day 2026
+    url: https://www.bassetlaw.gov.uk/news-and-events/events/charter-day-2026/
+    note: Used to confirm the 2026 event date and public event framing.
+  - title: Discover Retford event listing for Charter Day 2026
+    url: https://discoverretford.co.uk/plan-your-trip/events/retford-charter-day/
+    note: Used to cross-check the date, time, and town-centre location.
+  - title: Retford Charter Day Facebook page
+    url: https://www.facebook.com/profile.php?id=61573909713610
+    note: Best source for late changes, announcements, and closer-to-the-day updates.
 ---
 
-**Retford Charter Day 2026 will take place on Bank-Holiday Monday, 4th May 2026, across historic Retford in north Nottinghamshire.**
+**Retford Charter Day 2026 is scheduled for Bank Holiday Monday, 4 May 2026.** Public listings reviewed in April 2026 place the event in Retford town centre and Kings' Park, with a 10am start advertised on local event pages.
 
 ## What is Retford Charter Day?
 
-Retford Charter Day is the town's beloved annual food, craft, and festival fair that celebrates a pivotal moment in the town's history: the grant of a royal charter to Retford in 1259 by King Henry III. This historic charter awarded the town the right to hold an annual eight-day fair "for the improvement of the borough," marking Retford's formal recognition as an important market town and cementing its status as a royal borough, second only to Nottingham in Nottinghamshire.
+Retford Charter Day is the town's annual celebration of its market and borough history, mixed with a modern family event atmosphere: stalls, food, entertainment, community groups, and town-centre footfall all rolled into one day.
 
-The modern Charter Day celebration honours this medieval heritage whilst bringing the community together for a vibrant day of entertainment, local crafts, delicious food, and family fun. It's a volunteer-run, not-for-profit event that embodies the spirit of "all-for-Retford," showcasing the very best of what this historic market town has to offer.
+The historic background matters, but it is worth being precise. Retford's market rights go back to the medieval period, with an early royal charter granted in **1246** and a later charter in **1275** helping shape the market tradition the town still celebrates today. That is a firmer basis for the event than repeating a vague "medieval fair" line without checking the history.
 
-## What to Expect in 2026
+## What date should you put in your diary?
 
-Based on the tremendous success of previous years, Charter Day 2025 attracted over 10,000 attendees, and the 2026 event promises to be even bigger and better. Here's what you can look forward to:
+Put down **Monday 4 May 2026**.
 
-### Timing and Location
+Because Charter Day sits on the early May Bank Holiday, it is the kind of event people often remember by weekend rather than exact calendar date. If you are planning around trains, parking, child care, or stallholder arrangements, the exact day matters: it is the **Monday bank holiday**, not the Saturday before.
 
-The event runs all day across historic Retford, providing hours of continuous entertainment and activities for all ages. The festivities spread throughout the town centre and Kings Park, allowing visitors to explore Retford's charming streets whilst enjoying the various attractions and stalls.
+## What to expect on the day
 
-### Stallholder Variety
+The broad shape of Charter Day is usually familiar even when individual stallholders or performers change from year to year:
 
-One of the highlights of Charter Day is the diverse range of stalls that line the streets. Local artisans, craftspeople, food vendors, and businesses set up throughout the town, offering:
+- local food and drink stalls
+- craft and gift sellers
+- community organisations and town groups
+- family activities
+- entertainment spread across the town centre and Kings' Park
 
-- **Handmade crafts and gifts** - Perfect for finding unique, locally-made items
-- **Delicious food and drink** - From traditional British fare to international cuisine
-- **Local produce** - Supporting Retford's farmers and food producers
-- **Arts and crafts** - Showcasing the talent within the local community
-- **Vintage and antique items** - Treasure hunting for collectors and enthusiasts
-- **Children's activities** - Interactive stalls designed to engage young visitors
-- **Duck Race** - The iconic duck race through Kings Park
-- **Fun Fair** - Rides for all ages
+That mix is part of the appeal. Charter Day tends to feel less like a single fenced event and more like Retford operating at full local-event volume for the day.
 
-### Free Entertainment for All the Family
+## Where the event happens
 
-True to its community spirit, Charter Day offers **free entertainment throughout the day** for visitors of all ages. Previous years have featured:
+The public listings for 2026 place Charter Day across **Retford town centre and Kings' Park**. That matters for practical reasons:
 
-- Live music performances from local bands and musicians
-- Street entertainers and performers
-- Children's activities and workshops
-- Historical re-enactments celebrating Retford's medieval heritage
-- Dance performances
-- Interactive demonstrations
+- you are not heading to one isolated showground
+- walking between the market area and park space is part of the day
+- town-centre parking and bank-holiday traffic matter more than they would for a field-based fair
 
-The free entertainment ensures that Charter Day remains accessible to everyone, creating an inclusive celebration that truly brings the whole community together.
+If you are visiting from outside Retford, it is worth arriving with a flexible plan rather than assuming you will park right beside the busiest area.
 
-## A Celebration of Retford's Medieval Heritage
+## Best way to keep up with updates
 
-Charter Day isn't just a fun fair—it's a meaningful celebration of Retford's long and fascinating history. The 1259 royal charter was a turning point for the town, granting it valuable trading rights and establishing its importance in north Nottinghamshire. By the medieval period, Retford had become the main town of the Bassetlaw Hundred and hosted the Quarter Sessions for North Nottinghamshire.
+If you only check one source close to the event, make it the official **Retford Charter Day Facebook page**. Council and tourism listings are useful for confirmation, but social posts are usually where late operational updates show up first.
 
-The charter granted Retford the right to hold an annual eight-day fair, which would have attracted merchants from across the region and beyond. These medieval fairs were crucial to the town's prosperity, dealing in cattle, horses, cheese, hops, and other goods. Today's Charter Day continues this tradition of bringing people together for trade, celebration, and community, connecting modern Retford with its medieval past in a tangible and joyful way.
+That is especially helpful for:
 
-## Get Involved: Stallholder Bookings Now Open
+- weather-related changes
+- stallholder messages
+- entertainment announcements
+- last-minute reminders about timings or access
 
-Whether you're a local business owner, a talented craftsperson, or a food vendor looking to showcase your offerings, Charter Day provides a fantastic opportunity to reach thousands of potential customers whilst supporting a beloved community event.
+## Quick planning tips
 
-**Stallholder bookings are now open for 2026.**
+- **Arrive earlier if you can.** Bank Holiday events get busier as the day goes on.
+- **Expect town-centre walking.** Comfortable shoes are a better bet than treating it like a quick in-and-out market visit.
+- **Bring both card and cash.** Many traders take cards, but local event days are still one of the few moments when cash can save hassle.
+- **Check updates again the day before.** This is the easiest way to avoid travelling on stale assumptions.
 
-To secure your spot at this year's event, contact the organisers at:
-**contact.retfordcharterday@gmail.com**
+## Final answer
 
-With over 10,000 attendees expected, Charter Day offers excellent visibility for your business or craft. The volunteer organisers work hard to create a diverse mix of stalls that will appeal to all visitors, so don't miss your chance to be part of this special day.
+If you came here for the short version: **Retford Charter Day 2026 is on Monday 4 May 2026.**
 
-## The Volunteer Spirit
-
-What makes Retford Charter Day truly special is that it's entirely **volunteer-run and not-for-profit**. Local residents donate their time, energy, and expertise to organise and execute this major community event, driven by pride in their town and a desire to celebrate its heritage.
-
-This volunteer ethos means that every penny raised goes back into making the event better and supporting the local community. It's a genuine grassroots celebration, organised by Retford residents for Retford residents and visitors alike. The dedication of these volunteers ensures that Charter Day remains an authentic, community-focused event rather than a commercial venture.
-
-## Planning Your Visit
-
-### When to Arrive
-
-With the event running pretty much all day, we recommend arriving early to make the most of your day. The morning tends to be slightly quieter, giving you a chance to browse the stalls before the crowds build up. However, the atmosphere throughout the day is wonderful, so arrive whenever suits your family best.
-
-### What to Bring
-
-- **Comfortable shoes** - You'll be doing plenty of walking as you explore the stalls
-- **Cash and card** - Whilst many stallholders accept card payments, it's wise to bring cash as well
-- **Reusable bags** - For all the wonderful items you'll purchase
-- **Sun cream and hats** (if the weather's nice) or **umbrellas and raincoats** (this is Britain, after all!)
-- **A hearty appetite** - The food stalls are not to be missed
-
-### Family-Friendly Tips
-
-Charter Day is designed with families in mind:
-- The free entertainment provides regular breaks from shopping
-- Children's activities keep younger visitors engaged
-- The variety of food options means even fussy eaters will find something they enjoy
-- Pushchairs can navigate most areas, though some streets may be crowded during peak times
-
-## Getting to Retford
-
-Retford is well-connected and easily accessible:
-
-**By Train:** Retford railway station sits on the East Coast Main Line, with regular services to London King's Cross, Doncaster, and beyond. The station is a short walk from the town centre where Charter Day takes place.
-
-**By Car:** Retford is close to the A1(M), making it easily accessible from across Yorkshire, Nottinghamshire, Lincolnshire, and beyond. Various car parks are available in the town centre.
-
-**By Bus:** Regular bus services connect Retford with surrounding towns and villages.
-
-## Why You Should Attend
-
-Retford Charter Day offers something rare in today's world: a genuine community celebration that honours local history whilst bringing people together in a spirit of fun and fellowship. Whether you're a Retford resident, a history enthusiast, a foodie, a craft lover, or simply someone looking for a fantastic family day out, Charter Day 2026 promises to deliver.
-
-With over 10,000 attendees expected, diverse stalls offering everything from handmade crafts to delicious food, free entertainment throughout the day, and the chance to explore historic Retford at its most vibrant, Charter Day is an event not to be missed.
-
-## Mark Your Calendars
-
-**Monday, 4th May 2026**
-**Historic Retford, North Nottinghamshire**
-
-Whether you're planning to visit, considering becoming a stallholder, or thinking about volunteering, Retford Charter Day 2026 is an event that celebrates the best of this historic market town. It's a day when medieval heritage meets modern community spirit, when local businesses thrive, and when thousands of people come together to celebrate all that makes Retford special.
-
-Book it in your diary now—Retford Charter Day 2026 is coming, and you won't want to miss it!
-
-![Charter Day 2026](/images/charter-day-2026.jpg)
-
-**For stallholder enquiries:** contact.retfordcharterday@gmail.com
-
-**Follow Retford Charter Day on [Facebook](https://www.facebook.com/profile.php?id=61573909713610) for updates and announcements as we get closer to the big day!**
+For the most reliable final check before travelling, use the Bassetlaw District Council listing, the Discover Retford event page, and the official Retford Charter Day Facebook page linked below.

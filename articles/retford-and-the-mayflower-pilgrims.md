@@ -3,6 +3,10 @@ title: A Guide to Retford's Mayflower Pilgrim History
 date: 2026-01-07
 excerpt: The area surrounding Retford, particularly the tiny village of Babworth, served as the crucible where religious dissent transformed into a movement that would culminate in the Mayflower voyage of 1620.
 image: /images/babworth-church.jpg
+author: Brenda Cooper
+authorSlug: brenda-cooper
+reviewedDate: 2026-04-23
+reportingNote: This is an interpretive local-history guide rather than a single-source academic paper. The article draws on the source notes already listed in the body and should be read alongside those references.
 ---
 
 When visitors think of Retford, they often picture the bustling Market Square, the award-winning Kings Park, or the elegant Georgian architecture that graces Carolgate. Yet beneath the surface of this charming Nottinghamshire market town lies a story of extraordinary historical significance—one that would shape the very foundations of modern America. The area surrounding Retford, particularly the tiny village of Babworth, served as the crucible where religious dissent transformed into a movement that would culminate in the Mayflower voyage of 1620.

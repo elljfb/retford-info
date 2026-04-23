@@ -3,6 +3,10 @@ import Link from 'next/link';
 export const metadata = {
   title: "Local Resources & Services in Retford | Community Guide",
   description: "Essential local resources, services, emergency contacts, and community information for residents and visitors to Retford, Nottinghamshire.",
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function Resources() {

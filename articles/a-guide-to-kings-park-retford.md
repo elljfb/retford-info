@@ -1,8 +1,19 @@
 ---
 title: A Guide to Kings Park in Retford
 date: 2026-03-07
-excerpt: Looking for the perfect day out with the children near Retford? Whether you're after a quick jaunt around a tranquil lake, an adventure through ancient woodland, or a leisurely stroll with plenty of activities to keep the little ones entertained, the Retford area offers some wonderful family-friendly walking destinations.
+excerpt: Kings Park is Retford's main town-centre green space, combining riverside walks, gardens, play areas, a skatepark, and seasonal splash facilities in one of the town's best-used public spaces.
 image: /images/kings-park-river-2.JPG
+author: Brenda Cooper
+authorSlug: brenda-cooper
+reviewedDate: 2026-04-23
+reportingNote: Kings Park itself is open year-round, but some facilities are seasonal. The splash park and kiosk details in particular should be checked against Bassetlaw District Council before making a special trip.
+sources:
+  - title: Kings Park, Retford - Bassetlaw District Council
+    url: https://www.bassetlaw.gov.uk/parks-and-open-spaces/kings-park/
+    note: Checked in April 2026 for park facilities, access, and history.
+  - title: Splash Parks - Bassetlaw District Council
+    url: https://www.bassetlaw.gov.uk/parks-and-open-spaces/splash-parks/
+    note: Checked in April 2026 for current seasonal splash park opening information.
 ---
 
 Kings Park is one of Retford’s most popular green spaces, offering a relaxing mix of nature, recreation and family friendly activities close to the town centre. Spanning a large open area beside the River Idle, the park provides something for visitors of all ages, whether you are looking for a peaceful walk, a place for children to play, or somewhere to spend time outdoors on a sunny day.

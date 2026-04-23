@@ -3,6 +3,11 @@ title: Retford Times Obituaries
 date: 2026-03-18
 excerpt: Where to find Retford death notices online, how the Retford Times fits into the wider Reach and Lincolnshire Live network, and practical help for arranging a funeral notice locally.
 image: /images/retford-cemetary.jpg
+author: Brenda Cooper
+authorSlug: brenda-cooper
+reviewedDate: 2026-04-23
+noindex: true
+reportingNote: This page is kept as a practical signpost for readers who still search for "Retford Times obituaries", but it is intentionally excluded from search indexing because it is a narrow navigation aid rather than one of the site's core local guides.
 ---
 
 # Retford Times Obituaries

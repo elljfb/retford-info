@@ -8,9 +8,8 @@ export default function sitemap() {
     '',
     '/about',
     '/articles',
+    '/authors/brenda-cooper',
     '/contact',
-    '/faq',
-    '/resources',
     '/editorial-policy',
     '/privacy-policy',
     '/terms-of-service',
@@ -21,17 +20,19 @@ export default function sitemap() {
     priority: route === '' ? 1 : route === '/articles' ? 0.9 : 0.7,
   }));
 
-  const articleUrls = articles.map((article) => {
-    const parsedDate = new Date(article.meta.date);
-    const lastModified = Number.isNaN(parsedDate.getTime()) ? new Date() : parsedDate;
+  const articleUrls = articles
+    .filter((article) => !article.meta.noindex)
+    .map((article) => {
+      const parsedDate = new Date(article.meta.reviewedDate || article.meta.updatedDate || article.meta.date);
+      const lastModified = Number.isNaN(parsedDate.getTime()) ? new Date() : parsedDate;
 
-    return {
-      url: `${baseUrl}/articles/${article.slug}`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    };
-  });
+      return {
+        url: `${baseUrl}/articles/${article.slug}`,
+        lastModified,
+        changeFrequency: 'monthly',
+        priority: 0.8,
+      };
+    });
 
   return [...routes, ...articleUrls];
 }
