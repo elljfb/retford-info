@@ -20,6 +20,26 @@ export interface Business {
   opening_hours?: string;
 }
 
+export function getBusinessValues(value: string | string[] | undefined): string[] {
+  const values = Array.isArray(value) ? value : [value];
+  return values.filter((item): item is string => typeof item === 'string' && item.trim().length > 0);
+}
+
+export function slugifyBusinessValue(value: string) {
+  return value
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/\s+/g, '-')
+    .replace(/[^a-z0-9-]/g, '');
+}
+
+export function formatBusinessSlug(value: string) {
+  return value
+    .replace(/-/g, ' ')
+    .replace(/\b\w/g, (letter) => letter.toUpperCase())
+    .replace(/ And /g, ' and ');
+}
+
 export async function getBusinesses(): Promise<Business[]> {
   const filePath = path.join(process.cwd(), 'data', 'businesses.csv');
   
@@ -78,7 +98,7 @@ export async function getBusinessBySlug(slug: string): Promise<Business | null> 
 export async function getBusinessesByCategory(category: string): Promise<Business[]> {
   const businesses = await getBusinesses();
   return businesses.filter(b => {
-    const categories = Array.isArray(b.category) ? b.category : [b.category];
+    const categories = getBusinessValues(b.category);
     return categories.some(cat => cat.toLowerCase() === category.toLowerCase());
   });
 }
@@ -86,7 +106,7 @@ export async function getBusinessesByCategory(category: string): Promise<Busines
 export async function getBusinessesBySubcategory(subcategory: string): Promise<Business[]> {
   const businesses = await getBusinesses();
   return businesses.filter(b => {
-    const subcategories = Array.isArray(b.subcategory) ? b.subcategory : [b.subcategory];
+    const subcategories = getBusinessValues(b.subcategory);
     return subcategories.some(sub => sub.toLowerCase() === subcategory.toLowerCase());
   });
 }
@@ -96,7 +116,7 @@ export async function getCategories(): Promise<string[]> {
   const categoriesSet = new Set<string>();
   
   businesses.forEach(b => {
-    const categories = Array.isArray(b.category) ? b.category : [b.category];
+    const categories = getBusinessValues(b.category);
     categories.forEach(cat => categoriesSet.add(cat));
   });
   
@@ -108,7 +128,7 @@ export async function getSubcategoriesByCategory(category: string): Promise<stri
   const subcategoriesSet = new Set<string>();
   
   businesses.forEach(b => {
-    const subcategories = Array.isArray(b.subcategory) ? b.subcategory : [b.subcategory];
+    const subcategories = getBusinessValues(b.subcategory);
     subcategories.forEach(sub => subcategoriesSet.add(sub));
   });
   

@@ -4,6 +4,8 @@ import { formatDate } from '@/lib/utils';
 import { notFound } from 'next/navigation';
 import ShareButtons from '@/components/ShareButtons';
 
+type ArticleParams = Promise<{ slug: string }>;
+
 export async function generateStaticParams() {
   const articles = await getArticles();
   return articles.map(article => ({
@@ -11,8 +13,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const article = await getArticleBySlug(params.slug);
+export async function generateMetadata({ params }: { params: ArticleParams }) {
+  const { slug } = await params;
+  const article = await getArticleBySlug(slug);
   if (!article) return {};
   
   const ogImage = article.image 
@@ -37,9 +40,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default async function ArticlePage({ params }: { params: { slug: string } }) {
-  const article = await getArticleBySlug(params.slug);
-  const relatedArticles = await getRelatedArticles(params.slug, 2);
+export default async function ArticlePage({ params }: { params: ArticleParams }) {
+  const { slug } = await params;
+  const article = await getArticleBySlug(slug);
+  const relatedArticles = await getRelatedArticles(slug, 2);
 
   if (!article) {
     notFound();

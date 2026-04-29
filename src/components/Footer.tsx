@@ -21,12 +21,10 @@ export default function Footer() {
   };
 
   const quickLinks = [
-    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Privacy Policy', href: '/privacy-policy' },
     { name: 'Terms & Conditions', href: '/terms' },
     { name: 'Contact', href: '/contact' },
     { name: 'About', href: '/about' },
-    { name: 'Worksop.info', href: 'https://worksop.info' },
-    { name: 'Ingoldmells.info', href: 'https://ingoldmells.info' },
   ];
 
   return (
@@ -45,7 +43,7 @@ export default function Footer() {
               style={{ background: 'transparent', objectFit: 'cover' }}
             />
             <p className="text-sm text-gray-400">
-              © 2026 <Link href="https://801web.co">801 Web Co</Link>. All rights reserved.
+              © 2026 Retford.info. All rights reserved.
             </p>
           </div>
 

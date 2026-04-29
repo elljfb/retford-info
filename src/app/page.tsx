@@ -1,11 +1,6 @@
 import Link from "next/link";
 import ShareButtons from "@/components/ShareButtons";
-import dynamic from "next/dynamic";
-
-const MultiMap = dynamic(() => import('@/components/MultiMap'), {
-  ssr: false,
-  loading: () => <div className="bg-gray-200 h-64 rounded-lg flex items-center justify-center text-gray-600">Loading map...</div>
-});
+import MultiMapClient from "@/components/MultiMapClient";
 
 export default function Home() {
   const categories = [
@@ -93,7 +88,7 @@ export default function Home() {
             </p>
           </div>
           <div className="h-64 rounded-lg overflow-hidden">
-            <MultiMap 
+            <MultiMapClient
               locations={[{ name: 'Retford Town Centre', address: 'Market Square, Retford' }]} 
               center={[53.3225, -0.9417]}
               zoom={9}

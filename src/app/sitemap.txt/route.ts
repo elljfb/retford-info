@@ -1,4 +1,4 @@
-import { getBusinesses, getCategories, getSubcategoriesByCategory } from '@/lib/businesses';
+import { getBusinesses, getCategories, getSubcategoriesByCategory, slugifyBusinessValue } from '@/lib/businesses';
 import { getArticles, getNews } from '@/lib/articles';
 import { NextResponse } from 'next/server';
 
@@ -23,17 +23,17 @@ export async function GET() {
   // Category pages
   const categories = await getCategories();
   for (const category of categories) {
-    const categorySlug = category.toLowerCase().replace(/\s+/g, '-');
+    const categorySlug = slugifyBusinessValue(category);
     urls.push(`${baseUrl}/categories/${categorySlug}`);
   }
 
   // Subcategory pages
   for (const category of categories) {
-    const categorySlug = category.toLowerCase().replace(/\s+/g, '-');
+    const categorySlug = slugifyBusinessValue(category);
     const subcategories = await getSubcategoriesByCategory(category);
     
     for (const subcategory of subcategories) {
-      const subcategorySlug = subcategory.toLowerCase().replace(/&/g, 'and').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+      const subcategorySlug = slugifyBusinessValue(subcategory);
       urls.push(`${baseUrl}/categories/${categorySlug}/${subcategorySlug}`);
     }
   }

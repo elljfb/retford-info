@@ -1,15 +1,12 @@
 import { MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
-import { getBusinessBySlug, getBusinesses } from '@/lib/businesses';
+import { getBusinessBySlug, getBusinesses, getBusinessValues } from '@/lib/businesses';
 import { notFound } from 'next/navigation';
 import ShareButtons from '@/components/ShareButtons';
-import dynamic from 'next/dynamic';
+import MapClient from '@/components/MapClient';
 import { marked } from 'marked';
 import Image from 'next/image';
 
-const Map = dynamic(() => import('@/components/Map'), {
-  ssr: false,
-  loading: () => <div className="bg-gray-200 h-48 rounded-lg flex items-center justify-center text-gray-600">Loading map...</div>
-});
+type BusinessParams = Promise<{ slug: string }>;
 
 export async function generateStaticParams() {
   const businesses = await getBusinesses();
@@ -18,13 +15,14 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const business = await getBusinessBySlug(params.slug);
+export async function generateMetadata({ params }: { params: BusinessParams }) {
+  const { slug } = await params;
+  const business = await getBusinessBySlug(slug);
   if (!business) return {};
   
   // Handle single or multiple categories
-  const firstCategory = Array.isArray(business.category) ? business.category[0] : business.category;
-  const firstSubcategory = Array.isArray(business.subcategory) ? business.subcategory[0] : business.subcategory;
+  const firstCategory = getBusinessValues(business.category)[0] || 'Retford Business';
+  const firstSubcategory = getBusinessValues(business.subcategory)[0];
   
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://retford.info';
   const ogImage = `${siteUrl}/api/og?title=${encodeURIComponent(business.name)}&subtitle=${encodeURIComponent(firstCategory)}${firstSubcategory ? `%20•%20${encodeURIComponent(firstSubcategory)}` : ''}`;
@@ -48,8 +46,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default async function BusinessPage({ params }: { params: { slug: string } }) {
-  const business = await getBusinessBySlug(params.slug);
+export default async function BusinessPage({ params }: { params: BusinessParams }) {
+  const { slug } = await params;
+  const business = await getBusinessBySlug(slug);
 
   if (!business) {
     notFound();
@@ -72,7 +71,7 @@ export default async function BusinessPage({ params }: { params: { slug: string 
     }
     // Basic listings: use category background (use first category if multiple)
     if (!business.is_premium) {
-      const category = (Array.isArray(business.category) ? business.category[0] : business.category).toLowerCase();
+      const category = (getBusinessValues(business.category)[0] || '').toLowerCase();
       if (category === 'eat and drink') {
         return { backgroundImage: 'url(/businesses/eat-and-drink/eat-drink.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' };
       }
@@ -141,10 +140,10 @@ export default async function BusinessPage({ params }: { params: { slug: string 
         <div className="mb-12">
           <h1 className="text-4xl font-bold mb-2">{business.name}</h1>
           <div className="flex flex-wrap gap-2">
-            {(Array.isArray(business.subcategory) ? business.subcategory : [business.subcategory]).map((sub, index) => (
+            {getBusinessValues(business.subcategory).map((sub, index, subcategories) => (
               <span key={index} className="text-lg text-gray-600">
                 {sub}
-                {index < (Array.isArray(business.subcategory) ? business.subcategory.length : 1) - 1 && ' • '}
+                {index < subcategories.length - 1 && ' • '}
               </span>
             ))}
           </div>
@@ -257,7 +256,7 @@ export default async function BusinessPage({ params }: { params: { slug: string 
                       </address>
                     </div>
                     <div className="h-48 rounded-lg overflow-hidden">
-                      <Map address={business.address} businessName={business.name} />
+                      <MapClient address={business.address} businessName={business.name} />
                     </div>
                   </>
                 )}

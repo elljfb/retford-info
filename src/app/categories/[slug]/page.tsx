@@ -1,25 +1,29 @@
 import Link from 'next/link';
-import { getBusinessesByCategory, getCategories, getSubcategoriesByCategory } from '@/lib/businesses';
+import {
+  formatBusinessSlug,
+  getBusinessesByCategory,
+  getBusinessValues,
+  getCategories,
+  getSubcategoriesByCategory,
+  slugifyBusinessValue,
+} from '@/lib/businesses';
 import { notFound } from 'next/navigation';
 import ShareButtons from '@/components/ShareButtons';
-import dynamic from 'next/dynamic';
+import MultiMapClient from '@/components/MultiMapClient';
 import NextImage from 'next/image';
 
-const MultiMap = dynamic(() => import('@/components/MultiMap'), {
-  ssr: false,
-  loading: () => <div className="bg-gray-200 h-96 rounded-lg flex items-center justify-center text-gray-600">Loading map...</div>
-});
+type CategoryParams = Promise<{ slug: string }>;
 
 export async function generateStaticParams() {
   const categories = await getCategories();
   return categories.map(category => ({
-    slug: category.toLowerCase().replace(/\s+/g, '-'),
+    slug: slugifyBusinessValue(category),
   }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const categoryName = params.slug.replace(/-/g, ' ');
-  const formattedCategoryName = categoryName.replace(/\b\w/g, l => l.toUpperCase()).replace(/ And /g, ' and ');
+export async function generateMetadata({ params }: { params: CategoryParams }) {
+  const { slug } = await params;
+  const formattedCategoryName = formatBusinessSlug(slug);
   
   const ogImage = `/api/og?title=${encodeURIComponent(formattedCategoryName)}&subtitle=${encodeURIComponent('Retford, Nottinghamshire')}`;
 
@@ -40,8 +44,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default async function CategoryPage({ params }: { params: { slug: string } }) {
-  const categoryName = params.slug.replace(/-/g, ' ');
+export default async function CategoryPage({ params }: { params: CategoryParams }) {
+  const { slug } = await params;
+  const categoryName = slug.replace(/-/g, ' ');
   const businesses = await getBusinessesByCategory(categoryName);
 
   if (businesses.length === 0) {
@@ -63,16 +68,16 @@ export default async function CategoryPage({ params }: { params: { slug: string 
 
   // Background images for categories
   const getCategoryBackground = () => {
-    if (params.slug === 'eat-and-drink') {
+    if (slug === 'eat-and-drink') {
       return { backgroundImage: 'url(/businesses/eat-and-drink/eat-drink.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' };
     }
-    if (params.slug === 'shops-and-businesses') {
+    if (slug === 'shops-and-businesses') {
       return { backgroundImage: 'url(/businesses/shops-and-businesses/businesses.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' };
     }
-    if (params.slug === 'things-to-do') {
+    if (slug === 'things-to-do') {
       return { backgroundImage: 'url(/businesses/things-to-do/things-to-do.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' };
     }
-    if (params.slug === 'accommodation') {
+    if (slug === 'accommodation') {
       return { backgroundImage: 'url(/businesses/accommodation/accommodation.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' };
     }
     return {};
@@ -90,7 +95,7 @@ export default async function CategoryPage({ params }: { params: { slug: string 
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="relative text-center text-white z-10 px-4">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            {categoryEmojis[params.slug] || '📍'} {categoryName.replace(/\b\w/g, l => l.toUpperCase())}
+            {categoryEmojis[slug] || '📍'} {categoryName.replace(/\b\w/g, l => l.toUpperCase())}
           </h1>
           <div className="flex justify-center">
             <ShareButtons title={`${categoryName.replace(/\b\w/g, l => l.toUpperCase())} in Retford | Retford.info`} />
@@ -104,7 +109,7 @@ export default async function CategoryPage({ params }: { params: { slug: string 
           {categoryName.replace(/\b\w/g, l => l.toUpperCase())} in Retford
         </h2>
         <p className="text-lg leading-relaxed text-gray-700 max-w-3xl">
-          Discover a wide range of {params.slug === 'eat-and-drink' ? 'places to ' : ''}{categoryName.toLowerCase()} in Retford, from well-established local favourites to newer additions across the town. Explore what's available and find the places that help you make the most of your time in Retford.
+          Discover a wide range of {slug === 'eat-and-drink' ? 'places to ' : ''}{categoryName.toLowerCase()} in Retford, from well-established local favourites to newer additions across the town. Explore what's available and find the places that help you make the most of your time in Retford.
         </p>
       </section>
 
@@ -114,13 +119,13 @@ export default async function CategoryPage({ params }: { params: { slug: string 
           <h3 className="text-3xl font-bold mb-6">Categories within {categoryName.replace(/\b\w/g, l => l.toUpperCase())}</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {subcategories.map((subcategory) => {
-              const subcategorySlug = subcategory.toLowerCase().replace(/&/g, 'and').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-              const businessCount = businesses.filter(b => b.subcategory === subcategory).length;
+              const subcategorySlug = slugifyBusinessValue(subcategory);
+              const businessCount = businesses.filter(b => getBusinessValues(b.subcategory).includes(subcategory)).length;
               
               return (
                 <Link
                   key={subcategory}
-                  href={`/categories/${params.slug}/${subcategorySlug}`}
+                  href={`/categories/${slug}/${subcategorySlug}`}
                   className="group"
                 >
                   <div className="bg-gray-100 h-32 rounded-lg flex flex-col items-center justify-center hover:bg-accent hover:shadow-lg transition-all">
@@ -188,7 +193,7 @@ export default async function CategoryPage({ params }: { params: { slug: string 
           <section className="max-w-6xl mx-auto px-6 py-12">
             <h3 className="text-2xl font-bold mb-6">Find Our Featured Businesses</h3>
             <div className="h-96 rounded-lg overflow-hidden">
-              <MultiMap 
+              <MultiMapClient
                 locations={premiumBusinesses.filter(b => b.address).map(b => ({
                   name: b.name,
                   address: b.address

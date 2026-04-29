@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { getBusinesses, getCategories, getSubcategoriesByCategory } from '@/lib/businesses';
+import { getBusinesses, getCategories, getSubcategoriesByCategory, slugifyBusinessValue } from '@/lib/businesses';
 import { getArticles, getNews } from '@/lib/articles';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -78,7 +78,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Category pages
   const categories = await getCategories();
   const categoryPages = categories.map((category) => ({
-    url: `${baseUrl}/categories/${category.toLowerCase().replace(/\s+/g, '-')}`,
+    url: `${baseUrl}/categories/${slugifyBusinessValue(category)}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.9,
@@ -87,11 +87,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Subcategory pages
   const subcategoryPages = [];
   for (const category of categories) {
-    const categorySlug = category.toLowerCase().replace(/\s+/g, '-');
+    const categorySlug = slugifyBusinessValue(category);
     const subcategories = await getSubcategoriesByCategory(category);
     
     for (const subcategory of subcategories) {
-      const subcategorySlug = subcategory.toLowerCase().replace(/&/g, 'and').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+      const subcategorySlug = slugifyBusinessValue(subcategory);
       subcategoryPages.push({
         url: `${baseUrl}/categories/${categorySlug}/${subcategorySlug}`,
         lastModified: new Date(),

@@ -3,8 +3,10 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/react";
+import Script from "next/script";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://retford.info'),
   title: "Retford in Nottinghamshire - Information for Residents and Visitors",
   description: "A local community information website for Retford, Nottinghamshire",
   openGraph: {
@@ -27,12 +29,31 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6766680365418435"
-          crossOrigin="anonymous"></script>
-          <script src="https://analytics.ahrefs.com/analytics.js" data-key="2SixlHm47EpoLQhXu//XrA" async></script>
-      </head>
       <body className="flex flex-col min-h-screen">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-D4E6DQ36M4"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-D4E6DQ36M4');
+          `}
+        </Script>
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="2SixlHm47EpoLQhXu//XrA"
+          strategy="afterInteractive"
+        />
+        <Script
+          src="https://scripts.scriptwrapper.com/tags/e52c9d4f-adf6-4926-b450-7f5809249b41.js"
+          type="text/javascript"
+          data-noptimize="1"
+          data-cfasync="false"
+          strategy="afterInteractive"
+        />
         <Navbar />
         <main className="flex-grow">
           {children}

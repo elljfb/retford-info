@@ -1,21 +1,29 @@
 import Link from 'next/link';
 import { MapPin, Phone } from 'lucide-react';
-import { getBusinessesByCategory, getCategories, getSubcategoriesByCategory } from '@/lib/businesses';
+import {
+  formatBusinessSlug,
+  getBusinessesByCategory,
+  getBusinessValues,
+  getCategories,
+  getSubcategoriesByCategory,
+  slugifyBusinessValue,
+} from '@/lib/businesses';
 import { notFound } from 'next/navigation';
 import ShareButtons from '@/components/ShareButtons';
 import NextImage from 'next/image';
 
+type SubcategoryParams = Promise<{ slug: string; subcategory: string }>;
 
 export async function generateStaticParams() {
   const categories = await getCategories();
   const params = [];
   
   for (const category of categories) {
-    const categorySlug = category.toLowerCase().replace(/\s+/g, '-');
+    const categorySlug = slugifyBusinessValue(category);
     const subcategories = await getSubcategoriesByCategory(category);
     
     for (const subcategory of subcategories) {
-      const subcategorySlug = subcategory.toLowerCase().replace(/&/g, 'and').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+      const subcategorySlug = slugifyBusinessValue(subcategory);
       params.push({
         slug: categorySlug,
         subcategory: subcategorySlug,
@@ -26,9 +34,10 @@ export async function generateStaticParams() {
   return params;
 }
 
-export async function generateMetadata({ params }: { params: { slug: string; subcategory: string } }) {
-  const subcategoryName = params.subcategory.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-  const categoryName = params.slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()).replace(/ And /g, ' and ');
+export async function generateMetadata({ params }: { params: SubcategoryParams }) {
+  const { slug, subcategory } = await params;
+  const subcategoryName = formatBusinessSlug(subcategory);
+  const categoryName = formatBusinessSlug(slug);
   
   const ogImage = `/api/og?title=${encodeURIComponent(subcategoryName)}&subtitle=${encodeURIComponent(categoryName)}`;
   
@@ -49,27 +58,28 @@ export async function generateMetadata({ params }: { params: { slug: string; sub
   };
 }
 
-export default async function SubcategoryPage({ params }: { params: { slug: string; subcategory: string } }) {
-  const categoryName = params.slug.replace(/-/g, ' ');
+export default async function SubcategoryPage({ params }: { params: SubcategoryParams }) {
+  const { slug, subcategory } = await params;
+  const categoryName = slug.replace(/-/g, ' ');
   
   const allBusinesses = await getBusinessesByCategory(categoryName);
   // Match by comparing slugified versions - handle both single and array subcategories
   const businesses = allBusinesses.filter(b => {
-    const subcategories = Array.isArray(b.subcategory) ? b.subcategory : [b.subcategory];
+    const subcategories = getBusinessValues(b.subcategory);
     return subcategories.some(sub => {
-      const businessSubcategorySlug = sub.toLowerCase().replace(/&/g, 'and').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-      return businessSubcategorySlug === params.subcategory;
+      const businessSubcategorySlug = slugifyBusinessValue(sub);
+      return businessSubcategorySlug === subcategory;
     });
   });
   
   // Get the actual subcategory name from the first business that matches
-  let subcategoryName = params.subcategory.replace(/-/g, ' ');
+  let subcategoryName = subcategory.replace(/-/g, ' ');
   if (businesses.length > 0) {
     const firstBusiness = businesses[0];
-    const subcategories = Array.isArray(firstBusiness.subcategory) ? firstBusiness.subcategory : [firstBusiness.subcategory];
+    const subcategories = getBusinessValues(firstBusiness.subcategory);
     const matchingSub = subcategories.find(sub => {
-      const slug = sub.toLowerCase().replace(/&/g, 'and').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-      return slug === params.subcategory;
+      const subSlug = slugifyBusinessValue(sub);
+      return subSlug === subcategory;
     });
     if (matchingSub) subcategoryName = matchingSub;
   }
@@ -83,16 +93,16 @@ export default async function SubcategoryPage({ params }: { params: { slug: stri
 
   // Background images for categories
   const getCategoryBackground = () => {
-    if (params.slug === 'eat-and-drink') {
+    if (slug === 'eat-and-drink') {
       return { backgroundImage: 'url(/businesses/eat-and-drink/eat-drink.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' };
     }
-    if (params.slug === 'shops-and-businesses') {
+    if (slug === 'shops-and-businesses') {
       return { backgroundImage: 'url(/businesses/shops-and-businesses/businesses.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' };
     }
-    if (params.slug === 'things-to-do') {
+    if (slug === 'things-to-do') {
       return { backgroundImage: 'url(/businesses/things-to-do/things-to-do.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' };
     }
-    if (params.slug === 'accommodation') {
+    if (slug === 'accommodation') {
       return { backgroundImage: 'url(/businesses/accommodation/accommodation.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' };
     }
     return {};
@@ -123,7 +133,7 @@ export default async function SubcategoryPage({ params }: { params: { slug: stri
         <div className="text-sm text-gray-600">
           <Link href="/" className="hover:text-accent-dark">Home</Link>
           {' / '}
-          <Link href={`/categories/${params.slug}`} className="hover:text-accent-dark">
+          <Link href={`/categories/${slug}`} className="hover:text-accent-dark">
             {categoryName.replace(/\b\w/g, (l: string) => l.toUpperCase())}
           </Link>
           {' / '}

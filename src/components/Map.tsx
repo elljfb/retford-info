@@ -23,67 +23,64 @@ export default function Map({ address, businessName, className = '' }: MapProps)
   const mapInstanceRef = useRef<L.Map | null>(null);
 
   useEffect(() => {
-    if (!mapRef.current || mapInstanceRef.current) return;
+    const container = mapRef.current;
+    let cancelled = false;
 
-    // Geocode the address to get coordinates
+    if (!container || mapInstanceRef.current) return;
+
+    const createMap = (position: [number, number], zoom: number) => {
+      if (cancelled || mapInstanceRef.current) return null;
+
+      const map = L.map(container).setView(position, zoom);
+      mapInstanceRef.current = map;
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 19,
+      }).addTo(map);
+
+      return map;
+    };
+
     const geocodeAddress = async () => {
       try {
-        // Using Nominatim (OpenStreetMap's geocoding service)
         const response = await fetch(
           `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(
-            address + ', Retford, Nottinghamshire, UK'
+            `${address}, Retford, Nottinghamshire, UK`
           )}`
         );
         const data = await response.json();
 
+        if (cancelled || mapInstanceRef.current) return;
+
         if (data && data.length > 0) {
           const { lat, lon } = data[0];
-          
-          // Create map
-          const map = L.map(mapRef.current!).setView([parseFloat(lat), parseFloat(lon)], 15);
-          mapInstanceRef.current = map;
+          const position: [number, number] = [parseFloat(lat), parseFloat(lon)];
+          const map = createMap(position, 15);
 
-          // Add OpenStreetMap tiles
-          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-            maxZoom: 19,
-          }).addTo(map);
+          if (!map) return;
 
-          // Add marker
-          L.marker([parseFloat(lat), parseFloat(lon)])
+          L.marker(position)
             .addTo(map)
             .bindPopup(`<b>${businessName}</b><br>${address}`)
             .openPopup();
         } else {
-          // Fallback to Retford center if address not found
-          const map = L.map(mapRef.current!).setView([53.3225, -0.9417], 13);
-          mapInstanceRef.current = map;
-
-          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-            maxZoom: 19,
-          }).addTo(map);
+          createMap([53.3225, -0.9417], 13);
         }
       } catch (error) {
         console.error('Error geocoding address:', error);
-        
-        // Fallback to Retford center
-        if (mapRef.current && !mapInstanceRef.current) {
-          const map = L.map(mapRef.current).setView([53.3225, -0.9417], 13);
-          mapInstanceRef.current = map;
 
-          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-            maxZoom: 19,
-          }).addTo(map);
+        if (!cancelled && !mapInstanceRef.current) {
+          createMap([53.3225, -0.9417], 13);
         }
       }
     };
 
     geocodeAddress();
 
-    // Cleanup
     return () => {
+      cancelled = true;
+
       if (mapInstanceRef.current) {
         mapInstanceRef.current.remove();
         mapInstanceRef.current = null;
@@ -91,5 +88,11 @@ export default function Map({ address, businessName, className = '' }: MapProps)
     };
   }, [address, businessName]);
 
-  return <div ref={mapRef} className={className} style={{ height: '100%', minHeight: '200px', position: 'relative', zIndex: 1 }} />;
+  return (
+    <div
+      ref={mapRef}
+      className={className}
+      style={{ height: '100%', minHeight: '200px', position: 'relative', zIndex: 1 }}
+    />
+  );
 }
