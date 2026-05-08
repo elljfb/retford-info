@@ -1,7 +1,7 @@
 ---
 title: "Could You Foster? Nottinghamshire Launches Campaign Ahead of Foster Care Fortnight"
 date: 2026-05-08
-excerpt: Banners are popping up across Nottinghamshire urging residents to consider fostering, as the county council steps up its drive to find loving homes for local children.
+excerpt: "Banners are popping up across Nottinghamshire urging residents to consider fostering, as the county council steps up its drive to find loving homes for local children."
 image: /articles/foster-carers.jpeg
 ---
 
