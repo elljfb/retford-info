@@ -23,7 +23,7 @@ Councillor Rory Green, Cabinet Member for Children and Families, said the counci
 
 "Foster carers play a massive role in the lives of vulnerable children and young people," he said. "It really is the greatest gift an adult can give. If you have space in your heart and in your home, do get in touch. It takes one minute of your time to register your interest."
 
-## Could You Help?
+## Could You Help? 
 
 The council is keen to hear from anyone across the Retford area and wider Nottinghamshire who is curious about fostering, regardless of whether they have considered it seriously before -- just as Paula hadn't until she spotted a banner on her commute.
 
