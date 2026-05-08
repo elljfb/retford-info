@@ -50,7 +50,7 @@ export default async function ArticlePage({ params }: { params: ArticleParams })
   }
 
   return (
-    <>
+    <div className="single-post">
       {/* Cover Section */}
       <section 
         className="relative w-full h-96 bg-gradient-to-r from-blue-400 to-blue-300 flex items-center justify-center"
@@ -67,13 +67,14 @@ export default async function ArticlePage({ params }: { params: ArticleParams })
 
       <div className="max-w-3xl mx-auto px-6 py-12">
         {/* Article Meta */}
-        <article>
+        <article className="post type-post status-publish format-standard hentry">
           <time className="text-gray-500">{formatDate(article.date)}</time>
 
           {/* Article Content */}
-          <div className="article-content text-gray-700 mb-12 mt-6">
-            <div dangerouslySetInnerHTML={{ __html: article.html }} />
-          </div>
+          <div
+            className="entry-content article-content text-gray-700 mb-12 mt-6"
+            dangerouslySetInnerHTML={{ __html: article.html }}
+          />
         </article>
 
         {/* Related Articles */}
@@ -112,6 +113,6 @@ export default async function ArticlePage({ params }: { params: ArticleParams })
           </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 }
