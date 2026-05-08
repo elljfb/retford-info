@@ -65,7 +65,7 @@ img[src^="https://sync.intentiq.com/"] {
   pointer-events: auto !important;
 }
 
-#fixed_container_bottom .adhesion_wrapper {
+#fixed_container_bottom {
   flex-shrink: 0 !important;
 }
 
