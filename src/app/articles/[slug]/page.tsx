@@ -17,9 +17,11 @@ export async function generateMetadata({ params }: { params: ArticleParams }) {
   const { slug } = await params;
   const article = await getArticleBySlug(slug);
   if (!article) return {};
+
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://retford.info';
   
   const ogImage = article.image 
-    ? `/api/og?type=article&image=${encodeURIComponent(article.image)}`
+    ? new URL(article.image, siteUrl).toString()
     : `/api/og?title=${encodeURIComponent(article.title)}&subtitle=${encodeURIComponent('Article')}`;
   
   return {
