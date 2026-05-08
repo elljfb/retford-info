@@ -72,16 +72,18 @@ export default function CarParks() {
 
       <div className="max-w-4xl mx-auto px-6 py-12">
         <h2 className="text-3xl font-bold mb-6">Parking in Retford</h2>
-        <p className="text-lg text-gray-700 mb-12">
-          Retford town centre has several convenient car parks with reasonable rates. 
-          Most parking around the town centre is council operated but is low-cost, making it easy to visit our local shops and attractions.
-        </p>
-        <br></br>
-        <h3 className="text-3xl font-bold mb-6">Free Parking in Retford</h3>
-        <p className="text-lg text-gray-700 mb-12">
-          Around the town there are side streets with free parking and the major supermarkets around the town allow 2 hours free parking for customers.
-          Also most of the council car parks in Retford offer free parking after 6pm on weekdays and all day on Sundays. For quick visits to the town centre you can park in the Asda Overflow car park next to Kings Park for 2 hours free parking.
-        </p>
+        <div className="entry-content">
+          <p className="text-lg text-gray-700 mb-12">
+            Retford town centre has several convenient car parks with reasonable rates. 
+            Most parking around the town centre is council operated but is low-cost, making it easy to visit our local shops and attractions.
+          </p>
+          <br></br>
+          <h3 className="text-3xl font-bold mb-6">Free Parking in Retford</h3>
+          <p className="text-lg text-gray-700 mb-12">
+            Around the town there are side streets with free parking and the major supermarkets around the town allow 2 hours free parking for customers.
+            Also most of the council car parks in Retford offer free parking after 6pm on weekdays and all day on Sundays. For quick visits to the town centre you can park in the Asda Overflow car park next to Kings Park for 2 hours free parking.
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {carParks.map((park, index) => (
@@ -108,7 +110,7 @@ export default function CarParks() {
           </ul>
         </div>
 
-        <div className="mt-12 p-6 bg-gray-50 rounded-lg">
+        <div className="entry-content mt-12 p-6 bg-gray-50 rounded-lg">
           <h3 className="text-xl font-bold mb-3">Plan Your Visit</h3>
           <p className="text-gray-700">
             With convenient parking and plenty to see and do, Retford is the perfect destination 

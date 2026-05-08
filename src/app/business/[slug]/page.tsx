@@ -176,7 +176,7 @@ export default async function BusinessPage({ params }: { params: BusinessParams 
                 <section className="mb-8">
                   <h2 className="text-2xl font-bold mb-4">About {business.name}</h2>
                   <div 
-                    className="text-gray-700 leading-relaxed markdown-content"
+                    className="entry-content text-gray-700 leading-relaxed markdown-content"
                     dangerouslySetInnerHTML={{ __html: descriptionHtml }}
                   />
                 </section>

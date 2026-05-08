@@ -33,9 +33,11 @@ export default function WhatsOn() {
       <div className="max-w-4xl mx-auto px-6 py-12">
         <h2 className="text-3xl font-bold mb-6">What's on in Retford</h2>
         
-        <p className="text-gray-700 mb-8 leading-relaxed">
-          This page lists Retford's upcoming events for the benefit of people living in, and visiting, the historic market town. From traditional farmers markets and seasonal celebrations to community festivals and special occasions, discover what's happening in Retford and the surrounding area. Whether you're a long-time resident or planning a visit, check back regularly to stay up to date with all the latest events and activities taking place in our vibrant town centre and beyond.
-        </p>
+        <div className="entry-content">
+          <p className="text-gray-700 mb-8 leading-relaxed">
+            This page lists Retford's upcoming events for the benefit of people living in, and visiting, the historic market town. From traditional farmers markets and seasonal celebrations to community festivals and special occasions, discover what's happening in Retford and the surrounding area. Whether you're a long-time resident or planning a visit, check back regularly to stay up to date with all the latest events and activities taking place in our vibrant town centre and beyond.
+          </p>
+        </div>
 
         <h3 className="text-3xl font-bold mb-6">Upcoming Events in Retford</h3>
       
@@ -54,7 +56,7 @@ export default function WhatsOn() {
           </div>
         )}
 
-        <div className="mt-12 p-6 bg-gray-100 rounded-lg">
+        <div className="entry-content mt-12 p-6 bg-gray-100 rounded-lg">
           <h3 className="text-xl font-bold mb-4">Submit an Event</h3>
           <p className="text-gray-700 mb-4">
             Have an event coming up in Retford? We'd love to feature it on our What's On page!

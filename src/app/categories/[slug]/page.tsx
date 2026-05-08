@@ -104,7 +104,7 @@ export default async function CategoryPage({ params }: { params: CategoryParams 
       </section>
 
       {/* Category Intro */}
-      <section className="max-w-6xl mx-auto px-6 py-12">
+      <section className="entry-content max-w-6xl mx-auto px-6 py-12">
         <h2 className="text-4xl font-bold mb-6">
           {categoryName.replace(/\b\w/g, l => l.toUpperCase())} in Retford
         </h2>

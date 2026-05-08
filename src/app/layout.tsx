@@ -55,7 +55,7 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
         <Navbar />
-        <main className="flex-grow">
+        <main className="flex-grow single-post">
           {children}
         </main>
         <Footer />

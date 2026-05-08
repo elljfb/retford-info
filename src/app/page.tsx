@@ -29,7 +29,7 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-6 py-12">
         <h2 className="text-4xl font-bold mb-6">Retford in Nottinghamshire</h2>
         <div className="flex gap-8 items-center">
-          <div>
+          <div className="entry-content">
             <p className="text-lg leading-relaxed text-gray-700 mb-4">
               Welcome to Retford, a historic and charming market town nestled in the heart of Nottinghamshire. Boasting a rich heritage and a warm, community spirit, Retford offers a peaceful escape with its beautifully maintained parks and award-winning floral displays in Kings Park.
             </p>
@@ -76,7 +76,7 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-6 py-12">
         <h2 className="text-4xl font-bold mb-6">Where is Retford?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
+          <div className="entry-content">
             <p className="text-lg leading-relaxed text-gray-700 mb-4">
               Retford is a market town in Nottinghamshire, located in the East Midlands of England.
               Situated on the River Idle, it's approximately 30 miles north of Nottingham and has
@@ -101,11 +101,13 @@ export default function Home() {
       <section className="bg-gray-50 py-12">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-bold mb-6">About Retford.info</h2>
-          <p className="text-lg leading-relaxed text-gray-700 max-w-3xl">
-            Retford.info is a community-driven website dedicated to promoting local businesses and
-            keeping residents and visitors informed about what's happening in our town. We're committed
-            to supporting the local economy and fostering a sense of community pride.
-          </p>
+          <div className="entry-content max-w-3xl">
+            <p className="text-lg leading-relaxed text-gray-700">
+              Retford.info is a community-driven website dedicated to promoting local businesses and
+              keeping residents and visitors informed about what's happening in our town. We're committed
+              to supporting the local economy and fostering a sense of community pride.
+            </p>
+          </div>
         </div>
       </section>
     </>

@@ -40,7 +40,7 @@ export default async function ArticlesPage() {
       <section className="max-w-6xl mx-auto px-6 py-12">
         <div>
           <h2 className="text-4xl font-bold mb-6">Retford Articles</h2>
-          <div className="space-y-4">
+          <div className="entry-content space-y-4">
             <p className="text-lg leading-relaxed text-gray-700">
               Welcome to our articles section, featuring in-depth stories and features about Retford and the local community. 
               Our articles cover local events, community highlights, business profiles, and everything that makes Retford special.

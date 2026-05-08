@@ -144,7 +144,7 @@ export default async function SubcategoryPage({ params }: { params: SubcategoryP
       </section>
 
       {/* Subcategory Intro */}
-      <section className="max-w-6xl mx-auto px-6 py-8">
+      <section className="entry-content max-w-6xl mx-auto px-6 py-8">
         <h2 className="text-4xl font-bold mb-6">
           {subcategoryName.replace(/\b\w/g, (l: string) => l.toUpperCase())} in Retford
         </h2>

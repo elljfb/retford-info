@@ -22,18 +22,20 @@ export default function Weather() {
         <h2 className="text-3xl font-bold mb-6">Retford Weather</h2>
         
         {/* Introduction */}
-          <p className="mb-4 leading-relaxed">
-            Retford experiences a temperate climate with moderate rainfall typical of the East Midlands. 
-            Located inland in North Nottinghamshire, the town benefits from more stable weather patterns 
-            compared to coastal areas, with warm summers and cool winters perfect for exploring the historic 
-            market town and surrounding countryside.
-          </p>
-          <p className="leading-relaxed">
-            For your convenience, we have embedded a weather forecast below along with flood warnings for the area. 
-            To help you plan your day in Retford, explore our <a href="/categories/things-to-do" className="text-accent-dark hover:underline font-semibold">Things to Do</a> section 
-            featuring both indoor and outdoor activities, or browse our <a href="/categories/eat-and-drink" className="text-accent-dark hover:underline font-semibold">Eat & Drink</a> guide 
-            for cozy cafes and restaurants whatever the weather.
-          </p>
+          <div className="entry-content">
+            <p className="mb-4 leading-relaxed">
+              Retford experiences a temperate climate with moderate rainfall typical of the East Midlands. 
+              Located inland in North Nottinghamshire, the town benefits from more stable weather patterns 
+              compared to coastal areas, with warm summers and cool winters perfect for exploring the historic 
+              market town and surrounding countryside.
+            </p>
+            <p className="leading-relaxed">
+              For your convenience, we have embedded a weather forecast below along with flood warnings for the area. 
+              To help you plan your day in Retford, explore our <a href="/categories/things-to-do" className="text-accent-dark hover:underline font-semibold">Things to Do</a> section 
+              featuring both indoor and outdoor activities, or browse our <a href="/categories/eat-and-drink" className="text-accent-dark hover:underline font-semibold">Eat & Drink</a> guide 
+              for cozy cafes and restaurants whatever the weather.
+            </p>
+          </div>
 
           <br></br>
         
@@ -153,7 +155,7 @@ export default function Weather() {
           </div>
         </div>
 
-        <div className="mt-12 p-6 bg-blue-50 rounded-lg border border-accent">
+        <div className="entry-content mt-12 p-6 bg-blue-50 rounded-lg border border-accent">
           <h3 className="text-xl font-bold mb-3">Planning Your Visit?</h3>
           <p className="text-gray-700">
             Whatever the weather, Retford has plenty to offer! Check the forecast and plan 

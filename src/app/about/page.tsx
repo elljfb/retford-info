@@ -30,11 +30,13 @@ export default function About() {
 
       <div className="max-w-4xl mx-auto px-6 py-12">
         <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
-        <p className="text-lg text-gray-700 leading-relaxed mb-8">
-          Retford.info was created to be the go-to resource for everything happening in Retford, Nottinghamshire.
-          We're dedicated to supporting local businesses, keeping residents informed, and fostering a sense of
-          community pride.
-        </p>
+        <div className="entry-content">
+          <p className="text-lg text-gray-700 leading-relaxed mb-8">
+            Retford.info was created to be the go-to resource for everything happening in Retford, Nottinghamshire.
+            We're dedicated to supporting local businesses, keeping residents informed, and fostering a sense of
+            community pride.
+          </p>
+        </div>
 
         <h2 className="text-3xl font-bold mb-6 mt-12">Why Choose Retford.info?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
@@ -67,12 +69,14 @@ export default function About() {
         </div>
 
         <h2 className="text-3xl font-bold mb-6 mt-12">Support Local</h2>
-        <p className="text-lg text-gray-700 leading-relaxed mb-8">
-          When you visit businesses listed on Retford.info, you're supporting our local economy. Don't forget to
-          mention us when you contact them—it helps us continue providing this service to the community!
-        </p>
+        <div className="entry-content">
+          <p className="text-lg text-gray-700 leading-relaxed mb-8">
+            When you visit businesses listed on Retford.info, you're supporting our local economy. Don't forget to
+            mention us when you contact them—it helps us continue providing this service to the community!
+          </p>
+        </div>
 
-        <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg mb-8">
+        <div className="entry-content bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg mb-8">
           <p className="text-gray-700">
             <strong>Please note:</strong> We are currently in the process of manually adding businesses to Retford.info. 
             If your favourite local business isn't listed yet, we're working on it! Businesses can also get in touch to 

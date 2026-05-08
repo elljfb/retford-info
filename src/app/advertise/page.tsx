@@ -17,11 +17,13 @@ export default function Advertise() {
 
       <div className="max-w-4xl mx-auto px-6 py-12">
         <h2 className="text-3xl font-bold mb-6">Get Listed on Retford.info</h2>
-        <p className="text-lg text-gray-700 leading-relaxed mb-12">
-          Retford.info is the perfect place to promote your business to local customers and visitors.
-          Whether you're a small shop, restaurant, hotel, or service provider, we've got a listing option
-          that works for you.
-        </p>
+        <div className="entry-content">
+          <p className="text-lg text-gray-700 leading-relaxed mb-12">
+            Retford.info is the perfect place to promote your business to local customers and visitors.
+            Whether you're a small shop, restaurant, hotel, or service provider, we've got a listing option
+            that works for you.
+          </p>
+        </div>
 
         {/* Pricing Table */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
@@ -103,7 +105,7 @@ export default function Advertise() {
 
         {/* How it Works */}
         <h2 className="text-3xl font-bold mb-6 mt-12">How It Works</h2>
-        <div className="space-y-6 mb-12">
+        <div className="entry-content space-y-6 mb-12">
           <div className="flex gap-6">
             <div className="bg-accent text-gray-900 w-12 h-12 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
             <div>
@@ -143,7 +145,7 @@ export default function Advertise() {
         </div>
 
         {/* CTA */}
-        <div className="bg-gray-50 p-8 rounded-lg text-center">
+        <div className="entry-content bg-gray-50 p-8 rounded-lg text-center">
           <h3 className="text-2xl font-bold mb-4">Ready to Get Listed?</h3>
           <p className="text-gray-700 mb-6">
             Contact us today to discuss your listing options and get your business on Retford.info!

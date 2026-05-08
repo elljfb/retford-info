@@ -32,7 +32,7 @@ export default function Contact() {
       <div className="max-w-4xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           {/* Contact Information */}
-          <div>
+          <div className="entry-content">
             <h2 className="text-2xl font-bold mb-6">Get In Touch</h2>
             <p className="text-gray-700 mb-8">
               Have questions about listings, advertising, or anything else? We'd love to hear from you!
@@ -64,7 +64,7 @@ export default function Contact() {
         </div>
 
         {/* Additional Information */}
-        <div className="bg-gray-50 p-8 rounded-lg">
+        <div className="entry-content bg-gray-50 p-8 rounded-lg">
           <h2 className="text-2xl font-bold mb-4">Other Pages</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Link href="/about" className="text-accent-dark hover:underline">

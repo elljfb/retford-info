@@ -45,7 +45,7 @@ export default async function NewsPage() {
       <section className="max-w-6xl mx-auto px-6 py-12">
         <div>
           <h2 className="text-4xl font-bold mb-6">Retford News</h2>
-          <div className="space-y-4">
+          <div className="entry-content space-y-4">
           <p className="text-lg leading-relaxed text-gray-700">
             Want to know what's happening in Retford? Welcome to our news page, which brings together the latest news 
             from local and regional sources to keep you informed about your community.

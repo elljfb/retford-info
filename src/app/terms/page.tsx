@@ -15,7 +15,7 @@ export default function Terms() {
       <div className="max-w-3xl mx-auto px-6 py-12">
         <p className="text-gray-600 mb-8">Last updated: December 2024</p>
 
-        <div className="space-y-8 prose prose-sm max-w-none text-gray-700">
+        <div className="entry-content space-y-8 prose prose-sm max-w-none text-gray-700">
           <section>
             <h2 className="text-2xl font-bold mb-4">1. Agreement to Terms</h2>
             <p>
