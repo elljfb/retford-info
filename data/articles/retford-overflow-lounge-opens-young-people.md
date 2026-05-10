@@ -1,5 +1,5 @@
 ---
-title: Retford Gets a Brand New After-School Hangout for Young People
+title: "Retford Gets a Brand New After-School Hangout for Young People"
 date: 2026-05-10
 excerpt: "A new dedicated space for young people to socialise after school has officially opened in Retford after securing government funding."
 image: /articles/young-people-space-retford.jpeg
