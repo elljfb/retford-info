@@ -13,6 +13,8 @@ The venue describes itself as "Retford's ultimate social spot" and looks set to 
 
 The Bunker's Facebook post summed up the concept simply: "Think sport, competition, drinks and good nights with your friends."
 
+![Facebook post](/articles/the-bunker-fb.jpeg)
+
 Whether you are planning a date night, a group game night or just a drink with mates, the venue appears to be pitching itself as something for everyone. No opening date has been announced yet, but the "coming soon" teaser has already been generating buzz locally.
 
 You can follow The Bunker Bar on [Facebook](https://www.facebook.com/61588799282887/) and Instagram to stay up to date with the opening announcement.
