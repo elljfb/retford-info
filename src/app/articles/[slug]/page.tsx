@@ -19,7 +19,15 @@ export async function generateMetadata({ params }: { params: ArticleParams }) {
   if (!article) return {};
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://retford.info';
-  
+  const publishedTime = new Date(article.date).toISOString();
+  const newsKeywords = [
+    article.title,
+    'Retford',
+    'Nottinghamshire',
+    'local news',
+    'community',
+  ].join(', ');
+
   const ogImage = article.image 
     ? new URL(article.image, siteUrl).toString()
     : `/api/og?title=${encodeURIComponent(article.title)}&subtitle=${encodeURIComponent('Article')}`;
@@ -32,6 +40,8 @@ export async function generateMetadata({ params }: { params: ArticleParams }) {
       description: article.excerpt,
       images: [ogImage],
       type: 'article',
+      publishedTime,
+      authors: ['Retford.info'],
     },
     twitter: {
       card: 'summary_large_image',
@@ -39,6 +49,11 @@ export async function generateMetadata({ params }: { params: ArticleParams }) {
       description: article.excerpt,
       images: [ogImage],
     },
+    other: [
+      { name: 'news_keywords', content: newsKeywords },
+      { property: 'article:published_time', content: publishedTime },
+      { property: 'article:section', content: 'Local News' },
+    ],
   };
 }
 

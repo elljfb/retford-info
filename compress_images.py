@@ -16,6 +16,7 @@ QUALITY = 85  # 85 is a good balance between quality and file size
 MAX_WIDTH = 1920  # Maximum width for images
 MAX_HEIGHT = 1920  # Maximum height for images
 SUPPORTED_FORMATS = {'.jpg', '.jpeg', '.png', '.webp', '.JPG'}
+IGNORED_FILES = {'retfordinfo.png'}
 
 def get_file_size_kb(filepath):
     """Get file size in KB."""
@@ -127,6 +128,8 @@ def main():
     image_files = []
     for ext in SUPPORTED_FORMATS:
         image_files.extend(PUBLIC_DIR.rglob(f"*{ext}"))
+    
+    image_files = [img for img in image_files if img.name not in IGNORED_FILES]
     
     if not image_files:
         print("No images found in the public directory.")

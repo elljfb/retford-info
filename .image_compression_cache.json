@@ -32,8 +32,8 @@
     "size": 808.3515625
   },
   "public\\retfordinfo.png": {
-    "hash": "96b162772556d6f12a3c36b68223bde2",
-    "size": 129.6123046875
+    "hash": "246715f44c81dcdb3d1cb394b7d3a0d6",
+    "size": 124.1337890625
   },
   "public\\businesses\\eat-and-drink\\freds-1.png": {
     "hash": "72058548b407eab0786ec8f1001de7a7",
@@ -238,5 +238,41 @@
   "public\\articles\\charter-day-header.jpg": {
     "hash": "d90cf08ee78b47b3d2d3ed0217e9580e",
     "size": 877.9521484375
+  },
+  "public\\articles\\police-farm.png": {
+    "hash": "b3797ac84d567c3613eec4412e2cae37",
+    "size": 1662.947265625
+  },
+  "public\\articles\\retford-golf-sim-bar.png": {
+    "hash": "fac296b03738379595aac59cfd9025f3",
+    "size": 1837.1455078125
+  },
+  "public\\articles\\foster-carers.jpeg": {
+    "hash": "a45a3fdb3dbec9e270c4ae5fdc528062",
+    "size": 204.51171875
+  },
+  "public\\articles\\the-bunker-fb.jpeg": {
+    "hash": "2050310f65eebc2a1f285d71c6c56a46",
+    "size": 121.1484375
+  },
+  "public\\articles\\young-people-space-retford.jpeg": {
+    "hash": "42db76da69c7fc4045e814de334e8fe4",
+    "size": 926.28125
+  },
+  "public\\articles\\clumber-cat1.webp": {
+    "hash": "c8619adab2fb265695ade9ac44ae7e7f",
+    "size": 15.25
+  },
+  "public\\articles\\clumber-cat2.webp": {
+    "hash": "598a6d9b53dabe229c7d0bd06e474f69",
+    "size": 36.0625
+  },
+  "public\\articles\\puppy-probe-1.webp": {
+    "hash": "b27467e1a7db1fb7f1ea00bfef8e0e6c",
+    "size": 70.837890625
+  },
+  "public\\articles\\puppy-probe-2.webp": {
+    "hash": "ac9c95354404c8a57d0764d9b7b6b282",
+    "size": 45.78515625
   }
 }
