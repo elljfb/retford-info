@@ -48,11 +48,12 @@ export default function Navbar() {
 
   const pages = [
     { name: 'What\'s On', href: '/whats-on' },
+    { name: 'Obituaries', href: '/obituaries' },
     { name: 'Car Parks', href: '/car-parks' },
     { name: 'Weather', href: '/weather' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Advertise', href: '/contact' },
+    { name: 'Advertise', href: '/advertise' },
   ];
 
   return (

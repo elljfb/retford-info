@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { getBusinesses, getCategories, getSubcategoriesByCategory, slugifyBusinessValue } from '@/lib/businesses';
 import { getArticles, getNews } from '@/lib/articles';
+import { fetchPublishedObituaries, hasSupabaseObituariesConfig } from '@/lib/supabase-obituaries';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://retford.info';
@@ -42,6 +43,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
       changeFrequency: 'daily' as const,
       priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/obituaries`,
+      lastModified: new Date(),
+      changeFrequency: 'daily' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/obituaries/submit`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/whats-on`,
@@ -128,6 +141,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
+  const obituaries = hasSupabaseObituariesConfig()
+    ? await fetchPublishedObituaries(1000).catch(() => [])
+    : [];
+  const obituaryPages = obituaries.map((obituary) => ({
+    url: `${baseUrl}/obituaries/${obituary.slug}`,
+    lastModified: new Date(obituary.updated_at || obituary.created_at),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
   return [
     ...staticPages,
     ...categoryPages,
@@ -135,5 +158,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...businessPages,
     ...articlePages,
     ...newsPages,
+    ...obituaryPages,
   ];
 }
