@@ -8,7 +8,7 @@ export default function Home() {
     { name: "Eat and Drink", slug: "eat-and-drink", image: "/businesses/eat-and-drink/eat-drink.jpg", path: "/categories/eat-and-drink" },
     { name: "Accommodation", slug: "accommodation", image: "/businesses/accommodation/accommodation.jpg", path: "/categories/accommodation" },
     { name: "Things to Do", slug: "things-to-do", image: "/businesses/things-to-do/things-to-do.jpg", path: "/categories/things-to-do" },
-    { name: "Obituaries", slug: "obituaries", image: "/retford-town-hall.jpg", path: "/obituaries" },
+    { name: "Obituaries", slug: "obituaries", image: "/obituaries.png", path: "/obituaries" },
     { name: "Latest Articles", slug: "articles", image: "/articles/articles-cover.jpg", path: "/articles" },
   ];
 
