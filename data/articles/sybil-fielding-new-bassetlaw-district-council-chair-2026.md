@@ -13,7 +13,7 @@ Cllr Fielding said: "It is a tremendous privilege to become Chair of Bassetlaw D
 
 "I will exercise my duties as Chair with fairness and impartiality, in the knowledge we are all working for the benefit of our community. I would also like to thank Councillor Tony Eaton for his diligent work as Chair and congratulate him for his civic leadership during the past 12 months."
 
-![New Chair](/articles/new-bassetlaw-council-chair.jpeg)
+![New Chair](/articles/new-bassetlaw-council-chair.jpg)
 Pictured: Cllr David Naylor, Vice Chair of Bassetlaw District Council and Cllr Sybil Fielding, Chair of Bassetlaw District Council
 
 Cllr Fielding is no stranger to the role, having previously served as Council Chair in 2013/14 and as County Council Chair in 2015/16. She has been a ward councillor for Worksop North West since 2012 and currently serves as the council's Armed Forces Champion.
