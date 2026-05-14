@@ -274,5 +274,25 @@
   "public\\articles\\puppy-probe-2.webp": {
     "hash": "ac9c95354404c8a57d0764d9b7b6b282",
     "size": 45.78515625
+  },
+  "public\\obituaries.png": {
+    "hash": "5e83909b4cad808dc704781285d72ea6",
+    "size": 2025.5556640625
+  },
+  "public\\articles\\retford-lifesavers.jpeg": {
+    "hash": "2f1de48295880e2d59bb189e9ce17aee",
+    "size": 640.00390625
+  },
+  "public\\articles\\dogs.jpg": {
+    "hash": "378f34e60d4d00b99f0df7b6aa9479c5",
+    "size": 277.572265625
+  },
+  "public\\articles\\new-bassetlaw-council-chair.jpg": {
+    "hash": "55d420301ce3bf3001cec514accab037",
+    "size": 375.7138671875
+  },
+  "public\\businesses\\eat-and-drink\\lucky-days-retford.jpg": {
+    "hash": "bf1d1d6f760d71c8d69353c7cf81717d",
+    "size": 75.96875
   }
 }

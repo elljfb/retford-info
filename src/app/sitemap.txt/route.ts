@@ -1,9 +1,10 @@
 import { getBusinesses, getCategories, getSubcategoriesByCategory, slugifyBusinessValue } from '@/lib/businesses';
 import { getArticles, getNews } from '@/lib/articles';
+import { fetchPublishedObituaries, hasSupabaseObituariesConfig } from '@/lib/supabase-obituaries';
 import { NextResponse } from 'next/server';
 
 export async function GET() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://retford.info';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.NEXT_PUBLIC_BASE_URL || 'https://retford.info';
 
   const urls: string[] = [];
 
@@ -14,6 +15,8 @@ export async function GET() {
   urls.push(`${baseUrl}/advertise`);
   urls.push(`${baseUrl}/articles`);
   urls.push(`${baseUrl}/news`);
+  urls.push(`${baseUrl}/obituaries`);
+  urls.push(`${baseUrl}/obituaries/submit`);
   urls.push(`${baseUrl}/whats-on`);
   urls.push(`${baseUrl}/car-parks`);
   urls.push(`${baseUrl}/weather`);
@@ -54,6 +57,14 @@ export async function GET() {
   const news = await getNews();
   for (const article of news) {
     urls.push(`${baseUrl}/news/${article.slug}`);
+  }
+
+  // Obituary pages
+  const obituaries = hasSupabaseObituariesConfig()
+    ? await fetchPublishedObituaries(1000).catch(() => [])
+    : [];
+  for (const obituary of obituaries) {
+    urls.push(`${baseUrl}/obituaries/${obituary.slug}`);
   }
 
   // Join all URLs with newlines
