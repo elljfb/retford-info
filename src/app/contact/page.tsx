@@ -29,38 +29,9 @@ export default function Contact() {
         </div>
       </section>
 
-      <div className="max-w-4xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-          {/* Contact Information */}
-          <div className="entry-content">
-            <h2 className="text-2xl font-bold mb-6">Get In Touch</h2>
-            <p className="text-gray-700 mb-8">
-              Have questions about listings, advertising, or anything else? We'd love to hear from you!
-            </p>
-
-            <div className="space-y-6">
-              <div>
-                <h3 className="font-bold text-lg mb-2">Email</h3>
-                <a href="mailto:retfordinfo@gmail.com" className="text-accent-dark hover:underline">
-                  retfordinfo@gmail.com
-                </a>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-lg mb-2">Location</h3>
-                <p className="text-gray-700">
-                  Retford<br />
-                  Nottinghamshire<br />
-                  England
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Contact Form */}
-          <div>
-            <ContactForm />
-          </div>
+      <div className="max-w-2xl mx-auto px-6 py-12">
+        <div className="mb-12">
+          <ContactForm />
         </div>
 
         {/* Additional Information */}
