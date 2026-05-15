@@ -36,7 +36,7 @@ export default function ContactForm() {
       } else {
         setMessage({ type: 'error', text: result.error || 'Failed to send message. Please try again.' });
       }
-    } catch (error) {
+    } catch {
       setMessage({ type: 'error', text: 'An error occurred. Please try again later.' });
     } finally {
       setIsSubmitting(false);

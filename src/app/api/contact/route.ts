@@ -1,5 +1,8 @@
 import { NextResponse } from 'next/server';
 
+const CONTACT_FORM_FROM = 'Retford.info Contact Form <contact@retford.info>';
+const CONTACT_FORM_TO = 'retfordinfo@gmail.com';
+
 function escapeHtml(value: string) {
   return value
     .replace(/&/g, '&amp;')
@@ -21,15 +24,29 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
-    const { name, email, subject, message } = body;
+    const name = typeof body.name === 'string' ? body.name.trim() : '';
+    const email = typeof body.email === 'string' ? body.email.trim() : '';
+    const subject = typeof body.subject === 'string' ? body.subject.trim() : '';
+    const message = typeof body.message === 'string' ? body.message.trim() : '';
 
-    // Validate required fields
     if (!name || !email || !subject || !message) {
       return NextResponse.json(
         { error: 'All fields are required' },
         { status: 400 }
       );
     }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return NextResponse.json(
+        { error: 'Please enter a valid email address' },
+        { status: 400 }
+      );
+    }
+
+    const safeName = escapeHtml(name);
+    const safeEmail = escapeHtml(email);
+    const safeSubject = escapeHtml(subject);
+    const safeMessage = escapeHtml(message).replace(/\n/g, '<br>');
 
     const emailResponse = await fetch('https://api.resend.com/emails', {
       method: 'POST',
@@ -38,16 +55,24 @@ export async function POST(request: Request) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'Retford.info Contact Form <noreply@retfordbusinesshub.co.uk>',
-        to: ['retfordinfo@gmail.com'],
+        from: CONTACT_FORM_FROM,
+        to: [CONTACT_FORM_TO],
         reply_to: email,
         subject: `Contact Form: ${subject}`,
+        text: [
+          'New Contact Form Submission',
+          '',
+          `From: ${name} (${email})`,
+          `Subject: ${subject}`,
+          '',
+          message,
+        ].join('\n'),
         html: `
         <h2>New Contact Form Submission</h2>
-        <p><strong>From:</strong> ${escapeHtml(name)} (${escapeHtml(email)})</p>
-        <p><strong>Subject:</strong> ${escapeHtml(subject)}</p>
+        <p><strong>From:</strong> ${safeName} (${safeEmail})</p>
+        <p><strong>Subject:</strong> ${safeSubject}</p>
         <p><strong>Message:</strong></p>
-        <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
+        <p>${safeMessage}</p>
       `,
       }),
     });

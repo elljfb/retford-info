@@ -41,8 +41,8 @@ export default function Contact() {
             <div className="space-y-6">
               <div>
                 <h3 className="font-bold text-lg mb-2">Email</h3>
-                <a href="mailto:info@retfordbusinesshub.co.uk" className="text-accent-dark hover:underline">
-                  info@retfordbusinesshub.co.uk
+                <a href="mailto:retfordinfo@gmail.com" className="text-accent-dark hover:underline">
+                  retfordinfo@gmail.com
                 </a>
               </div>
 
