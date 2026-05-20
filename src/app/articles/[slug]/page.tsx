@@ -28,10 +28,10 @@ export async function generateMetadata({ params }: { params: ArticleParams }) {
     'community',
   ].join(', ');
 
-  const ogImage = article.image 
+  const ogImage = article.image
     ? new URL(article.image, siteUrl).toString()
     : `/api/og?title=${encodeURIComponent(article.title)}&subtitle=${encodeURIComponent('Article')}`;
-  
+
   return {
     title: `${article.title} - Retford, Nottinghamshire`,
     description: article.excerpt,
@@ -60,16 +60,17 @@ export async function generateMetadata({ params }: { params: ArticleParams }) {
 export default async function ArticlePage({ params }: { params: ArticleParams }) {
   const { slug } = await params;
   const article = await getArticleBySlug(slug);
-  const relatedArticles = await getRelatedArticles(slug, 2);
 
   if (!article) {
     notFound();
   }
 
+  const relatedArticles = await getRelatedArticles(slug, 4);
+
   return (
     <div className="single-post">
       {/* Cover Section */}
-      <section 
+      <section
         className="relative w-full h-96 bg-gradient-to-r from-blue-400 to-blue-300 flex items-center justify-center"
         style={{ backgroundImage: `url(${article.image || '/articles/articles-cover.jpg'})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
@@ -82,52 +83,71 @@ export default async function ArticlePage({ params }: { params: ArticleParams })
         </div>
       </section>
 
-      <div className="max-w-3xl mx-auto px-6 py-12">
-        {/* Article Meta */}
-        <article className="post type-post status-publish format-standard hentry">
-          <time className="text-gray-500">{formatDate(article.date)}</time>
+      <div className="max-w-6xl mx-auto px-6 py-12">
+        <div className="flex flex-col lg:flex-row gap-10 lg:items-start">
+          <div className="lg:flex-[0_0_66.67%] lg:max-w-[66.67%]">
+            {/* Article Meta */}
+            <article className="post type-post status-publish format-standard hentry">
+              <time className="text-gray-500">{formatDate(article.date)}</time>
 
-          {/* Article Content */}
-          <div
-            className="entry-content article-content text-gray-700 mb-12 mt-6"
-            dangerouslySetInnerHTML={{ __html: article.html }}
-          />
-        </article>
+              {/* Article Content */}
+              <div
+                className="entry-content article-content text-gray-700 mb-12 mt-6"
+                dangerouslySetInnerHTML={{ __html: article.html }}
+              />
+            </article>
 
-        {/* Related Articles */}
-        {relatedArticles.length > 0 && (
-          <section className="mt-12 pt-12 border-t border-gray-300">
-            <h2 className="text-2xl font-bold mb-6">Related Articles</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {relatedArticles.map(related => (
-                <Link
-                  key={related.slug}
-                  href={`/articles/${related.slug}`}
-                  className="group"
-                >
-                  <div className="border border-gray-300 rounded-lg p-4 hover:border-accent-dark hover:shadow-md transition-all h-full">
-                    <time className="text-sm text-gray-500">{formatDate(related.date)}</time>
-                    <h3 className="text-lg font-bold mt-2 group-hover:text-accent-dark">
-                      {related.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm mt-2 line-clamp-2">
-                      {related.excerpt}
-                    </p>
-                  </div>
-                </Link>
-              ))}
+            {/* Back to Articles */}
+            <div className="mt-12 pt-12 border-t border-gray-300">
+              <Link
+                href="/articles"
+                className="inline-block bg-accent text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-accent-dark transition-colors no-underline"
+              >
+                &larr; Back to Articles
+              </Link>
             </div>
-          </section>
-        )}
+          </div>
 
-        {/* Back to Articles */}
-        <div className="mt-12 pt-12 border-t border-gray-300">
-          <Link
-            href="/articles"
-            className="inline-block bg-accent text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-accent-dark transition-colors no-underline"
-          >
-            ← Back to Articles
-          </Link>
+          <div style={{ flexBasis: '33.33%' }} className="w-full lg:w-auto">
+            <aside className="wp-block-template-part lg:sticky lg:top-8 space-y-8">
+              {relatedArticles.length > 0 && (
+                <section aria-labelledby="related-articles-heading">
+                  <h2 id="related-articles-heading" className="text-xl font-bold mb-4">
+                    Suggested Posts
+                  </h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-5">
+                    {relatedArticles.map(related => (
+                      <Link
+                        key={related.slug}
+                        href={`/articles/${related.slug}`}
+                        className="group block no-underline"
+                      >
+                        <article className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all hover:border-accent-dark hover:shadow-md">
+                          <div className="aspect-[16/9] bg-gray-100">
+                            <img
+                              src={related.image || '/articles/articles-cover.jpg'}
+                              alt=""
+                              className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                              loading="lazy"
+                            />
+                          </div>
+                          <div className="p-4">
+                            <time className="text-xs text-gray-500">{formatDate(related.date)}</time>
+                            <h3 className="mt-2 text-base font-bold leading-snug text-gray-900 group-hover:text-accent-dark">
+                              {related.title}
+                            </h3>
+                            <p className="mt-2 text-sm leading-relaxed text-gray-600">
+                              {related.excerpt}
+                            </p>
+                          </div>
+                        </article>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              )}
+            </aside>
+          </div>
         </div>
       </div>
     </div>
