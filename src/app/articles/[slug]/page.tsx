@@ -108,8 +108,14 @@ export default async function ArticlePage({ params }: { params: ArticleParams })
             </div>
           </div>
 
-          <div style={{ flexBasis: '33.33%' }} className="w-full lg:w-auto">
-            <aside className="wp-block-template-part lg:sticky lg:top-8 space-y-8">
+          <div
+            id="sidebar_btf"
+            data-ad-slot="sidebar_btf"
+            data-journey-target="sidebar_btf"
+            style={{ flexBasis: '33.33%' }}
+            className="sidebar_btf w-full lg:w-auto"
+          >
+            <aside className="wp-block-template-part sidebar_btf lg:sticky lg:top-8 space-y-8">
               {relatedArticles.length > 0 && (
                 <section aria-labelledby="related-articles-heading">
                   <h2 id="related-articles-heading" className="text-xl font-bold mb-4">
