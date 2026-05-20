@@ -294,5 +294,17 @@
   "public\\businesses\\eat-and-drink\\lucky-days-retford.jpg": {
     "hash": "bf1d1d6f760d71c8d69353c7cf81717d",
     "size": 75.96875
+  },
+  "public\\articles\\new-clumber-park-bus.png": {
+    "hash": "24595fdf0db1891377698ea49d9fb7a1",
+    "size": 4199.93359375
+  },
+  "public\\articles\\new-business-funding.jpg": {
+    "hash": "7a73a044ff81e3707aaf20f8abd3cea8",
+    "size": 520.8115234375
+  },
+  "public\\articles\\police-idle-valley.jpg": {
+    "hash": "5087d6fa0daec2e1ac1110126a95a8ad",
+    "size": 64.6572265625
   }
 }
