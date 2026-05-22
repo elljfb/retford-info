@@ -7,7 +7,7 @@ image: /articles/retford-golf-sim-bar.png
 
 **A brand new sports and games bar is coming to Retford town centre, promising golf simulators, pool, darts, shuffleboard and crafted drinks all under one roof.**
 
-The Bunker Bar, which will be based at 21-23 Carolgate, has announced its arrival on social media, teasing locals with the promise that "something big is landing in town."
+[The Bunker Bar](/business/the-bunker-bar), which will be based at 21-23 Carolgate, has announced its arrival on social media, teasing locals with the promise that "something big is landing in town."
 
 The venue describes itself as "Retford's ultimate social spot" and looks set to fill a gap in the town's nightlife with a mix of competitive socialising and bar vibes. As well as golf simulators, guests will be able to challenge friends at pool, darts and shuffleboard, with crafted drinks served throughout.
 
