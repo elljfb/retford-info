@@ -5,9 +5,7 @@ import { ExternalLink } from 'lucide-react';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://retford.info';
 
-// Force dynamic rendering to fetch fresh RSS data on each request
-export const dynamic = 'force-dynamic';
-export const revalidate = 0; // Disable static generation
+export const revalidate = 3600;
 
 export const metadata = {
   title: 'Local News - Retford, Nottinghamshire',

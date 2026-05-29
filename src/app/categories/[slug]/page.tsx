@@ -126,6 +126,7 @@ export default async function CategoryPage({ params }: { params: CategoryParams 
                 <Link
                   key={subcategory}
                   href={`/categories/${slug}/${subcategorySlug}`}
+                  prefetch={false}
                   className="group"
                 >
                   <div className="bg-gray-100 h-32 rounded-lg flex flex-col items-center justify-center hover:bg-accent hover:shadow-lg transition-all">
@@ -157,6 +158,7 @@ export default async function CategoryPage({ params }: { params: CategoryParams 
                   <Link
                     key={business.slug}
                     href={`/business/${business.slug}`}
+                    prefetch={false}
                     className="group"
                   >
                     <div className="relative h-48 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">

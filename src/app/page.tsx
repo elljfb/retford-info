@@ -47,6 +47,7 @@ export default function Home() {
             <Link
               key={category.slug}
               href={category.path}
+              prefetch={false}
               className="group"
             >
               <div 

@@ -62,7 +62,7 @@ export default function Navbar() {
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo and Title */}
-            <Link href="/" className="flex items-center gap-3 no-underline">
+            <Link href="/" prefetch={false} className="flex items-center gap-3 no-underline">
               <Image
                 src="/retfordinfo.png"
                 alt="Retford.info Logo"
@@ -111,6 +111,7 @@ export default function Navbar() {
                     <Link
                       key={item.href}
                       href={item.href}
+                      prefetch={false}
                       className="block text-lg text-gray-700 hover:text-accent hover:underline"
                       onClick={() => setIsMenuOpen(false)}
                     >
@@ -128,6 +129,7 @@ export default function Navbar() {
                     <Link
                       key={item.href}
                       href={item.href}
+                      prefetch={false}
                       className="block text-lg text-gray-700 hover:text-accent hover:underline"
                       onClick={() => setIsMenuOpen(false)}
                     >
@@ -144,6 +146,7 @@ export default function Navbar() {
                   <div className="space-y-3">
                     <Link
                       href="/articles"
+                      prefetch={false}
                       className="block text-lg font-semibold text-gray-700 hover:text-accent hover:underline mb-4"
                       onClick={() => setIsMenuOpen(false)}
                     >
@@ -153,6 +156,7 @@ export default function Navbar() {
                       <Link
                         key={article.slug}
                         href={`/articles/${article.slug}`}
+                        prefetch={false}
                         className="block text-sm text-gray-600 hover:text-accent hover:underline"
                         onClick={() => setIsMenuOpen(false)}
                       >
@@ -167,6 +171,7 @@ export default function Navbar() {
                   <div className="space-y-3">
                     <Link
                       href="/news"
+                      prefetch={false}
                       className="block text-lg font-semibold text-gray-700 hover:text-accent hover:underline mb-4"
                       onClick={() => setIsMenuOpen(false)}
                     >

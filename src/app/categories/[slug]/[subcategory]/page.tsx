@@ -131,9 +131,9 @@ export default async function SubcategoryPage({ params }: { params: SubcategoryP
       {/* Breadcrumb */}
       <section className="max-w-6xl mx-auto px-6 py-4">
         <div className="text-sm text-gray-600">
-          <Link href="/" className="hover:text-accent-dark">Home</Link>
+          <Link href="/" prefetch={false} className="hover:text-accent-dark">Home</Link>
           {' / '}
-          <Link href={`/categories/${slug}`} className="hover:text-accent-dark">
+          <Link href={`/categories/${slug}`} prefetch={false} className="hover:text-accent-dark">
             {categoryName.replace(/\b\w/g, (l: string) => l.toUpperCase())}
           </Link>
           {' / '}
@@ -166,6 +166,7 @@ export default async function SubcategoryPage({ params }: { params: SubcategoryP
                   <Link
                     key={business.slug}
                     href={`/business/${business.slug}`}
+                    prefetch={false}
                     className="group"
                   >
                     <div className="relative h-48 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
@@ -213,6 +214,7 @@ export default async function SubcategoryPage({ params }: { params: SubcategoryP
               <Link
                 key={business.slug}
                 href={`/business/${business.slug}`}
+                prefetch={false}
                 className="block group"
               >
                 <div className="border border-gray-300 rounded-lg p-4 hover:border-accent-dark hover:shadow-md transition-all h-full">

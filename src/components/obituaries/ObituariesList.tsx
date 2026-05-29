@@ -121,6 +121,7 @@ export default function ObituariesList() {
         </p>
         <Link
           href="/obituaries/submit"
+          prefetch={false}
           className="inline-flex items-center justify-center bg-accent text-gray-900 px-5 py-3 rounded-lg font-semibold hover:bg-accent-dark hover:text-white transition-colors no-underline"
         >
           Submit a notice
@@ -144,6 +145,7 @@ export default function ObituariesList() {
           <Link
             key={obituary.id}
             href={`/obituaries/${obituary.slug}`}
+            prefetch={false}
             className="block group bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden no-underline"
           >
             <div className="h-48 bg-gray-100 relative">

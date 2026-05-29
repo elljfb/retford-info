@@ -50,6 +50,7 @@ export default function ArticlesList({ initialArticles, totalCount }: ArticlesLi
               <Link
                 key={article.slug}
                 href={`/articles/${article.slug}`}
+                prefetch={false}
                 className="block group bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden"
               >
                 {article.image && (

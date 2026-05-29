@@ -101,6 +101,7 @@ export default async function ArticlePage({ params }: { params: ArticleParams })
             <div className="mt-12 pt-12 border-t border-gray-300">
               <Link
                 href="/articles"
+                prefetch={false}
                 className="inline-block bg-accent text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-accent-dark transition-colors no-underline"
               >
                 &larr; Back to Articles
@@ -126,6 +127,7 @@ export default async function ArticlePage({ params }: { params: ArticleParams })
                       <Link
                         key={related.slug}
                         href={`/articles/${related.slug}`}
+                        prefetch={false}
                         className="group block no-underline"
                       >
                         <article className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all hover:border-accent-dark hover:shadow-md">

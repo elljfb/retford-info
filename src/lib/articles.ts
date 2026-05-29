@@ -3,6 +3,21 @@ import path from 'path';
 import matter from 'gray-matter';
 import { marked } from 'marked';
 
+const renderer = new marked.Renderer();
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+renderer.image = (href: string, title: string | null, text: string): string => {
+  const titleAttr = title ? ` title="${escapeHtml(title)}"` : '';
+  return `<img src="${escapeHtml(href)}" alt="${escapeHtml(text)}"${titleAttr} loading="lazy" decoding="async">`;
+};
+
 export interface Article {
   slug: string;
   title: string;
@@ -27,7 +42,7 @@ async function readArticlesFromDir(dir: string): Promise<Article[]> {
       const fullPath = path.join(filePath, file);
       const content = fs.readFileSync(fullPath, 'utf-8');
       const { data, content: body } = matter(content);
-      const html = await marked(body);
+      const html = await marked(body, { renderer });
 
       return {
         slug: file.replace('.md', ''),

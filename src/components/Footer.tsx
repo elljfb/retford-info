@@ -55,6 +55,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    prefetch={false}
                     className="text-gray-300 hover:text-accent transition-colors no-underline"
                   >
                     {link.name}
@@ -71,6 +72,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/categories/shops-and-businesses"
+                  prefetch={false}
                   className="text-gray-300 hover:text-accent transition-colors no-underline"
                 >
                   Shops & Businesses
@@ -79,6 +81,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/categories/eat-and-drink"
+                  prefetch={false}
                   className="text-gray-300 hover:text-accent transition-colors no-underline"
                 >
                   Eat & Drink
@@ -87,6 +90,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/categories/accommodation"
+                  prefetch={false}
                   className="text-gray-300 hover:text-accent transition-colors no-underline"
                 >
                   Accommodation
@@ -95,6 +99,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/categories/things-to-do"
+                  prefetch={false}
                   className="text-gray-300 hover:text-accent transition-colors no-underline"
                 >
                   Things to Do
@@ -111,6 +116,7 @@ export default function Footer() {
             </p>
             <Link
               href="/advertise"
+              prefetch={false}
               className="inline-block bg-accent text-gray-900 px-4 py-2 rounded font-semibold hover:bg-white transition-colors no-underline"
             >
               Learn More
