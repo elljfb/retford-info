@@ -11,6 +11,8 @@ Newark and Sherwood District Council has tabled designs to demolish the Forest C
 
 The proposals would see two large buildings constructed in the area between Rufford Avenue and Forest Road. One would house up to seven small and medium-sized businesses on the first floor, with a retail unit, council offices, customer service area, meeting rooms and public lobby at ground level. The second building would be dedicated to the new cinema and an additional retail unit.
 
+![New Cinema](/articles/ollerton-cinema.webp)
+
 Three affordable council homes would also be built on the site of the former town hall.
 
 Funding for the project comes from the former Conservative government's Levelling Up fund, as part of a wider regeneration effort for the town centre.
