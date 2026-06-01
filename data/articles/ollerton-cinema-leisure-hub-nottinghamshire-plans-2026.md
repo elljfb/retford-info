@@ -1,5 +1,5 @@
 ---
-title: "New Two-Screen Cinema and Leisure Hub Planned for Nottinghamshire Town"
+title: "New Two-Screen Cinema and Leisure Hub Planned for Nottinghamshire Town Near Retford"
 date: 2026-06-01
 excerpt: "Plans have been unveiled to demolish several town centre buildings in a Nottinghamshire town and replace them with a new cinema, cafe, small businesses and council offices."
 image: /articles/ollerton-cinema.webp
