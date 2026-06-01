@@ -33,10 +33,10 @@ export async function generateMetadata({ params }: { params: ArticleParams }) {
     : `/api/og?title=${encodeURIComponent(article.title)}&subtitle=${encodeURIComponent('Article')}`;
 
   return {
-    title: `${article.title} - Retford, Nottinghamshire`,
+    title: `${article.title} - Retford Local News`,
     description: article.excerpt,
     openGraph: {
-      title: `${article.title} - Retford, Nottinghamshire`,
+      title: `${article.title} - Retford Local News`,
       description: article.excerpt,
       images: [ogImage],
       type: 'article',
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: { params: ArticleParams }) {
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${article.title} - Retford, Nottinghamshire`,
+      title: `${article.title} - Retford Local News`,
       description: article.excerpt,
       images: [ogImage],
     },
