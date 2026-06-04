@@ -23,4 +23,4 @@ Paul Methven, CEO of UKFE, said: "Securing operational control of the West Burto
 
 ## What is STEP?
 
-STEP -- Spherical Tokamak for Energy Production -- is the UK government's programme to design and build a prototype fusion energy plant at West Burton. If successful, it could become one of the most significant energy projects in British history, with the potential to deliver clean, near-limitless power for decades to come. The project is expected to bring significant long-term investment and job creation to the Bassetlaw region.
+STEP (Spherical Tokamak for Energy Productio) is the UK government's programme to design and build a prototype fusion energy plant at West Burton. If successful, it could become one of the most significant energy projects in British history, with the potential to deliver clean, near-limitless power for decades to come. The project is expected to bring significant long-term investment and job creation to the Bassetlaw region.
